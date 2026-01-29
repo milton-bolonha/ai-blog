@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <?xml-stylesheet type="text/xsl" href="/template.xsl"?>
+        <!-- Created in Thu Jan 29 2026 08:05:59 GMT-0300 (Horário Padrão de Brasília) -->
+        <urlset
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd"
+          xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+          <url>
+            <loc>https://instituto.app/blog/shocking-facts-about-everyday-foods-that-might-surprise-you</loc>
+            <lastmod>2024-11-22T15:16:58.011Z</lastmod>
+            <image:image>
+            <image:loc>https://res.cloudinary.com/dj0et6kq4/image/upload/v1732288617/moderntips/ai/het3mzakufxrphjuz8yi.png</image:loc>
+          </image:image>
+          </url>,<url>
+            <loc>https://instituto.app/blog/9-clever-natural-ways-to-calm-down-psoriasis-symptoms</loc>
+            <lastmod>2024-11-11T18:05:00.000Z</lastmod>
+            <image:image>
+            <image:loc>https://res.cloudinary.com/dj0et6kq4/image/upload/v1731013515/moderntips/ai/rkjvfvd3ucbfpc8zkui0.png</image:loc>
+          </image:image>
+          </url>
+      </urlset>
+      
