@@ -1,0 +1,120 @@
+{
+  "home": {
+    "titleNormal": "Transformando ideias em",
+    "titleBold": "Realidade Digital",
+    "subtitle": "Desenvolvedor Full Stack especializado em experiências web de alta performance e sistemas escaláveis.",
+    "cta": {
+      "letsTalk": "Vamos Conversar",
+      "viewProjects": "Ver Projetos"
+    },
+    "scroll": "Role para explorar",
+    "about": {
+      "title": "Open To Work",
+      "description": "Trabalho ajudando pessoas e empresas a transformarem ideias em produtos web reais, sistemas com inteligência artificial e experiências gamificadas.",
+      "cta": "Saiba Mais"
+    },
+    "projects": {
+      "title": "Catálogo",
+      "subtitle": "Catálogo em Destaque",
+      "description": "Veja abaixo os sistemas prontos que possuo de fácil instalação, também os projetos de curto, médio e longo prazo.",
+      "viewAll": "Ver Todos os Projetos",
+      "projectNumber": "Projeto",
+      "project1": "Plataforma SaaS completa com arquitetura escalável e SEO otimizado.",
+      "project2": "Dashboard administrativo com analytics em tempo real e gestão de usuários.",
+      "project3": "API RESTful de alta performance com documentação Swagger integrada."
+    },
+    "services": {
+      "title": "Como posso ajudar seu projeto?",
+      "subtitle": "Serviços especializados para escalar seu negócio",
+      "list": [
+        "Desenvolvimento Web Full Stack",
+        "Otimização de Performance",
+        "Arquitetura de Sistemas",
+        "Mentoria Técnica"
+      ]
+    },
+    "contact": {
+      "title": "Vamos criar algo incrível juntos?",
+      "subtitle": "Entre em contato para discutir seu próximo projeto",
+      "form": {
+        "name": "Seu Nome",
+        "email": "Seu E-mail",
+        "message": "Sua Mensagem",
+        "submit": "Enviar Mensagem",
+        "sending": "Enviando...",
+        "success": "Mensagem enviada com sucesso!",
+        "error": "Erro ao enviar mensagem. Tente novamente."
+      }
+    },
+    "footer": {
+      "rights": "Todos os direitos reservados.",
+      "copyright": "Todos os direitos reservados."
+    }
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "introduction": "Olá! Sou Milton Bolonha, estudante de Análise e Desenvolvimento de Sistemas, conhecido por ser trabalhador e honrado em cumprir minhas promessas. Meu objetivo é ajudar empreendedores e profissionais como você a transformarem ideias em projetos digitais de sucesso, com soluções escaláveis, modernas e funcionais.",
+    "education": {
+      "title": "Educação",
+      "degree": "Graduando em Análise e Desenvolvimento de Sistemas",
+      "degreeShort": "Análise e Desenvolvimento de Sistemas"
+    },
+    "specialization": {
+      "title": "Especialização",
+      "area": "Desenvolvimento Web Full-Stack"
+    },
+    "services": {
+      "title": "O que posso fazer pelo seu projeto?",
+      "items": [
+        "Desenvolvimento de sites responsivos e modernos que destacam seus produtos ou serviços.",
+        "Criação de aplicações web personalizadas, com Front-End e Back-End integrados.",
+        "Otimização e deploy em plataformas como Netlify e Vercel, garantindo performance e estabilidade.",
+        "Estruturação de sistemas eficientes utilizando Node.js, SQL, ReactJS e NextJS.",
+        "Documentação organizada e comunicação clara, facilitando o trabalho em equipe e manutenções futuras."
+      ]
+    },
+    "whyChoose": {
+      "title": "Por que escolher trabalhar comigo?",
+      "items": [
+        "Comprometimento total: Entrego o que prometo, estudando e aplicando soluções eficazes.",
+        "Aprendizado rápido e constante: Estou sempre atualizado nas tecnologias mais recentes, oferecendo soluções modernas e eficientes.",
+        "Foco em resultados: Antes de codificar, analiso e entendo profundamente o problema, garantindo que a solução atenda exatamente às suas necessidades."
+      ]
+    },
+    "skills": {
+      "title": "Minhas habilidades técnicas:",
+      "frontend": "Front-End:",
+      "backend": "Back-End:",
+      "deploy": "Deploy & Otimização:",
+      "frontendTechs": "ReactJS | NextJS | HTML5 | CSS3 | Tailwind CSS | Bootstrap | JavaScript | TypeScript",
+      "backendTechs": "Node.js | SQL | REST APIs | Git | GitHub",
+      "deployTechs": "Netlify | Vercel"
+    },
+    "cta": "Conheça Minha História"
+  },
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Catálogo",
+    "blog": "Blog",
+    "contact": "Contato"
+  },
+  "floatingButton": {
+    "contactMe": "Fale Comigo"
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "description": "A página que você está procurando não existe ou foi movida.",
+    "backHome": "Voltar para o início"
+  },
+  "blog": {
+    "readMore": "Ler mais",
+    "publishedOn": "Publicado em",
+    "by": "por",
+    "timeToRead": "min de leitura"
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "response": "Resposta"
+  }
+}

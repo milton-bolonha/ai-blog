@@ -1,0 +1,57 @@
+Landing page
+one page website
+
+Netlify
+
+
+
+
+Vamos mudar "O Que Faço?"
+o q vai mudar?
+ordem e nomes das tags 3D & Game Dev, Web Dev e Mentoria
+e vamos adicionar o conteúdo que queremos nos q ainda não tem
+
+IA & Web Apps
+deve ter a imagem e os botões como no game dev só que imagens placeholders
+botões
+- AI Insights
+- AI AutoBlog
+- WordPress Sites
+
+3D & Game Dev
+- Atualmente: imagens com transição  são acionadas automaticamente e dois botões JOGAR DEMO e VER TODOS JOGO
+- Coloque 3 imagem diferentes (use placeholders) que não são acionadas automaticamente, mas com o hover mouse nos botões, serão três botões, "Jogar Demo", "Stranger Craft", "Air Flight"
+"Jogar Demo" continua a jogar nosso neon flight
+"Stranger Craft" envia para nosso link do jogo
+"Air Flight"  envia para nosso link do jogo
+
+
+Mentoria
+- Ver Vídeo
+- Falar com o Mentor 
+o link acima leva para whats, nossos números em content settings acho q em business.json ou outro json dali..
+
+
+top ribbon
+depoimentos dos mentorados
+"Nunca ganhei tanto dinheiro"
+
+
+
+
+ads 1
+dir pra esq
+ultima animação
+uns 10% dela só
+
+
++500 projetos
++70USD 
+
+
+trocar
+Impacto real em projetos e carreiras ao redor do mundo.
+
+
+
+animações ads

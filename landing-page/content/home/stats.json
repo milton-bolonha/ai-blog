@@ -1,0 +1,28 @@
+{
+  "statsSection": {
+    "title": "Meus Resultados",
+    "subtitle": "+2 Décadas de Experiência",
+    "items": [
+      {
+        "value": "+900",
+        "label": "Projetos Web",
+        "sublabel": "Desde 1998"
+      },
+      {
+        "value": "U$70k+",
+        "label": "Faturamento USD",
+        "info": "Freelancer Internacional"
+      },
+      {
+        "value": "+8 Países",
+        "label": "Projetos internacionais",
+        "info": "EUA, Europa e Brasil"
+      },
+      {
+        "value": "253",
+        "label": "Mentorados",
+        "info": "Carreiras Impactadas"
+      }
+    ]
+  }
+}

@@ -2,7 +2,8 @@
   "name": "miltons-workspace",
   "version": "1.0.0-journal.1.0.0",
   "workspaces": [
-    "core"
+    "core",
+    "landing-page"
   ],
   "private": false,
   "description": "Boilerplate Times",
