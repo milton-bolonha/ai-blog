@@ -24,6 +24,11 @@ core/out
 ../.next
 core/.next
 
+landing-page/node_modules
+landing-page/out
+landing-page/.next
+
+
 # production
 /build
 
