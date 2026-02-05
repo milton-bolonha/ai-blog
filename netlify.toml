@@ -1,7 +1,6 @@
 [build]
-    command = "node core/sync.js && npm run build --workspace=core"
-    functions = "core/src/api"
-    publish = "core/out"
+    command = "npm run build"
+    publish = "landing-page/.next"
 
 [build.environment]
   NODE_VERSION = "20.11.0"

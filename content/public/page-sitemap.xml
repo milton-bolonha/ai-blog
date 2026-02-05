@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
       <?xml-stylesheet type="text/xsl" href="/template.xsl"?>
-        <!-- Created in Thu Jan 29 2026 08:57:57 GMT-0300 (Horário Padrão de Brasília) -->
+        <!-- Created in Thu Feb 05 2026 14:04:44 GMT-0300 (Horário Padrão de Brasília) -->
         <urlset
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd"
           xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           <url>
             <loc>https://instituto.app/blog/terms-and-conditions</loc>
-            <lastmod>2026-01-29T11:57:53.583Z</lastmod>
+            <lastmod>2026-02-05T17:04:38.347Z</lastmod>
             
           </url>,<url>
             <loc>https://instituto.app/blog/privacy-policy</loc>
-            <lastmod>2026-01-29T11:57:53.582Z</lastmod>
+            <lastmod>2026-02-05T17:04:38.345Z</lastmod>
             
           </url>,<url>
             <loc>https://instituto.app/blog/advertising-disclosure</loc>
-            <lastmod>2026-01-29T11:57:53.580Z</lastmod>
+            <lastmod>2026-02-05T17:04:38.343Z</lastmod>
             
           </url>,<url>
             <loc>https://instituto.app/blog/about-us</loc>
-            <lastmod>2026-01-29T11:57:53.578Z</lastmod>
+            <lastmod>2026-02-05T17:04:38.342Z</lastmod>
             
           </url>
       </urlset>

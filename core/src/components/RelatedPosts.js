@@ -1,8 +1,8 @@
-import React from "react";
+import Link from "next/link";
 
 const RelatedPosts = ({ slug, image, category, title, categorySlug }) => (
   <div id={`item-2`} className={`post column-post`}>
-    <a href={"/" + slug} className="media">
+    <Link href={"/" + slug} className="media">
       <div
         className="media"
         style={{
@@ -11,18 +11,18 @@ const RelatedPosts = ({ slug, image, category, title, categorySlug }) => (
             : `url(/posts/${image})`,
         }}
       ></div>
-    </a>
+    </Link>
     <div className="main-post-inner caption">
-      <a
+      <Link
         href={"/" + categorySlug}
         alt={category}
         className="post-category author"
       >
         {category}
-      </a>
-      <a href={"/" + slug} className="post-link">
+      </Link>
+      <Link href={"/" + slug} className="post-link">
         <h2 className="title">{title}</h2>
-      </a>
+      </Link>
     </div>
   </div>
 );
