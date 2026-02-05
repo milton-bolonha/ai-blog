@@ -26,6 +26,7 @@
     "clean": "npm run clean -w core",
     "update": "npm run update -w core",
     "emails": "echo './core/content/emails/index.mjml' && mjml ./core/content/emails/index.mjml -o ./core/content/emails/index.html",
+    "preinstall": "npx only-allow npm",
     "predev": "npm run sync",
     "prebuild": "npm run sync",
     "develop": "concurrently \"npm run dev -w landing-page\" \"npm run dev -w core\"",
