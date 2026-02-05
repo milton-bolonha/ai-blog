@@ -1,7 +1,7 @@
 {
   "successMessage": "Thank you for your message. We will reach you soon.",
   "feedbackSubject": "Message Request",
-  "siteUrl": "https://instituto.app/blog",
+  "siteUrl": "https://blog-instituto.netlify.app/blog",
   "footerText": "Disclaimer: The content provided on this site is intended for general information purposes only and should not be considered a replacement for professional financial and/or medical advice. All materials, including text, graphics, images, and information, are subject to change without prior notice. The information, materials, terms, conditions, and descriptions presented on these pages are subject to change without prior notice.",
   "postsToShow": 9,
   "homeCategory": "Health",

@@ -2,7 +2,7 @@
 title: Terms and Conditions
 layout: page
 date: 2024-07-16 00:48:30
-pageDescription: Please read these Terms of Use (“Terms”, “Terms of Use”) carefully before using the https://instituto.app/blog website (the “Service”) operated by I/O Blog (“us”, “we”, or “our”).
+pageDescription: Please read these Terms of Use (“Terms”, “Terms of Use”) carefully before using the https://blog-instituto.netlify.app/blog website (the “Service”) operated by I/O Blog (“us”, “we”, or “our”).
 ---
 
 Last updated: December 31, 2019

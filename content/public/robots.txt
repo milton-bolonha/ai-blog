@@ -1606,7 +1606,7 @@ Disallow:/
 User-agent: zgrab
 Disallow:/
 
-Sitemap: https://instituto.app/sitemaps.xml
-Sitemap: https://instituto.app/post-sitemap.xml
-Sitemap: https://instituto.app/page-sitemap.xml
+Sitemap: https://blog-instituto.netlify.app/sitemaps.xml
+Sitemap: https://blog-instituto.netlify.app/post-sitemap.xml
+Sitemap: https://blog-instituto.netlify.app/page-sitemap.xml
   

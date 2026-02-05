@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   repo: mt
   branch: master
-  site_domain: https://instituto.app/blog
+  site_domain: https://blog-instituto.netlify.app/blog
 
 media_folder: "core/public/posts"
 public_folder: ""

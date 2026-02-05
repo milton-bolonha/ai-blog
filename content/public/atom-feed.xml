@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://instituto.app/blog/</id>
+    <id>https://blog-instituto.netlify.app/blog/</id>
     <title>I/O Blog Atom Feed</title>
     <updated>2026-02-05T17:04:44.299Z</updated>
     <generator>I/O Blog is here to deliver tips and tricks to live a better life. Feed</generator>
     <author>
         <name>I/O Blog</name>
         <email>general@moderntips.com</email>
-        <uri>https://instituto.app/blog</uri>
+        <uri>https://blog-instituto.netlify.app/blog</uri>
     </author>
-    <link rel="alternate" href="https://instituto.app/blog/"/>
-    <link rel="self" href="https://instituto.app/blog/atom-feed.xml"/>
+    <link rel="alternate" href="https://blog-instituto.netlify.app/blog/"/>
+    <link rel="self" href="https://blog-instituto.netlify.app/blog/atom-feed.xml"/>
     <subtitle>I/O Blog is here to deliver tips and tricks to live a better life.</subtitle>
     <logo>https://res.cloudinary.com/dj0et6kq4/image/upload/v1725537988/moderntips/assets/mt_cover_1_w0m81h.png</logo>
     <rights>© 2026 I/O Blog. All Rights Reserved.</rights>
     <category term="health"/>
     <entry>
         <title type="html"><![CDATA[Shocking Facts About Everyday Foods That Might Surprise You]]></title>
-        <id>https://instituto.app/blog/shocking-facts-about-everyday-foods-that-might-surprise-you</id>
-        <link href="https://instituto.app/blog/shocking-facts-about-everyday-foods-that-might-surprise-you"/>
+        <id>https://blog-instituto.netlify.app/blog/shocking-facts-about-everyday-foods-that-might-surprise-you</id>
+        <link href="https://blog-instituto.netlify.app/blog/shocking-facts-about-everyday-foods-that-might-surprise-you"/>
         <updated>2024-11-22T15:16:58.011Z</updated>
         <summary type="html"><![CDATA[no description]]></summary>
         <content type="html"><![CDATA[<p>Discover the secret stories behind common foods that you consume every day. <strong>Continue searching</strong> the options below to uncover surprises waiting at your table.</p>
@@ -65,13 +65,13 @@
         <author>
             <name>Emily Hart</name>
             <email>general@moderntips.com</email>
-            <uri>https://instituto.app/blog</uri>
+            <uri>https://blog-instituto.netlify.app/blog</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[9 Clever Natural Ways to Calm Down Psoriasis Symptoms]]></title>
-        <id>https://instituto.app/blog/9-clever-natural-ways-to-calm-down-psoriasis-symptoms</id>
-        <link href="https://instituto.app/blog/9-clever-natural-ways-to-calm-down-psoriasis-symptoms"/>
+        <id>https://blog-instituto.netlify.app/blog/9-clever-natural-ways-to-calm-down-psoriasis-symptoms</id>
+        <link href="https://blog-instituto.netlify.app/blog/9-clever-natural-ways-to-calm-down-psoriasis-symptoms"/>
         <updated>2024-11-11T18:05:00.000Z</updated>
         <summary type="html"><![CDATA[no description]]></summary>
         <content type="html"><![CDATA[<p>Are you struggling with psoriasis? Begin your search now for natural remedies that can help soothe your skin and improve your quality of life.</p>
@@ -97,15 +97,15 @@
         <author>
             <name>Emily Hart</name>
             <email>general@moderntips.com</email>
-            <uri>https://instituto.app/blog</uri>
+            <uri>https://blog-instituto.netlify.app/blog</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Terms and Conditions]]></title>
-        <id>https://instituto.app/blog/terms-and-conditions</id>
-        <link href="https://instituto.app/blog/terms-and-conditions"/>
+        <id>https://blog-instituto.netlify.app/blog/terms-and-conditions</id>
+        <link href="https://blog-instituto.netlify.app/blog/terms-and-conditions"/>
         <updated>2026-02-05T17:04:38.347Z</updated>
-        <summary type="html"><![CDATA[Please read these Terms of Use (“Terms”, “Terms of Use”) carefully before using the https://instituto.app/blog website (the “Service”) operated by I/O Blog (“us”, “we”, or “our”).]]></summary>
+        <summary type="html"><![CDATA[Please read these Terms of Use (“Terms”, “Terms of Use”) carefully before using the https://blog-instituto.netlify.app/blog website (the “Service”) operated by I/O Blog (“us”, “we”, or “our”).]]></summary>
         <content type="html"><![CDATA[<p>Last updated: December 31, 2019</p>
 <p>Please read these Terms and Conditions (“Terms”, “Terms and Conditions”) carefully before using the https://www.moderntips.com website (the “Service”) operated by I/O Blog (“us”, “we”, or “our”).</p>
 <p>Your access to and use of the Service is conditioned upon your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who wish to access or use the Service.</p>
@@ -141,13 +141,13 @@
         <author>
             <name>I/O Blog</name>
             <email>general@moderntips.com</email>
-            <uri>https://instituto.app/blog</uri>
+            <uri>https://blog-instituto.netlify.app/blog</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Privacy Policy]]></title>
-        <id>https://instituto.app/blog/privacy-policy</id>
-        <link href="https://instituto.app/blog/privacy-policy"/>
+        <id>https://blog-instituto.netlify.app/blog/privacy-policy</id>
+        <link href="https://blog-instituto.netlify.app/blog/privacy-policy"/>
         <updated>2026-02-05T17:04:38.345Z</updated>
         <summary type="html"><![CDATA[Privacy police for I/O Blog blog.]]></summary>
         <content type="html"><![CDATA[<p>Effective date: December 31, 2019</p>
@@ -292,13 +292,13 @@
         <author>
             <name>I/O Blog</name>
             <email>general@moderntips.com</email>
-            <uri>https://instituto.app/blog</uri>
+            <uri>https://blog-instituto.netlify.app/blog</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Advertising Disclosure]]></title>
-        <id>https://instituto.app/blog/advertising-disclosure</id>
-        <link href="https://instituto.app/blog/advertising-disclosure"/>
+        <id>https://blog-instituto.netlify.app/blog/advertising-disclosure</id>
+        <link href="https://blog-instituto.netlify.app/blog/advertising-disclosure"/>
         <updated>2026-02-05T17:04:38.343Z</updated>
         <summary type="html"><![CDATA[I/O Blog.com has a financial relationship with some of the companies mentioned throughout the site and this site may be compensated through the credit card issuer or advertiser’s partner programs.]]></summary>
         <content type="html"><![CDATA[<p>moderntips.com has a financial relationship with some of the companies mentioned throughout the site and this site may be compensated through the credit card issuer or advertiser’s partner programs. We do not make recommendations based on these relationships alone. Compensation may impact which companies we review and write about and how and where products appear on this site (including, for example, the order in which they appear).</p>
@@ -307,13 +307,13 @@
         <author>
             <name>I/O Blog</name>
             <email>general@moderntips.com</email>
-            <uri>https://instituto.app/blog</uri>
+            <uri>https://blog-instituto.netlify.app/blog</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[About Us]]></title>
-        <id>https://instituto.app/blog/about-us</id>
-        <link href="https://instituto.app/blog/about-us"/>
+        <id>https://blog-instituto.netlify.app/blog/about-us</id>
+        <link href="https://blog-instituto.netlify.app/blog/about-us"/>
         <updated>2026-02-05T17:04:38.342Z</updated>
         <summary type="html"><![CDATA[I/O Blog is here to deliver tips and tricks to live a better life.]]></summary>
         <content type="html"><![CDATA[<h2 id="aboutus">About Us</h2>
@@ -328,7 +328,7 @@ Los Angeles, CA 90051-6681<br />
         <author>
             <name>I/O Blog</name>
             <email>general@moderntips.com</email>
-            <uri>https://instituto.app/blog</uri>
+            <uri>https://blog-instituto.netlify.app/blog</uri>
         </author>
     </entry>
 </feed>

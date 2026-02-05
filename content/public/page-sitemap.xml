@@ -6,19 +6,19 @@
           xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd"
           xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           <url>
-            <loc>https://instituto.app/blog/terms-and-conditions</loc>
+            <loc>https://blog-instituto.netlify.app/blog/terms-and-conditions</loc>
             <lastmod>2026-02-05T17:04:38.347Z</lastmod>
             
           </url>,<url>
-            <loc>https://instituto.app/blog/privacy-policy</loc>
+            <loc>https://blog-instituto.netlify.app/blog/privacy-policy</loc>
             <lastmod>2026-02-05T17:04:38.345Z</lastmod>
             
           </url>,<url>
-            <loc>https://instituto.app/blog/advertising-disclosure</loc>
+            <loc>https://blog-instituto.netlify.app/blog/advertising-disclosure</loc>
             <lastmod>2026-02-05T17:04:38.343Z</lastmod>
             
           </url>,<url>
-            <loc>https://instituto.app/blog/about-us</loc>
+            <loc>https://blog-instituto.netlify.app/blog/about-us</loc>
             <lastmod>2026-02-05T17:04:38.342Z</lastmod>
             
           </url>

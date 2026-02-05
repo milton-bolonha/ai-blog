@@ -184,7 +184,7 @@ Who is using:
 
 - **Features:** https://github.com/miltonbolonha/boilerplate-times/blob/master/README.md#our-features
 - **Demo:** https://boilerplate-times.netlify.app
-- **Production:** https://instituto.app/
+- **Production:** https://blog-instituto.netlify.app/
 - **Sitemaps:** https://boilerplate-times.netlify.app/sitemaps.xml
 - **PageSpeed:** https://pagespeed.web.dev/analysis/https-boilerplate-times-netlify-app/quvfc4swsb?form_factor=desktop
 - **Schema Validator:** https://validator.schema.org/#url=https%3A%2F%2Fboilerplate-times.netlify.app%2Fsecrets-revealed-how-seniors-are-snagging-affordable-dental-implants%2F

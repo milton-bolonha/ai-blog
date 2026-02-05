@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/template.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
-		<loc>https://instituto.app/blog/page-sitemap.xml</loc>
+		<loc>https://blog-instituto.netlify.app/blog/page-sitemap.xml</loc>
 		<lastmod>2026-02-05T17:04:44.215Z</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>https://instituto.app/blog/post-sitemap.xml</loc>
+		<loc>https://blog-instituto.netlify.app/blog/post-sitemap.xml</loc>
 		<lastmod>2026-02-05T17:04:44.217Z</lastmod>
 	</sitemap>
   <sitemap>
-		<loc>https://instituto.app/blog/stories-sitemap.xml</loc>
+		<loc>https://blog-instituto.netlify.app/blog/stories-sitemap.xml</loc>
 		<lastmod>2026-02-05T17:04:44.217Z</lastmod>
 	</sitemap>
   <sitemap>
-		<loc>https://instituto.app/blog/feed-sitemap.xml</loc>
+		<loc>https://blog-instituto.netlify.app/blog/feed-sitemap.xml</loc>
 		<lastmod>2026-02-05T17:04:44.217Z</lastmod>
 	</sitemap>
 </sitemapindex>
