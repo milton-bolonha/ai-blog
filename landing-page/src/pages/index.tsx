@@ -310,9 +310,7 @@ const HomeContent = ({
 
 const Home = (props: HomeProps) => {
   return (
-    <ClientOnly>
-      <HomeContent {...props} />
-    </ClientOnly>
+    <HomeContent {...props} />
   );
 };
 

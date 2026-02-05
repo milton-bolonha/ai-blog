@@ -1,6 +1,5 @@
 [build]
     command = "npm run build"
-    publish = "landing-page/.next"
 
 [[plugins]]
   package = "@netlify/plugin-local-install-core"
