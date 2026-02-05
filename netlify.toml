@@ -1,16 +1,12 @@
 [build]
     command = "npm run build"
+    publish = "landing-page/.next"
 
 [[plugins]]
   package = "@netlify/plugin-local-install-core"
 
 [[plugins]]
-package = "@netlify/plugin-emails"
+  package = "@netlify/plugin-emails"
 
-[functions]
-  directory = "core/src/api"
-
-[[edge_functions]]
-  path = "/core/src/api/geo" 
-  function = "injectGeoCookie"
-  
+# Edge functions removed as they depend on core (now static).
+# If you need them, they must be migrated to landing-page.
