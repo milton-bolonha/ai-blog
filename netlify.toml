@@ -3,6 +3,9 @@
     publish = "landing-page/.next"
 
 [[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[plugins]]
   package = "@netlify/plugin-local-install-core"
 
 [[plugins]]
