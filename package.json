@@ -21,7 +21,7 @@
     "precopy": "npx rimraf landing-page/public/blog",
     "copy:core": "npx -y cpx \"core/out/**/*\" landing-page/public/blog",
     "build:landing": "npm run build -w landing-page",
-    "build": "npm run build:core && npm run precopy && npm run copy:core && npm run build:landing",
+    "build": "node generate-sitemap.js && npm run build:core && npm run precopy && npm run copy:core && npm run build:landing",
     "serve": "npm run serve -w core",
     "clean": "npm run clean -w core",
     "update": "npm run update -w core",
