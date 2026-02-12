@@ -1,5 +1,5 @@
 ---
-title: Post upwork 1
+title: Post upwork
 linkAiDraft:
   - linkUrl: https://www.upwork.com/resources/how-much-do-freelancers-make
 author: Milton Bolonha
