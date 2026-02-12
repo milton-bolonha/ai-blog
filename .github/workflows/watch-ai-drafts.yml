@@ -49,10 +49,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
         run: |
-          git config --global user.name 'schindyguy'
-          git config --global user.email 'bschindelheim@gmail.com'
+          git config --global user.name 'milton-bolonha'
+          git config --global user.email 'miltonsiedler@gmail.com'
           git fetch && git pull
           git add .
           git status
           git commit -m "✔️ [Auto Commit]: Convert drafts to posts and build changes"
-          git push https://$GITHUB_TOKEN@github.com/schindyguy/mt.git HEAD:master
+          git push https://$GITHUB_TOKEN@github.com/milton-bolonha/ai-blog.git HEAD:master

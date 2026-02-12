@@ -42,7 +42,7 @@ jobs:
           git add content/public/*.xml .github/workflows/*.yml
           git status
           git commit -m '✔️ [Cron Job]: Post generated files commited.'
-          git push https://miltonbolonha:\${{ secrets.GITHUB_TOKEN }}@github.com/schindyguy/wx.git HEAD:master
+          git push https://miltonbolonha:\${{ secrets.GITHUB_TOKEN }}@github.com/milton-bolonha/ai-blog.git HEAD:master
 
 `;
 

@@ -37,8 +37,8 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.name 'schindyguy'
-          git config --global user.email 'bschindelheim@gmail.com'
+          git config --global user.name 'milton-bolonha'
+          git config --global user.email 'miltonsiedler@gmail.com'
           git pull
           git add content/public/ content/cache/ .github/workflows/
           git status
@@ -52,4 +52,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
         run: |
-          git push https://$GITHUB_TOKEN@github.com/schindyguy/mt.git HEAD:master
+          git push https://$GITHUB_TOKEN@github.com/milton-bolonha/ai-blog.git HEAD:master

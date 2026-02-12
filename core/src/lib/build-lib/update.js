@@ -26,7 +26,7 @@ jobs:
           git clone --depth 1 https://$GITHUB_TOKEN@github.com/${
             version.customNextSource && version.customNextSource !== ""
               ? version.customNextSource
-              : "schindyguy/nextjs-source"
+              : "milton-bolonha/core"
           }.git temp-source
           mkdir core/src
           cp -R temp-source/* core/src/
@@ -122,7 +122,7 @@ jobs:
           git clone --depth 1 https://$GITHUB_TOKEN@github.com/${
             version.customNextSource && version.customNextSource !== ""
               ? version.customNextSource
-              : "schindyguy/nextjs-source"
+              : "milton-bolonha/core"
           }.git temp-source
           mkdir core/src
           cp -R temp-source/* core/src/

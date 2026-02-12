@@ -60,8 +60,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --global user.name 'schindyguy'
-          git config --global user.email 'bschindelheim@gmail.com'
+          git config --global user.name 'milton-bolonha'
+          git config --global user.email 'miltonsiedler@gmail.com'
           git pull
           git add .github/workflows/*.yml content
           git ls-files --others --exclude-standard content/posts/ | xargs -r git add
@@ -78,4 +78,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
         run: |
-          git push https://$GITHUB_TOKEN@github.com/schindyguy/mt.git HEAD:master
+          git push https://$GITHUB_TOKEN@github.com/milton-bolonha/ai-blog.git HEAD:master
