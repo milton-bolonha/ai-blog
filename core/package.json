@@ -5,7 +5,7 @@
   "scripts": {
     "docs": "jsdoc -r ./src -d ../content/docs/jsdocs -R ../content/docs/jsdocs/README.md",
     "dev": "node src/lib/prompt-digestion/triggers/build.js && next dev --webpack -p 3001",
-    "build": "next build --webpack",
+    "build": "node src/lib/prompt-digestion/triggers/build.js && next build --webpack",
     "start": "next start --webpack",
     "lint": "next lint --webpack",
     "digest": "node src/lib/prompt-digestion/triggers/digest.js",
