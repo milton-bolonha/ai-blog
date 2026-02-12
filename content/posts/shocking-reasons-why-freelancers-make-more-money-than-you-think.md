@@ -14,7 +14,6 @@ tags:
   - income
   - money tips
 ---
-
 Curious about how much freelancers really make? Continue searching below to uncover surprising statistics and insights on freelance earnings. Explore options below and discover the potential of freelance work.
 
 Freelancers, also known as independent contractors, have the ability to set their own rates and choose their projects, which often results in a higher earning potential compared to traditional employment. With the rise of the gig economy, more individuals are exploring the opportunities freelancing offers.
@@ -38,12 +37,34 @@ Different industries offer different earning potentials for freelancers. For exa
 ## Strategies Freelancers Use to Increase Their Income
 
 1. **Diversification**: Freelancers often diversify their skill sets or service offerings to cater to a wider client base. For example, a graphic designer might offer both digital and print design services.
-
 2. **Building a Network**: Establishing a network of clients and industry contacts can lead to more job opportunities and referrals, increasing a freelancer's income potential.
-
 3. **Continuous Learning**: By staying updated with the latest trends and tools in their field, freelancers can offer cutting-edge services that are in high demand.
-
 4. **Strategic Pricing**: Many freelancers employ strategic pricing models such as value-based pricing, which charges clients based on the value delivered, rather than hourly rates.
+
+## Ok, but... How much?
+
+How much do the most popular freelancing professions make?
+
+There are many different types of freelancing work. Generally, the more technical a profession is, the more freelancers in that field can earn.
+
+The average freelancer's hourly rates for the most popular opportunities are listed here:  
+
+* **Writers.** On average, a freelance writer has a rate between $15 and $40 per hour.
+* **Editors.** On average, freelance editors earn between $15 and $40 per hour.
+* **Programmers.** Across multiple programming languages, the typical freelance programmer makes between $21 and $55 per hour.
+* **Software developers.** A developer can earn anywhere between $10 and $100 per hour or more.
+* **Mobile developers.** On average, mobile app developers make an hourly freelancer rate of $18 to $39 per hour.
+* **Web developers.** Freelance web developers design and create websites at an hourly rate of $15 to $50 or more.
+* **Graphic designers.** A freelance visual or graphic designer's hourly rate is about $15 to $35.
+* **Transcribers.** Freelance transcriptionists typically earn between $12 and $22 per hour.
+* **Bookkeepers.** A freelance bookkeeper makes between $11 and $25 per hour on average.
+* **Digital marketers.** Freelance digital marketers earn between $15 and $45 an hour on average.
+* **Photographers.** A freelance photographer typically has an hourly rate between $25 and $45.
+* **CRM managers.** A customer relations manager (CRM) or customer success manager (CSM) looks to earn $30 to $60 per hour.
+* **Data analysts.** Pay for a freelance data analyst averages $20 to $50 an hour.
+* **Project managers.** On average, freelance project managers make between $19 and $45 per hour.
+* **Social media managers.** Freelance social media managers typically earn between $14 and $35 per hour.
+* **Marketing managers.** Marketing managers, on average, typically earn $24 to $60 per hour.
 
 ## The Challenges That Can Impact A Freelancer's Earnings
 
@@ -54,4 +75,5 @@ Despite the potential for high earnings, freelancing comes with its own set of c
 Freelancing is not for everyone, but it provides a viable career path for those who desire flexibility and control over their earnings. By understanding the market and strategically cultivating their business, freelancers can potentially earn lucrative incomes. Whether you are considering becoming a freelancer or hiring one, understanding the dynamics of freelancer earnings can help you make informed decisions.
 
 Citations:
+
 1. [Upwork Resources](https://www.upwork.com/resources/how-much-do-freelancers-make)
