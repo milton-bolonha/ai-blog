@@ -9,8 +9,8 @@ public_folder: ""
 media_library:
   name: cloudinary
   config:
-    cloud_name: dyxuhpt7j
-    api_key: 338884965113117
+    cloud_name: dmrvxajho
+    api_key: 563998259153695
 
 publish_mode: simple
 
