@@ -69,7 +69,15 @@ const debugMe = require("../utils/debug-me");
 async function homePageScrapeLink(url, debug = false) {
   let browser;
   try {
-    browser = await puppeteer.launch(); // Set headless: false to see the browser
+    browser = await puppeteer.launch({
+      headless: "new",
+      args: [
+        "--no-sandbox",
+        "--disable-setuid-sandbox",
+        "--disable-dev-shm-usage",
+        "--disable-gpu",
+      ],
+    });
     const page = await browser.newPage();
 
     debugMe(debug, `Scrape Home Page URL`, url);
@@ -128,7 +136,15 @@ async function homePageScrapeLink(url, debug = false) {
 }
 async function visitAndGetBodyContent(url, debug) {
   if (!url) return null;
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    headless: "new",
+    args: [
+      "--no-sandbox",
+      "--disable-setuid-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+    ],
+  });
   const page = await browser.newPage();
 
   debugMe(debug, "Scraped Link ", url);

@@ -6,7 +6,7 @@ author: Milton Bolonha
 authorsPrompt: true
 universalPrompt: true
 additional_image_prompts:
-  - image_prompt: Um entardecer com um trabalhador freelancer e seu computador
+  - image_prompt: Um entardecer lindo com um trabalhador freelancer e seu computador
       mostrando na tela m código, estilo da imagem é um desenho com shapes
       definidos, estilo imagem de vídeo de loop de lo-fi. o trabalhador está de
       costas, as cores são todas pastéis.
