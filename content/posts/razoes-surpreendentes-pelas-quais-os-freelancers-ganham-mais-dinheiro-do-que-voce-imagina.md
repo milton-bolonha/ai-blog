@@ -39,6 +39,29 @@ No entanto, freelancers bem-sucedidos em qualquer domínio podem alcançar ganho
 3. **Aprendizado Contínuo**: Ao se manterem atualizados com as últimas tendências e ferramentas em sua área, freelancers podem oferecer serviços de ponta que estão em alta demanda.
 4. **Precificação Estratégica**: Muitos freelancers utilizam modelos estratégicos de precificação, como precificação baseada em valor, que cobra dos clientes com base no valor entregue, em vez de tarifas por hora.
 
+## Ok, mas... Quanto ganham?
+
+Existem muitos tipos diferentes de trabalho freelance. Em geral, quanto mais técnica é a profissão, mais os freelancers dessa área podem ganhar.
+
+As taxas médias por hora dos freelancers nas oportunidades mais populares estão listadas abaixo:
+
+* **Redatores (Writers).** Em média, um redator freelancer cobra entre US$15 e US$40 por hora.
+* **Editores (Editors).** Em média, editores freelancers ganham entre US$15 e US$40 por hora.
+* **Programadores (Programmers).** Em várias linguagens de programação, o programador freelancer típico ganha entre US$21 e US$55 por hora.
+* **Desenvolvedores de software (Software developers).** Um desenvolvedor pode ganhar entre US$10 e US$100 por hora ou mais.
+* **Desenvolvedores mobile (Mobile developers).** Em média, desenvolvedores de aplicativos móveis ganham entre US$18 e US$39 por hora.
+* **Desenvolvedores web (Web developers).** Desenvolvedores web freelancers projetam e criam sites com taxas entre US$15 e US$50 por hora ou mais.
+* **Designers gráficos (Graphic designers).** Um designer visual ou gráfico freelancer cobra cerca de US$15 a US$35 por hora.
+* **Transcritores (Transcribers).** Profissionais de transcrição freelancers normalmente ganham entre US$12 e US$22 por hora.
+* **Bookkeepers (Controles financeiros / Escrituradores contábeis).** Um bookkeeper freelancer ganha entre US$11 e US$25 por hora em média.
+* **Profissionais de marketing digital (Digital marketers).** Freelancers de marketing digital ganham entre US$15 e US$45 por hora em média.
+* **Fotógrafos (Photographers).** Um fotógrafo freelancer normalmente tem uma taxa entre US$25 e US$45 por hora.
+* **Gestores de CRM (CRM managers).** Um gerente de relacionamento com clientes (CRM) ou de sucesso do cliente (CSM) tende a ganhar entre US$30 e US$60 por hora.
+* **Analistas de dados (Data analysts).** A remuneração de um analista de dados freelancer fica, em média, entre US$20 e US$50 por hora.
+* **Gerentes de projetos (Project managers).** Em média, gerentes de projetos freelancers ganham entre US$19 e US$45 por hora.
+* **Gestores de mídias sociais (Social media managers).** Freelancers de redes sociais normalmente ganham entre US$14 e US$35 por hora.
+* **Gerentes de marketing (Marketing managers).** Gerentes de marketing, em média, ganham entre US$24 e US$60 por hora.
+
 ## Os Desafios que Podem Impactar os Ganhos de um Freelancer
 
 Apesar do potencial de altos ganhos, o trabalho freelance traz seus próprios desafios. A renda pode ser inconsistente, dependendo da disponibilidade de projetos e clientes. 
