@@ -105,7 +105,7 @@ const PostLeftColumn = ({
         </p>
         <p className="post-author-date read-time">
           <Image
-            src={`brandimages/clock.png`}
+            src={`/blog/brandimages/clock.png`}
             alt={"logomark"}
             width={15}
             height={15}

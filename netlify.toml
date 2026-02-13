@@ -10,3 +10,13 @@
 
 # Edge functions removed as they depend on core (now static).
 # If you need them, they must be migrated to landing-page.
+
+[[headers]]
+  for = "/blog/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/blog/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
