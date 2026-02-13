@@ -6,7 +6,7 @@ categories:
   - Career
 image: https://res.cloudinary.com/dmrvxajho/image/upload/v1770938522/io-repo/ai/wnbzd6deozircz8urogg.png
 featuredPost: true
-draft: false
+draft: true
 layout: post
 tags:
   - portfolio
