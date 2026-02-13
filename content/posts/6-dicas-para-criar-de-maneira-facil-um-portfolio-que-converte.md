@@ -5,7 +5,7 @@ author: Milton Bolonha
 categories:
   - Career
 image: https://res.cloudinary.com/dmrvxajho/image/upload/v1770938526/io-repo/ai/iw8vtbc0ibwicxdsbagx.png
-featuredPost: false
+featuredPost: true
 draft: false
 layout: post
 ---
