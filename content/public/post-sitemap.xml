@@ -1,21 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-      <?xml-stylesheet type="text/xsl" href="https://blog-instituto.netlify.app/blog/template.xsl"?>
-        <!-- Created in Fri Feb 13 2026 01:13:09 GMT+0000 (Coordinated Universal Time) -->
+      <?xml-stylesheet type="text/xsl" href="https://blog-instituto.netlify.app/blog//template.xsl"?>
+        <!-- Created in Thu Feb 12 2026 22:50:55 GMT-0300 (Horário Padrão de Brasília) -->
         <urlset
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd"
           xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           <url>
-            <loc>https://blog-instituto.netlify.app/blog/shocking-facts-about-everyday-foods-that-might-surprise-you</loc>
-            <lastmod>2024-11-22T15:16:58.011Z</lastmod>
+            <loc>https://blog-instituto.netlify.app/blog/como-criar-um-excelente-perfil-profissional-para-se-destacar-em-um-ambiente-competitivo</loc>
+            <lastmod>2026-02-12T21:30:23.000Z</lastmod>
             <image:image>
-            <image:loc>https://res.cloudinary.com/dj0et6kq4/image/upload/v1732288617/moderntips/ai/het3mzakufxrphjuz8yi.png</image:loc>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1770942369/io-repo/ai/mzzkule3kl10noagseou.png</image:loc>
+          </image:image><image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1770942373/io-repo/ai/agyysg3zr7bxhyttbgfr.png</image:loc>
+          </image:image>,<image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1770942371/io-repo/ai/exlnzi778pahg1fcwa4h.png</image:loc>
+          </image:image>,<image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1770942374/io-repo/ai/f40nkxofxapqdwflnz7z.png</image:loc>
           </image:image>
           </url>,<url>
-            <loc>https://blog-instituto.netlify.app/blog/9-clever-natural-ways-to-calm-down-psoriasis-symptoms</loc>
-            <lastmod>2024-11-11T18:05:00.000Z</lastmod>
+            <loc>https://blog-instituto.netlify.app/blog/6-dicas-para-criar-de-maneira-facil-um-portfolio-que-converte</loc>
+            <lastmod>2026-02-12T20:46:59.000Z</lastmod>
             <image:image>
-            <image:loc>https://res.cloudinary.com/dj0et6kq4/image/upload/v1731013515/moderntips/ai/rkjvfvd3ucbfpc8zkui0.png</image:loc>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1770938526/io-repo/ai/iw8vtbc0ibwicxdsbagx.png</image:loc>
+          </image:image><image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1770938524/io-repo/ai/xome6nwydsoyl7rjdwkm.png</image:loc>
+          </image:image>,<image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1770938525/io-repo/ai/gisskyx266itebxitffc.png</image:loc>
+          </image:image>,<image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1770938526/io-repo/ai/iw8vtbc0ibwicxdsbagx.png</image:loc>
+          </image:image>
+          </url>,<url>
+            <loc>https://blog-instituto.netlify.app/blog/razoes-surpreendentes-pelas-quais-os-freelancers-ganham-mais-dinheiro-do-que-voce-imagina</loc>
+            <lastmod>2026-02-12T19:46:31.000Z</lastmod>
+            <image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1770935714/io-repo/ai/opnma6hnbpmefaaoaudt.png</image:loc>
+          </image:image><image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1770935714/io-repo/ai/opnma6hnbpmefaaoaudt.png</image:loc>
+          </image:image>,<image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1770935715/io-repo/ai/fkm1vflpzviqxl9lhpmx.png</image:loc>
           </image:image>
           </url>
       </urlset>

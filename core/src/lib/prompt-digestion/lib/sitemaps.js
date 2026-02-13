@@ -8,7 +8,7 @@ const general = require(`${appRoot}/content/settings/general.json`);
 const logos = require(`${appRoot}/content/settings/logos.json`);
 
 function sitemaps(scope) {
-  return `<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="${scope}/template.xsl"?>
+  return `<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="${general?.siteUrl + '/' + scope}/template.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
 		<loc>${scope}/page-sitemap.xml</loc>
@@ -34,7 +34,7 @@ function feedSitemaps(siteUrl, scope, cardLogo) {
     ? cardLogo
     : siteUrl + scope + "/" + cardLogo;
   return `<?xml version="1.0" encoding="UTF-8"?>
-  <?xml-stylesheet type="text/xsl" href="${scope}/template.xsl"?>
+  <?xml-stylesheet type="text/xsl" href="${siteUrl + '/' + scope}/template.xsl"?>
     <!-- Created in ${new Date()} -->
     <urlset
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -65,7 +65,7 @@ function feedSitemaps(siteUrl, scope, cardLogo) {
 const assembleXML = (data, siteUrl, scope, isStories = false) => {
   const amp = isStories ? ["amp/", ".stories.amp.html"] : ["", ""];
   return `<?xml version="1.0" encoding="UTF-8"?>
-      <?xml-stylesheet type="text/xsl" href="${scope}/template.xsl"?>
+      <?xml-stylesheet type="text/xsl" href="${siteUrl + '/' +scope}/template.xsl"?>
         <!-- Created in ${new Date()} -->
         <urlset
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

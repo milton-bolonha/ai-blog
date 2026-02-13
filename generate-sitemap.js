@@ -20,7 +20,7 @@ function getAllPostSlugs() {
 }
 
 function generateSiteMap() {
-  const baseUrl = "https://www.miltonbolonha.com.br";
+  const baseUrl = "https://blog-instituto.netlify.app";
   const date = new Date().toISOString();
 
   const posts = getAllPostSlugs();
@@ -35,7 +35,7 @@ function generateSiteMap() {
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/helpers/template.xsl"?>
+<?xml-stylesheet type="text/xsl" href="/blog/template.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Static Core Pages -->
   ${staticPages
