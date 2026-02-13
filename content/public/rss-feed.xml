@@ -4,13 +4,13 @@
         <title>I/O Blog Atom Feed</title>
         <link>https://blog-instituto.netlify.app/blog/</link>
         <description>I/O Blog is here to deliver tips and tricks to live a better life.</description>
-        <lastBuildDate>Fri, 13 Feb 2026 00:41:54 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 13 Feb 2026 00:59:50 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>I/O Blog is here to deliver tips and tricks to live a better life. Feed</generator>
         <language>en-us</language>
         <image>
             <title>I/O Blog Atom Feed</title>
-            <url>https://res.cloudinary.com/dj0et6kq4/image/upload/v1725537988/moderntips/assets/mt_cover_1_w0m81h.png</url>
+            <url>https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png</url>
             <link>https://blog-instituto.netlify.app/blog/</link>
         </image>
         <copyright>© 2026 I/O Blog. All Rights Reserved.</copyright>
@@ -134,7 +134,7 @@
 <p><em>PO Box 515381</em></p>
 <p><em>Los Angeles, CA 90051</em></p>]]></content:encoded>
             <author>general@moderntips.com (I/O Blog)</author>
-            <enclosure url="https://blog-instituto.netlify.app/blog/https://res.cloudinary.com/dj0et6kq4/image/upload/v1725537988/moderntips/assets/mt_cover_1_w0m81h.png" length="0" type="image/png"/>
+            <enclosure url="https://blog-instituto.netlify.app/blog/https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Advertising Disclosure]]></title>
@@ -146,7 +146,7 @@
 <h2 id="disclaimer">Disclaimer:</h2>
 <p>We try to keep information accurate and up to date, however we cannot make warranties regarding the accuracy of our information. Opinions expressed here are author’s alone, not those of the financial institution, lender, credit card issuer, advertiser, business, service provider, etc. and have not been reviewed, approved, or otherwise endorsed by the respective company. Please verify FDIC Insurance / NCUA Insurance status, credit card information, and interest rates during the application process. We strongly suggest you read the terms of use and privacy policies of advertised companies as they may be substantially different than I/O Blog policies.</p>]]></content:encoded>
             <author>general@moderntips.com (I/O Blog)</author>
-            <enclosure url="https://blog-instituto.netlify.app/blog/https://res.cloudinary.com/dj0et6kq4/image/upload/v1725537988/moderntips/assets/mt_cover_1_w0m81h.png" length="0" type="image/png"/>
+            <enclosure url="https://blog-instituto.netlify.app/blog/https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[Privacy Policy]]></title>
@@ -294,7 +294,7 @@
 <li>By mail: PO Box 515381, Los Angeles, CA 90051-6681</li>
 </ul>]]></content:encoded>
             <author>general@moderntips.com (I/O Blog)</author>
-            <enclosure url="https://blog-instituto.netlify.app/blog/https://res.cloudinary.com/dj0et6kq4/image/upload/v1725537988/moderntips/assets/mt_cover_1_w0m81h.png" length="0" type="image/png"/>
+            <enclosure url="https://blog-instituto.netlify.app/blog/https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png" length="0" type="image/png"/>
         </item>
         <item>
             <title><![CDATA[About Us]]></title>
@@ -312,7 +312,7 @@ PO Box 515381<br />
 Los Angeles, CA 90051-6681<br />
 <a href="mailto:mailinfo@moderntips.com">info@moderntips.com</a></p>]]></content:encoded>
             <author>general@moderntips.com (I/O Blog)</author>
-            <enclosure url="https://blog-instituto.netlify.app/blog/https://res.cloudinary.com/dj0et6kq4/image/upload/v1725537988/moderntips/assets/mt_cover_1_w0m81h.png" length="0" type="image/png"/>
+            <enclosure url="https://blog-instituto.netlify.app/blog/https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png" length="0" type="image/png"/>
         </item>
     </channel>
 </rss>
