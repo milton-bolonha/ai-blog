@@ -6,7 +6,7 @@ categories:
   - Career
 image: https://res.cloudinary.com/dmrvxajho/image/upload/v1770942369/io-repo/ai/mzzkule3kl10noagseou.png
 featuredPost: false
-draft: false
+draft: true
 layout: post
 tags:
   - Work Profile
