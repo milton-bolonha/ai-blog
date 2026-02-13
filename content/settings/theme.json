@@ -21,7 +21,7 @@
     "headerMainMenuType": "category"
   },
   "themeColors": {
-    "brand_color": "#3cb8ff",
+    "brand_color": "#000000",
     "ctaColor": "#3cb8ff",
     "background_color": "#ffffff",
     "darkBrandColor": "#3cb8ff",
@@ -29,6 +29,7 @@
     "darkBackgroundColor": "#000"
   },
   "generalThemeSettings": {
-    "themeStyle": "0"
+    "themeStyle": "0",
+    "footerStyle": "0"
   }
 }
