@@ -6,7 +6,7 @@ author: Milton Bolonha
 categories:
   - Freelancing
 image: https://res.cloudinary.com/dmrvxajho/image/upload/v1770935714/io-repo/ai/opnma6hnbpmefaaoaudt.png
-featuredPost: false
+featuredPost: true
 draft: false
 layout: post
 ---
