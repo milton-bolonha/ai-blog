@@ -3,7 +3,7 @@ title: 6 Dicas Para Criar de Maneira Fácil um Portfólio Que Converte
 date: 2026-02-12 20:46:59
 author: Milton Bolonha
 categories:
-  - Career
+  - Carreira
 image: https://res.cloudinary.com/dmrvxajho/image/upload/v1770938526/io-repo/ai/iw8vtbc0ibwicxdsbagx.png
 featuredPost: true
 draft: false
