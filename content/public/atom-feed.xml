@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog-instituto.netlify.app/blog/</id>
     <title>I/O Blog Atom Feed</title>
-    <updated>2026-02-12T21:15:24.436Z</updated>
+    <updated>2026-02-13T01:13:09.591Z</updated>
     <generator>I/O Blog is here to deliver tips and tricks to live a better life. Feed</generator>
     <author>
         <name>I/O Blog</name>
@@ -12,7 +12,7 @@
     <link rel="alternate" href="https://blog-instituto.netlify.app/blog/"/>
     <link rel="self" href="https://blog-instituto.netlify.app/blog/atom-feed.xml"/>
     <subtitle>I/O Blog is here to deliver tips and tricks to live a better life.</subtitle>
-    <logo>https://res.cloudinary.com/dj0et6kq4/image/upload/v1725537988/moderntips/assets/mt_cover_1_w0m81h.png</logo>
+    <logo>https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png</logo>
     <rights>© 2026 I/O Blog. All Rights Reserved.</rights>
     <category term="health"/>
     <entry>

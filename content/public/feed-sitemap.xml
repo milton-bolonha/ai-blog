@@ -7,21 +7,21 @@
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
         <loc>https://blog-instituto.netlify.app/blog/atom-feed.xml</loc>
-        <lastmod>2026-02-12T21:15:24.348Z</lastmod>
+        <lastmod>2026-02-13T01:13:09.563Z</lastmod>
         <image:image>
-        <image:loc>https://res.cloudinary.com/dj0et6kq4/image/upload/v1725537988/moderntips/assets/mt_cover_1_w0m81h.png</image:loc>
+        <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png</image:loc>
       </image:image>
       </url>,<url>
         <loc>https://blog-instituto.netlify.app/blog/rss-feed.xml</loc>
-        <lastmod>2026-02-12T21:15:24.348Z</lastmod>
+        <lastmod>2026-02-13T01:13:09.563Z</lastmod>
         <image:image>
-        <image:loc>https://res.cloudinary.com/dj0et6kq4/image/upload/v1725537988/moderntips/assets/mt_cover_1_w0m81h.png</image:loc>
+        <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png</image:loc>
       </image:image>
       </url>,<url>
         <loc>https://blog-instituto.netlify.app/blog/robots.txt</loc>
-        <lastmod>2026-02-12T21:15:24.348Z</lastmod>
+        <lastmod>2026-02-13T01:13:09.563Z</lastmod>
         <image:image>
-        <image:loc>https://res.cloudinary.com/dj0et6kq4/image/upload/v1725537988/moderntips/assets/mt_cover_1_w0m81h.png</image:loc>
+        <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png</image:loc>
       </image:image>
       </url>
     </urlset>
