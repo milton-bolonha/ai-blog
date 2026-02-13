@@ -2,7 +2,7 @@ const general = require("../../../content/cache/general.json");
 
 // TEMPLATES
 const dataXML = (data) => `<?xml version="1.0" encoding="UTF-8"?>
-      <?xml-stylesheet type="text/xsl" href="/template.xsl"?>
+      <?xml-stylesheet type="text/xsl" href="${general?.siteUrl + general?.scope}/template.xsl"?>
         <!-- Created in ${new Date()} -->
         <urlset
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"

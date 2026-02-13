@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="${general?.siteUrl + general?.scope}/template.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="https://blog-instituto.netlify.app/blog/template.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
-		<loc>https://moderntips.com/page-sitemap.xml</loc>
+		<loc>https://blog-instituto.netlify.app/blog/page-sitemap.xml</loc>
 		<lastmod>2024-12-07T10:02:15.218Z</lastmod>
 	</sitemap>
 	<sitemap>
-		<loc>https://moderntips.com/post-sitemap.xml</loc>
+		<loc>https://blog-instituto.netlify.app/blog/post-sitemap.xml</loc>
 		<lastmod>2024-12-07T10:02:15.218Z</lastmod>
 	</sitemap>
   <sitemap>
-		<loc>https://moderntips.com/stories-sitemap.xml</loc>
+		<loc>https://blog-instituto.netlify.app/blog/stories-sitemap.xml</loc>
 		<lastmod>2024-12-07T10:02:15.218Z</lastmod>
 	</sitemap>
   <sitemap>
-		<loc>https://moderntips.com/feed-sitemap.xml</loc>
+		<loc>https://blog-instituto.netlify.app/blog/feed-sitemap.xml</loc>
 		<lastmod>2024-12-07T10:02:15.218Z</lastmod>
 	</sitemap>
 </sitemapindex>

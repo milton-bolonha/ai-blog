@@ -8,7 +8,7 @@ const general = require(`${appRoot}/content/settings/general.json`);
 const logos = require(`${appRoot}/content/settings/logos.json`);
 
 function sitemaps(scope) {
-  return `<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="${general?.siteUrl + general?.scope}/template.xsl"?>
+  return `<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="${scope}/template.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
 		<loc>${scope}/page-sitemap.xml</loc>
@@ -34,8 +34,8 @@ function feedSitemaps(siteUrl, scope, cardLogo) {
     ? cardLogo
     : siteUrl + scope + "/" + cardLogo;
   return `<?xml version="1.0" encoding="UTF-8"?>
-  <?xml-stylesheet type="text/xsl" href="/template.xsl"?>
-    <!-- Created in Sun Aug 18 2024 19:34:06 GMT+0000 (Coordinated Universal Time) -->
+  <?xml-stylesheet type="text/xsl" href="${scope}/template.xsl"?>
+    <!-- Created in ${new Date()} -->
     <urlset
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd"
@@ -65,7 +65,7 @@ function feedSitemaps(siteUrl, scope, cardLogo) {
 const assembleXML = (data, siteUrl, scope, isStories = false) => {
   const amp = isStories ? ["amp/", ".stories.amp.html"] : ["", ""];
   return `<?xml version="1.0" encoding="UTF-8"?>
-      <?xml-stylesheet type="text/xsl" href="/template.xsl"?>
+      <?xml-stylesheet type="text/xsl" href="${scope}/template.xsl"?>
         <!-- Created in ${new Date()} -->
         <urlset
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
