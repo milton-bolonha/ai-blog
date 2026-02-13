@@ -4,7 +4,7 @@ title: Como Criar um Excelente Perfil Profissional Para Se Destacar Em Um
 date: 2026-02-12 21:30:23
 author: Milton Bolonha
 categories:
-  - Carreer
+  - Carreira
 image: https://res.cloudinary.com/dmrvxajho/image/upload/v1770942369/io-repo/ai/mzzkule3kl10noagseou.png
 featuredPost: true
 draft: false
