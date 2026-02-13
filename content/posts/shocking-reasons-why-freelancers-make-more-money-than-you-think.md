@@ -6,7 +6,7 @@ categories:
   - Freelancing
 image: https://res.cloudinary.com/dmrvxajho/image/upload/v1770935714/io-repo/ai/opnma6hnbpmefaaoaudt.png
 featuredPost: true
-draft: false
+draft: true
 layout: post
 tags:
   - freelancing
