@@ -7,7 +7,7 @@ const cacheSourceFolder = path.join(contentFolder, "cache");
 const general = require("../../../../content/cache/general.json");
 const logos = require("../../../../content/cache/logos.json");
 
-const sitemaps = `<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="/template.xsl"?>
+const sitemaps = `<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="${general?.siteUrl + general?.scope}/template.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
 		<loc>${general?.siteUrl + general?.scope}/page-sitemap.xml</loc>
