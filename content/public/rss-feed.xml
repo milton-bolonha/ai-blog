@@ -4,7 +4,11 @@
         <title>I/O Blog Atom Feed</title>
         <link>https://blog-instituto.netlify.app/blog/</link>
         <description>I/O Blog is here to deliver tips and tricks to live a better life.</description>
+<<<<<<< HEAD
         <lastBuildDate>Tue, 17 Feb 2026 01:41:22 GMT</lastBuildDate>
+=======
+        <lastBuildDate>Tue, 17 Feb 2026 01:38:03 GMT</lastBuildDate>
+>>>>>>> f9deb8c0d4e647df27a89410deb5cb300dcfdf18
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>I/O Blog is here to deliver tips and tricks to live a better life. Feed</generator>
         <language>pt-br</language>
