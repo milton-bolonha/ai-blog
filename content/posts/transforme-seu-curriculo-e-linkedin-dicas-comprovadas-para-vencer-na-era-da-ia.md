@@ -1,24 +1,22 @@
 ---
-title: >-
-  Transforme Seu Currículo e LinkedIn: Dicas Comprovadas para Vencer na Era da
-  IA
-author: Juliana Ribeiro
+title: "Transforme Seu Currículo e LinkedIn: Dicas Comprovadas para Vencer na
+  Era da IA"
+date: 2026-02-17T13:52:22.768Z
+author: Milton Bolonha
 categories:
   - Carreira
   - Tecnologia
   - Networking
+image: https://res.cloudinary.com/dmrvxajho/image/upload/v1771336342/io-repo/ai/j8so6mtyj1rvscpqfn8i.png
+featuredPost: true
+draft: false
+layout: post
 tags:
   - Currículo
   - LinkedIn
   - Inteligência Artificial
   - Emprego
   - Networking
-date: '2026-02-17T13:52:22.768Z'
-image: >-
-  https://res.cloudinary.com/dmrvxajho/image/upload/v1771336340/io-repo/ai/p8n8n1dl33ombhplvb2a.png
-draft: true
-featuredPost: false
-layout: post
 ---
 
 Seu currículo e perfil no LinkedIn estão prontos para a era da Inteligência Artificial? Continue lendo para saber como ajustá-los e se destacar! 
