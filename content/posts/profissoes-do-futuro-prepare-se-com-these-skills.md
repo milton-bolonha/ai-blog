@@ -1,21 +1,18 @@
 ---
-title: 'Profissões do Futuro: Prepare-se com These Skills'
-author: Isabela Albuquerque
+title: "Profissões do Futuro: Prepare-se com Essas Skills"
+date: 2026-02-17T13:55:16.113Z
+author: Milton Bolonha
 categories:
   - Carreira
-  - Mentoria
-  - Mercado de Trabalho
+image: https://res.cloudinary.com/dmrvxajho/image/upload/v1771336512/io-repo/ai/hix6muabklsbyrgbvas9.png
+featuredPost: false
+draft: true
+layout: post
 tags:
   - Soft Skills
   - Hard Skills
   - Profissional do Futuro
   - FIAP
-date: '2026-02-17T13:55:16.113Z'
-image: >-
-  https://res.cloudinary.com/dmrvxajho/image/upload/v1771336512/io-repo/ai/hix6muabklsbyrgbvas9.png
-draft: true
-featuredPost: false
-layout: post
 ---
 
 Sejam muito bem-vindos a mais um Carup! Hoje vamos falar sobre o mercado de trabalho e o profissional do futuro, focando nas skills necessárias para se destacar. Continue lendo e descubra como crescer profissionalmente com as dicas abaixo.
