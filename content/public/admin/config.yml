@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  repo: mt
+  repo: ai-blog
   branch: master
   site_domain: https://blog-instituto.netlify.app/blog
 
