@@ -1,20 +1,17 @@
 ---
-title: 'Transição de Carreira no Mercado Tec: Guia Completo para Sucesso'
-author: João Paulo Almeida
+title: "Transição de Carreira no Mercado Tec: Guia Completo para Sucesso"
+date: 2026-02-17T14:02:31.747Z
+author: Milton Bolonha
 categories:
   - Carreira
-  - Tecnologia
-  - Treinamento Profissional
+image: https://res.cloudinary.com/dmrvxajho/image/upload/v1771336949/io-repo/ai/rcbrkpg2d0pibtyvyzem.png
+featuredPost: false
+draft: false
+layout: post
 tags:
   - transição de carreira
   - mercado tec
   - psicologia educacional
-date: '2026-02-17T14:02:31.747Z'
-image: >-
-  https://res.cloudinary.com/dmrvxajho/image/upload/v1771336949/io-repo/ai/rcbrkpg2d0pibtyvyzem.png
-draft: true
-featuredPost: false
-layout: post
 ---
 
 # Transição de Carreira no Mercado Tec: Guia Completo para Sucesso
@@ -23,10 +20,7 @@ layout: post
 
 ![Transição de Carreira no Mercado Tec: Guia Completo para Sucesso](https://res.cloudinary.com/dmrvxajho/image/upload/v1771336950/io-repo/ai/hwrzpmqjwoirv33vb4w1.png)
 
-## Iniciar um Novo Carreup: Vamos Lá!
-Hoje estamos aqui para trocar uma ideia sobre esse tema recorrente: o mercado tec e a transição de carreira. Para quem não conhece, o Talent Lab é responsável pelo sucesso dos alunos, trabalhando com três pilares fundamentais: carreira e mercado, bem-estar, e parcerias e conexões.
-
-## Três Pilares do Talent Lab: Apoio ao Aluno
+## Apoio ao Aluno
 No pilar de bem-estar, recebemos alunos que passam por dificuldades emocionais, o que pode impactar o aprendizado. No pilar de carreira e mercado, auxiliamos com vagas, preparação para entrevistas, currículos, LinkedIn e transição de carreira. No pilar de parcerias, oferecemos experiências internacionais e benefícios aos alunos.
 
 ## Transição de Carreira: Adaptação em Primeiro Lugar
@@ -52,5 +46,3 @@ Seja paciente e reconheça o valor das suas experiências passadas, aplicando-as
 
 ## Finalizando: Seja Seu Próprio Motivo
 Aceite os desafios, valorize aprendizados e motive-se constantemente. Contextualize sua história, aprenda com ela e construa uma narrativa única e em evolução no mundo do tec.
-
-**Acompanhe-nos no Talent Lab no LinkedIn para mais dicas e suporte na sua transição de carreira. Estamos aqui para ajudar!**
