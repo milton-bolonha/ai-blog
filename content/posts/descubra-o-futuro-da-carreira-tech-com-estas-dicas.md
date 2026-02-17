@@ -4,7 +4,7 @@ date: 2026-02-17T02:06:32.336Z
 author: Milton Bolonha
 categories:
   - Carreira
-image: https://res.cloudinary.com/dmrvxajho/image/upload/v1771293991/io-repo/ai/gdvlxqdivvibghc02ev3.png
+image: https://res.cloudinary.com/dmrvxajho/image/upload/v1770942371/io-repo/ai/exlnzi778pahg1fcwa4h.png
 featuredPost: false
 draft: false
 layout: post
