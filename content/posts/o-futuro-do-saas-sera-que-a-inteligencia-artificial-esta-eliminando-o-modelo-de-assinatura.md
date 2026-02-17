@@ -6,8 +6,8 @@ author: Milton Bolonha
 categories:
   - SAAS
 image: https://res.cloudinary.com/dmrvxajho/image/upload/v1771354551/io-repo/ai/fxaegi5r90fgje5myvgg.png
-featuredPost: false
-draft: true
+featuredPost: true
+draft: false
 layout: post
 tags:
   - SaaS
