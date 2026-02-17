@@ -2,34 +2,18 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<sitemap>
 		<loc>https://blog-instituto.netlify.app/blog/page-sitemap.xml</loc>
-<<<<<<< HEAD
-		<lastmod>2026-02-17T01:41:22.640Z</lastmod>
+		<lastmod>2026-02-17T02:08:16.967Z</lastmod>
 	</sitemap>
 	<sitemap>
 		<loc>https://blog-instituto.netlify.app/blog/post-sitemap.xml</loc>
-		<lastmod>2026-02-17T01:41:22.643Z</lastmod>
+		<lastmod>2026-02-17T02:08:16.967Z</lastmod>
 	</sitemap>
   <sitemap>
 		<loc>https://blog-instituto.netlify.app/blog/stories-sitemap.xml</loc>
-		<lastmod>2026-02-17T01:41:22.643Z</lastmod>
+		<lastmod>2026-02-17T02:08:16.967Z</lastmod>
 	</sitemap>
   <sitemap>
 		<loc>https://blog-instituto.netlify.app/blog/feed-sitemap.xml</loc>
-		<lastmod>2026-02-17T01:41:22.643Z</lastmod>
-=======
-		<lastmod>2026-02-17T01:38:03.156Z</lastmod>
-	</sitemap>
-	<sitemap>
-		<loc>https://blog-instituto.netlify.app/blog/post-sitemap.xml</loc>
-		<lastmod>2026-02-17T01:38:03.156Z</lastmod>
-	</sitemap>
-  <sitemap>
-		<loc>https://blog-instituto.netlify.app/blog/stories-sitemap.xml</loc>
-		<lastmod>2026-02-17T01:38:03.156Z</lastmod>
-	</sitemap>
-  <sitemap>
-		<loc>https://blog-instituto.netlify.app/blog/feed-sitemap.xml</loc>
-		<lastmod>2026-02-17T01:38:03.156Z</lastmod>
->>>>>>> f9deb8c0d4e647df27a89410deb5cb300dcfdf18
+		<lastmod>2026-02-17T02:08:16.967Z</lastmod>
 	</sitemap>
 </sitemapindex>
