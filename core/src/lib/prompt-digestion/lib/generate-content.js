@@ -265,9 +265,10 @@ const MD = {
 
     const postFrontmatter = {
       title: aiResponse.title,
-      author: aiResponse.author,
-      categories:
-        aiResponse.categories || frontmatter.categories || "Uncategorized",
+      author: frontmatter.author || aiResponse.author,
+      categories: frontmatter.category
+        ? [frontmatter.category]
+        : aiResponse.categories || frontmatter.categories || ["Uncategorized"],
       tags: aiResponse.tag || aiResponse.tags || frontmatter.tags || [],
       date: new Date().toISOString(),
       image: postImgsUrl[0]?.mainImg || "cover.jpg",
