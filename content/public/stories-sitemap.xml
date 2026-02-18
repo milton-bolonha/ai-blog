@@ -1,11 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
       <?xml-stylesheet type="text/xsl" href="https://blog-instituto.netlify.app/blog//template.xsl"?>
-        <!-- Created in Mon Feb 16 2026 23:07:55 GMT-0300 (Horário Padrão de Brasília) -->
+        <!-- Created in Wed Feb 18 2026 11:51:48 GMT-0300 (Horário Padrão de Brasília) -->
         <urlset
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd"
           xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           <url>
+            <loc>https://blog-instituto.netlify.app/blog/amp/o-futuro-do-saas-sera-que-a-inteligencia-artificial-esta-eliminando-o-modelo-de-assinatura.stories.amp.html</loc>
+            <lastmod>2026-02-17T18:55:56.248Z</lastmod>
+            <image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1771354551/io-repo/ai/fxaegi5r90fgje5myvgg.png</image:loc>
+          </image:image><image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1771354552/io-repo/ai/ulxnuwmiew7r9mypjzsa.png</image:loc>
+          </image:image>,<image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1771354554/io-repo/ai/gq15qvhtvj5ybqnqf1yr.png</image:loc>
+          </image:image>,<image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1771354555/io-repo/ai/rwaaf4r4hdmogbverk4z.png</image:loc>
+          </image:image>
+          </url>,<url>
+            <loc>https://blog-instituto.netlify.app/blog/amp/descubra-o-segredo-das-carreiras-de-sucesso-em-tecnologia.stories.amp.html</loc>
+            <lastmod>2026-02-17T14:08:40.152Z</lastmod>
+            <image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1771337319/io-repo/ai/mdxchlz5eoyyhjszswjq.png</image:loc>
+          </image:image>
+          </url>,<url>
+            <loc>https://blog-instituto.netlify.app/blog/amp/transicao-de-carreira-no-mercado-tec-guia-completo-para-sucesso.stories.amp.html</loc>
+            <lastmod>2026-02-17T14:02:31.747Z</lastmod>
+            <image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1771336949/io-repo/ai/rcbrkpg2d0pibtyvyzem.png</image:loc>
+          </image:image><image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1771336950/io-repo/ai/hwrzpmqjwoirv33vb4w1.png</image:loc>
+          </image:image>
+          </url>,<url>
+            <loc>https://blog-instituto.netlify.app/blog/amp/transforme-seu-curriculo-e-linkedin-dicas-comprovadas-para-vencer-na-era-da-ia.stories.amp.html</loc>
+            <lastmod>2026-02-17T13:52:22.768Z</lastmod>
+            <image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1771336342/io-repo/ai/j8so6mtyj1rvscpqfn8i.png</image:loc>
+          </image:image><image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1771336342/io-repo/ai/j8so6mtyj1rvscpqfn8i.png</image:loc>
+          </image:image>
+          </url>,<url>
+            <loc>https://blog-instituto.netlify.app/blog/amp/descubra-o-futuro-da-carreira-tech-com-estas-dicas.stories.amp.html</loc>
+            <lastmod>2026-02-17T02:06:32.336Z</lastmod>
+            <image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1770942371/io-repo/ai/exlnzi778pahg1fcwa4h.png</image:loc>
+          </image:image>
+          </url>,<url>
             <loc>https://blog-instituto.netlify.app/blog/amp/como-criar-um-excelente-perfil-profissional-para-se-destacar-em-um-ambiente-competitivo.stories.amp.html</loc>
             <lastmod>2026-02-12T21:30:23.000Z</lastmod>
             <image:image>

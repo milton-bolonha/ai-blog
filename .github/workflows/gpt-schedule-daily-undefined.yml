@@ -52,4 +52,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
         run: |
-          git push https://$GITHUB_TOKEN@github.com/milton-bolonha/mt.git HEAD:master
+          git push https://$GITHUB_TOKEN@github.com/milton-bolonha/ai-blog.git HEAD:master
