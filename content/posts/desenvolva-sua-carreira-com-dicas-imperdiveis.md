@@ -1,21 +1,17 @@
 ---
 title: Desenvolva sua Carreira com Dicas Imperdíveis!
+date: 2026-02-18T14:09:12.834Z
 author: Milton Bolonha
 categories:
   - Carreira
-  - Freelancer
-  - Programação
-  - Desenvolvimento AI
+image: https://res.cloudinary.com/dmrvxajho/image/upload/v1771423752/io-repo/ai/z9cnmu3iz2lyxfz1fvtq.png
+featuredPost: false
+draft: false
+layout: post
 tags:
   - carreira
   - freelancer
   - desenvolvimento
-date: '2026-02-18T14:09:12.834Z'
-image: >-
-  https://res.cloudinary.com/dmrvxajho/image/upload/v1771423752/io-repo/ai/z9cnmu3iz2lyxfz1fvtq.png
-draft: true
-featuredPost: false
-layout: post
 ---
 
 Inicie sua jornada rumo ao sucesso profissional com as nossas dicas exclusivas! Continue lendo e descubra como crescer na sua carreira com as orientações abaixo.
@@ -55,8 +51,3 @@ Em um mundo onde a tecnologia avança a passos largos, programadores full stack 
 - **Contribua com código aberto:** Envolver-se com a comunidade ajuda a aumentar a visibilidade e aprimorar suas habilidades.
 
 A carreira em áreas tecnológicas pode ser desafiadora, mas com as orientações corretas, o sucesso fica muito mais próximo. Avance com confiança rumo a um futuro promissor na sua rotina profissional!
-
-### Citations
-1. [Artigo 1 sobre carreira](https://example.com/carreira-dicas)
-2. [Artigo 2 sobre freelancers](https://example.com/freelancers-oportunidades)
-3. [Artigo 3 sobre programadores full stack](https://example.com/full-stack)
