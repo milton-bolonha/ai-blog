@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
       <?xml-stylesheet type="text/xsl" href="https://blog-instituto.netlify.app/blog//template.xsl"?>
-        <!-- Created in Thu Feb 19 2026 09:56:55 GMT+0000 (Coordinated Universal Time) -->
+        <!-- Created in Mon Mar 23 2026 11:38:41 GMT-0300 (Horário Padrão de Brasília) -->
         <urlset
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd"
           xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           <url>
+            <loc>https://blog-instituto.netlify.app/blog/amp/desenvolva-sua-carreira-com-dicas-imperdiveis.stories.amp.html</loc>
+            <lastmod>2026-02-18T14:09:12.834Z</lastmod>
+            <image:image>
+            <image:loc>https://res.cloudinary.com/dmrvxajho/image/upload/v1771423752/io-repo/ai/z9cnmu3iz2lyxfz1fvtq.png</image:loc>
+          </image:image>
+          </url>,<url>
             <loc>https://blog-instituto.netlify.app/blog/amp/o-futuro-do-saas-sera-que-a-inteligencia-artificial-esta-eliminando-o-modelo-de-assinatura.stories.amp.html</loc>
             <lastmod>2026-02-17T18:55:56.248Z</lastmod>
             <image:image>

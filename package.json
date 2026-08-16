@@ -64,6 +64,7 @@
     "@netlify/plugin-sitemap": "^0.8.1",
     "@next/bundle-analyzer": "16.1.6",
     "@stackbit/cms-git": "^1.0.6",
+    "@types/three": "^0.183.1",
     "chokidar": "^3.6.0",
     "concurrently": "^9.2.1",
     "eslint": "^9.39.2",
@@ -84,6 +85,7 @@
     "react": "^19.2.4",
     "react-cookie-consent": "^9.0.0",
     "react-dom": "^19.2.4",
+    "three": "^0.183.2",
     "youtube-captions-scraper": "^2.0.3",
     "youtube-transcript": "^1.2.1"
   }
