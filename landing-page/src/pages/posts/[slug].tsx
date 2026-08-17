@@ -96,41 +96,50 @@ const Post = ({ postData, seoSettings }: PostProps) => {
         ) : (
           <>
             <ClientOnly>
-              <SignedOut>
+              {process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ? (
+                <>
+                  <SignedOut>
+                    <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                      <strong className="font-bold">Access Denied!</strong>
+                      <span className="block sm:inline"> This is a private post. Please log in to view it.</span>
+                    </div>
+                    <div className="mt-4 text-center">
+                      <CustomSignInButton />
+                    </div>
+                  </SignedOut>
+                  <SignedIn>
+                    <div className="flex flex-col md:flex-row gap-8 justify-center items-start">
+                      <div className="md:w-1/2 flex flex-col items-center">
+                        <ReactMarkdown
+                          remarkPlugins={[remarkGfm]}
+                          components={{
+                            img: ImageRenderer,
+                            p: ParagraphRenderer,
+                          }}
+                        >
+                          {postData.content.split('\n').filter(line => line.startsWith('!')).join('\n')}
+                        </ReactMarkdown>
+                      </div>
+                      <div className="md:w-1/2 flex flex-col items-start">
+                        <ReactMarkdown
+                          remarkPlugins={[remarkGfm]}
+                          components={{
+                            p: ParagraphRenderer,
+                            img: () => null, 
+                          }}
+                        >
+                          {postData.content.split('\n').filter(line => !line.startsWith('!')).join('\n')}
+                        </ReactMarkdown>
+                      </div>
+                    </div>
+                  </SignedIn>
+                </>
+              ) : (
                 <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
                   <strong className="font-bold">Access Denied!</strong>
-                  <span className="block sm:inline"> This is a private post. Please log in to view it.</span>
+                  <span className="block sm:inline"> This is a private post.</span>
                 </div>
-                <div className="mt-4 text-center">
-                  <CustomSignInButton />
-                </div>
-              </SignedOut>
-              <SignedIn>
-                <div className="flex flex-col md:flex-row gap-8 justify-center items-start">
-                  <div className="md:w-1/2 flex flex-col items-center">
-                    <ReactMarkdown
-                      remarkPlugins={[remarkGfm]}
-                      components={{
-                        img: ImageRenderer,
-                        p: ParagraphRenderer,
-                      }}
-                    >
-                      {postData.content.split('\n').filter(line => line.startsWith('!')).join('\n')}
-                    </ReactMarkdown>
-                  </div>
-                  <div className="md:w-1/2 flex flex-col items-start">
-                    <ReactMarkdown
-                      remarkPlugins={[remarkGfm]}
-                      components={{
-                        p: ParagraphRenderer,
-                        img: () => null, 
-                      }}
-                    >
-                      {postData.content.split('\n').filter(line => !line.startsWith('!')).join('\n')}
-                    </ReactMarkdown>
-                  </div>
-                </div>
-              </SignedIn>
+              )}
             </ClientOnly>
           </>
         )}

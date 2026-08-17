@@ -5,10 +5,11 @@ import { FaCheckCircle, FaExternalLinkAlt, FaPlus, FaCode, FaDatabase, FaServer,
 import Link from 'next/link';
 import { PostData } from '@/lib/posts';
 import { normalizeImage } from '@/lib/media';
+import { BsOpenai, BsAmazon } from 'react-icons/bs';
 import {
-    SiNextdotjs, SiOpenai, SiMongodb, SiClerk, SiStripe, SiTailwindcss,
+    SiNextdotjs, SiMongodb, SiClerk, SiStripe, SiTailwindcss,
     SiReact, SiPrisma, SiPostgresql, SiVercel, SiTypescript, SiJavascript,
-    SiNodedotjs, SiPython, SiDocker, SiAmazon, SiGooglecloud, SiFirebase
+    SiNodedotjs, SiPython, SiDocker, SiGooglecloud, SiFirebase
 } from 'react-icons/si';
 
 interface TechnicalSidebarProps {
@@ -75,7 +76,7 @@ export const TechnicalSidebar = ({ specs, images, title, link, technologies, rel
     const getTechIcon = (tech: string) => {
         const lower = tech.toLowerCase().trim();
         if (lower.includes('next')) return <SiNextdotjs className="text-white hover:text-white" />;
-        if (lower.includes('openai') || lower.includes('gpt')) return <SiOpenai className="text-green-400 hover:text-green-300" />;
+        if (lower.includes('openai') || lower.includes('gpt')) return <BsOpenai className="text-green-400 hover:text-green-300" />;
         if (lower.includes('mongo')) return <SiMongodb className="text-green-500 hover:text-green-400" />;
         if (lower.includes('clerk')) return <FaCheckCircle className="text-blue-400" />; // No simple icon for Clerk yet, fallback
         if (lower.includes('stripe')) return <SiStripe className="text-purple-400 hover:text-purple-300" />;
@@ -88,7 +89,7 @@ export const TechnicalSidebar = ({ specs, images, title, link, technologies, rel
         if (lower.includes('javascript')) return <SiJavascript className="text-yellow-400" />;
         if (lower.includes('node')) return <SiNodedotjs className="text-green-500" />;
         if (lower.includes('docker')) return <SiDocker className="text-blue-500" />;
-        if (lower.includes('aws')) return <SiAmazon className="text-yellow-500" />;
+        if (lower.includes('aws')) return <BsAmazon className="text-yellow-500" />;
         if (lower.includes('firebase')) return <SiFirebase className="text-yellow-400" />;
         if (lower.includes('python')) return <SiPython className="text-blue-400" />;
         return <FaCode className="text-gray-400" />;

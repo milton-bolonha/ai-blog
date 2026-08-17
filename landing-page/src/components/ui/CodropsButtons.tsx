@@ -204,7 +204,7 @@ export const RippleButton: React.FC<ButtonProps> = ({
       {...props}
     >
       {children}
-      <style jsx>{`
+      <style>{`
         .ripple-effect {
           position: absolute;
           border-radius: 50%;

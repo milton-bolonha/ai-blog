@@ -19,7 +19,7 @@ export const Layout = ({ children }: LayoutProps) => {
       <FloatingContactButton />
       {/* <SectionNavigator /> */}
       <GlobalClickFeedback />
-      <style jsx global>{`
+      <style>{`
         body {
           background-color: #000000;
         }

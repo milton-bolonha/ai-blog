@@ -4,7 +4,7 @@
         <title>I/O Blog Atom Feed</title>
         <link>https://blog-instituto.netlify.app/blog/</link>
         <description>I/O Blog is here to deliver tips and tricks to live a better life.</description>
-        <lastBuildDate>Mon, 23 Mar 2026 14:38:41 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 17 Aug 2026 01:55:51 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>I/O Blog is here to deliver tips and tricks to live a better life. Feed</generator>
         <language>pt-br</language>
@@ -363,7 +363,7 @@
             <title><![CDATA[Terms and Conditions]]></title>
             <link>https://blog-instituto.netlify.app/blog/terms-and-conditions</link>
             <guid>https://blog-instituto.netlify.app/blog/terms-and-conditions</guid>
-            <pubDate>Mon, 23 Mar 2026 14:38:33 GMT</pubDate>
+            <pubDate>Mon, 17 Aug 2026 01:55:49 GMT</pubDate>
             <description><![CDATA[Please read these Terms of Use (“Terms”, “Terms of Use”) carefully before using the https://blog-instituto.netlify.app/blog website (the “Service”) operated by I/O Blog (“us”, “we”, or “our”).]]></description>
             <content:encoded><![CDATA[<p>Last updated: December 31, 2019</p>
 <p>Please read these Terms and Conditions (“Terms”, “Terms and Conditions”) carefully before using the https://www.moderntips.com website (the “Service”) operated by I/O Blog (“us”, “we”, or “our”).</p>
@@ -401,10 +401,40 @@
             <enclosure url="https://blog-instituto.netlify.app/blog/https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png" length="0" type="image/png"/>
         </item>
         <item>
+            <title><![CDATA[About Us]]></title>
+            <link>https://blog-instituto.netlify.app/blog/about-us</link>
+            <guid>https://blog-instituto.netlify.app/blog/about-us</guid>
+            <pubDate>Mon, 17 Aug 2026 01:55:49 GMT</pubDate>
+            <description><![CDATA[I/O Blog is here to deliver tips and tricks to live a better life.]]></description>
+            <content:encoded><![CDATA[<h2 id="aboutus">About Us</h2>
+<p><strong>I/O Blog is here to deliver tips and tricks to live a better life.</strong> We cover a broad range of topics including finance, health, and travel to help enhance your everyday life. We’re passionate about spreading meaningful content that makes an immediate and noticeable difference in your life.</p>
+<p>Our writers aim to produce content that improves everyday lives. We understand how inside tips and tricks in the financial, health, and travel world can be extraordinarily powerful. We’re here to educate and inform so you can live your best life.</p>
+<p><strong>I/O Blog delivers understandable and usable information for people in all stages of life.</strong> From seniors to newly married couples who are learning to make a family budget, I/O Blog has valuable content you need to succeed. Our contributors enjoy researching the best in finance, health, and travel. We cover content on improving your credit, career, investments and how to live frugally, be healthy, and make the most of your travels. Look to I/O Blog before you make decisions – we’re providing the best tips for you and your family.</p>
+<h2 id="contactus">Contact Us</h2>
+<p>I/O Blog<br />
+PO Box 515381<br />
+Los Angeles, CA 90051-6681<br />
+<a href="mailto:mailinfo@moderntips.com">info@moderntips.com</a></p>]]></content:encoded>
+            <author>miltonbolonha@gmail.com (I/O Blog)</author>
+            <enclosure url="https://blog-instituto.netlify.app/blog/https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png" length="0" type="image/png"/>
+        </item>
+        <item>
+            <title><![CDATA[Advertising Disclosure]]></title>
+            <link>https://blog-instituto.netlify.app/blog/advertising-disclosure</link>
+            <guid>https://blog-instituto.netlify.app/blog/advertising-disclosure</guid>
+            <pubDate>Mon, 17 Aug 2026 01:55:49 GMT</pubDate>
+            <description><![CDATA[I/O Blog.com has a financial relationship with some of the companies mentioned throughout the site and this site may be compensated through the credit card issuer or advertiser’s partner programs.]]></description>
+            <content:encoded><![CDATA[<p>moderntips.com has a financial relationship with some of the companies mentioned throughout the site and this site may be compensated through the credit card issuer or advertiser’s partner programs. We do not make recommendations based on these relationships alone. Compensation may impact which companies we review and write about and how and where products appear on this site (including, for example, the order in which they appear).</p>
+<h2 id="disclaimer">Disclaimer:</h2>
+<p>We try to keep information accurate and up to date, however we cannot make warranties regarding the accuracy of our information. Opinions expressed here are author’s alone, not those of the financial institution, lender, credit card issuer, advertiser, business, service provider, etc. and have not been reviewed, approved, or otherwise endorsed by the respective company. Please verify FDIC Insurance / NCUA Insurance status, credit card information, and interest rates during the application process. We strongly suggest you read the terms of use and privacy policies of advertised companies as they may be substantially different than I/O Blog policies.</p>]]></content:encoded>
+            <author>miltonbolonha@gmail.com (I/O Blog)</author>
+            <enclosure url="https://blog-instituto.netlify.app/blog/https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png" length="0" type="image/png"/>
+        </item>
+        <item>
             <title><![CDATA[Privacy Policy]]></title>
             <link>https://blog-instituto.netlify.app/blog/privacy-policy</link>
             <guid>https://blog-instituto.netlify.app/blog/privacy-policy</guid>
-            <pubDate>Mon, 23 Mar 2026 14:38:33 GMT</pubDate>
+            <pubDate>Mon, 17 Aug 2026 01:55:49 GMT</pubDate>
             <description><![CDATA[Privacy police for I/O Blog blog.]]></description>
             <content:encoded><![CDATA[<p>Effective date: December 31, 2019</p>
 <p>I/O Blog (“us”, “we”, or “our”) operates the https://www.moderntips.com website (hereinafter referred to as the “Service”).</p>
@@ -545,36 +575,6 @@
 <li>By visiting this page on our website: https://www.moderntips.com/about/</li>
 <li>By mail: PO Box 515381, Los Angeles, CA 90051-6681</li>
 </ul>]]></content:encoded>
-            <author>miltonbolonha@gmail.com (I/O Blog)</author>
-            <enclosure url="https://blog-instituto.netlify.app/blog/https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png" length="0" type="image/png"/>
-        </item>
-        <item>
-            <title><![CDATA[Advertising Disclosure]]></title>
-            <link>https://blog-instituto.netlify.app/blog/advertising-disclosure</link>
-            <guid>https://blog-instituto.netlify.app/blog/advertising-disclosure</guid>
-            <pubDate>Mon, 23 Mar 2026 14:38:33 GMT</pubDate>
-            <description><![CDATA[I/O Blog.com has a financial relationship with some of the companies mentioned throughout the site and this site may be compensated through the credit card issuer or advertiser’s partner programs.]]></description>
-            <content:encoded><![CDATA[<p>moderntips.com has a financial relationship with some of the companies mentioned throughout the site and this site may be compensated through the credit card issuer or advertiser’s partner programs. We do not make recommendations based on these relationships alone. Compensation may impact which companies we review and write about and how and where products appear on this site (including, for example, the order in which they appear).</p>
-<h2 id="disclaimer">Disclaimer:</h2>
-<p>We try to keep information accurate and up to date, however we cannot make warranties regarding the accuracy of our information. Opinions expressed here are author’s alone, not those of the financial institution, lender, credit card issuer, advertiser, business, service provider, etc. and have not been reviewed, approved, or otherwise endorsed by the respective company. Please verify FDIC Insurance / NCUA Insurance status, credit card information, and interest rates during the application process. We strongly suggest you read the terms of use and privacy policies of advertised companies as they may be substantially different than I/O Blog policies.</p>]]></content:encoded>
-            <author>miltonbolonha@gmail.com (I/O Blog)</author>
-            <enclosure url="https://blog-instituto.netlify.app/blog/https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png" length="0" type="image/png"/>
-        </item>
-        <item>
-            <title><![CDATA[About Us]]></title>
-            <link>https://blog-instituto.netlify.app/blog/about-us</link>
-            <guid>https://blog-instituto.netlify.app/blog/about-us</guid>
-            <pubDate>Mon, 23 Mar 2026 14:38:33 GMT</pubDate>
-            <description><![CDATA[I/O Blog is here to deliver tips and tricks to live a better life.]]></description>
-            <content:encoded><![CDATA[<h2 id="aboutus">About Us</h2>
-<p><strong>I/O Blog is here to deliver tips and tricks to live a better life.</strong> We cover a broad range of topics including finance, health, and travel to help enhance your everyday life. We’re passionate about spreading meaningful content that makes an immediate and noticeable difference in your life.</p>
-<p>Our writers aim to produce content that improves everyday lives. We understand how inside tips and tricks in the financial, health, and travel world can be extraordinarily powerful. We’re here to educate and inform so you can live your best life.</p>
-<p><strong>I/O Blog delivers understandable and usable information for people in all stages of life.</strong> From seniors to newly married couples who are learning to make a family budget, I/O Blog has valuable content you need to succeed. Our contributors enjoy researching the best in finance, health, and travel. We cover content on improving your credit, career, investments and how to live frugally, be healthy, and make the most of your travels. Look to I/O Blog before you make decisions – we’re providing the best tips for you and your family.</p>
-<h2 id="contactus">Contact Us</h2>
-<p>I/O Blog<br />
-PO Box 515381<br />
-Los Angeles, CA 90051-6681<br />
-<a href="mailto:mailinfo@moderntips.com">info@moderntips.com</a></p>]]></content:encoded>
             <author>miltonbolonha@gmail.com (I/O Blog)</author>
             <enclosure url="https://blog-instituto.netlify.app/blog/https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png" length="0" type="image/png"/>
         </item>

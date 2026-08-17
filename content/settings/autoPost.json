@@ -1,8 +1,8 @@
 {
-  "aiUrlFrequency": "Daily",
+  "aiUrlFrequency": "Off",
   "weeklyPostDay": null,
   "everyXDays": "",
-  "autoPostHourTime": 5,
+  "autoPostHourTime": "",
   "autoPostMinutesTime": 0,
   "timezone": "UTC-08:00 (Los Angeles, Pacific Time)",
   "aiUrlSource": [

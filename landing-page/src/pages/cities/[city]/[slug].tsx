@@ -219,27 +219,36 @@ const CityCatalogItem = ({ postData, seoSettings, city, relatedPosts }: CityPost
                                 ) : (
                                     <div className="max-w-2xl mx-auto my-8">
                                         <ClientOnly>
-                                            <SignedOut>
+                                            {process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ? (
+                                                <>
+                                                    <SignedOut>
+                                                        <div className="bg-red-900/10 border border-red-500/20 text-red-200 px-8 py-10 rounded-2xl text-center backdrop-blur-sm">
+                                                            <h3 className="text-2xl font-bold mb-4">Acesso Restrito em {city.name} 🔒</h3>
+                                                            <p className="mb-8 text-white/70">Este conteúdo é exclusivo para membros. Faça login para continuar.</p>
+                                                            <CustomSignInButton />
+                                                        </div>
+                                                    </SignedOut>
+                                                    <SignedIn>
+                                                        <div className="prose prose-lg prose-invert max-w-none">
+                                                            <ReactMarkdown
+                                                                remarkPlugins={[remarkGfm]}
+                                                                rehypePlugins={[rehypeRaw]}
+                                                                components={{
+                                                                    img: ImageRenderer,
+                                                                    p: ParagraphRenderer,
+                                                                }}
+                                                            >
+                                                                {contentWithoutTable}
+                                                            </ReactMarkdown>
+                                                        </div>
+                                                    </SignedIn>
+                                                </>
+                                            ) : (
                                                 <div className="bg-red-900/10 border border-red-500/20 text-red-200 px-8 py-10 rounded-2xl text-center backdrop-blur-sm">
                                                     <h3 className="text-2xl font-bold mb-4">Acesso Restrito em {city.name} 🔒</h3>
-                                                    <p className="mb-8 text-white/70">Este conteúdo é exclusivo para membros. Faça login para continuar.</p>
-                                                    <CustomSignInButton />
+                                                    <p className="mb-8 text-white/70">Este conteúdo é exclusivo para membros.</p>
                                                 </div>
-                                            </SignedOut>
-                                            <SignedIn>
-                                                <div className="prose prose-lg prose-invert max-w-none">
-                                                    <ReactMarkdown
-                                                        remarkPlugins={[remarkGfm]}
-                                                        rehypePlugins={[rehypeRaw]}
-                                                        components={{
-                                                            img: ImageRenderer,
-                                                            p: ParagraphRenderer,
-                                                        }}
-                                                    >
-                                                        {contentWithoutTable}
-                                                    </ReactMarkdown>
-                                                </div>
-                                            </SignedIn>
+                                            )}
                                         </ClientOnly>
                                     </div>
                                 )}

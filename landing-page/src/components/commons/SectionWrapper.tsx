@@ -49,7 +49,7 @@ export const SectionWrapper = ({
 export const ScrollContainer = ({ children }: { children: ReactNode }) => {
   return (
     <div className="">
-      <style jsx global>{`
+      <style>{`
         /* Custom scrollbar */
         ::-webkit-scrollbar {
           width: 6px;
