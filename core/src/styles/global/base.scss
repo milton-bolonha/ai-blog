@@ -87,6 +87,8 @@ img::selection {
   align-items: center;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Federo&family=Tenor+Sans&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
@@ -95,8 +97,9 @@ body {
   overflow-y: auto;
   position: relative;
   z-index: 1;
-  // background: $primary__colorTwo;
-  background-color: $background_white;
+  background-color: #f4ece4 !important;
+  color: #1d2d44 !important;
+  font-family: 'Tenor Sans', sans-serif !important;
 
   cursor: default;
   h1,
@@ -105,7 +108,6 @@ body {
   h4,
   h5,
   p {
-    user-select: none;
     overflow-wrap: break-word;
   }
   h1,
@@ -113,9 +115,9 @@ body {
   h3,
   h4,
   h5 {
-    font-family: $main__font, $alternative__font;
-    color: $black;
-    font-weight: 700;
+    font-family: 'Federo', serif !important;
+    color: #1d2d44 !important;
+    font-weight: 400 !important;
     letter-spacing: normal;
   }
 
@@ -135,11 +137,11 @@ body {
     font-size: $h5__fontSize;
   }
   strong {
-    font-weight: 900;
+    font-weight: 700;
   }
   p {
-    font-family: $main__font;
-    color: $black;
+    font-family: 'Tenor Sans', sans-serif !important;
+    color: #3b5068 !important;
   }
   thead,
   tbody {
@@ -158,59 +160,57 @@ body {
 }
 
 a {
-  color: $black;
-  font-weight: 900;
-}
-[data-theme="dark"] {
-  a {
-    color: $background_white;
-    font-weight: 900;
+  color: #1d2d44;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  &:hover {
+    color: #D47E30;
   }
 }
+
 p {
   letter-spacing: normal;
-  line-height: 1.75;
+  line-height: 1.8;
+  font-family: 'Tenor Sans', sans-serif !important;
+  color: #3b5068 !important;
 }
+
 blockquote {
-  color: $black;
-  border-left: 5px solid $black;
-  padding-left: 5px;
+  color: #1d2d44;
+  border-left: 4px solid #D47E30;
+  background: #e6d8cc;
+  padding: 1rem 1.5rem;
+  border-radius: 0 1rem 1rem 0;
+  font-style: italic;
+  margin: 1.5rem 0;
 }
 
 sup {
   font-weight: 300;
   vertical-align: super;
-  color: #000;
+  color: #D47E30;
   font-size: 12px;
-
   padding: 5px;
   a {
     font-weight: 300;
     vertical-align: super;
-    color: #000;
+    color: #D47E30;
     font-size: 12px;
-
     padding: 5px;
   }
 }
 
+// Override dark mode overrides so core always uses our warm bege identity
 [data-theme="dark"] {
   body {
-    background-color: $dark_background_white__color;
+    background-color: #f4ece4 !important;
+    color: #1d2d44 !important;
 
-    h1,
-    h1 > a,
-    h2,
-    h2 > a,
-    h3,
-    h3 > a,
-    h4,
-    h4 > a,
-    h5,
-    h5 > a,
-    p,
-    footer {
-      color: $background_white;
+    h1, h1 > a, h2, h2 > a, h3, h3 > a, h4, h4 > a, h5, h5 > a {
+      color: #1d2d44 !important;
+    }
+    p {
+      color: #3b5068 !important;
     }
   }
 }

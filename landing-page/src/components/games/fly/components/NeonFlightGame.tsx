@@ -131,8 +131,8 @@ const NeonFlightGame = ({ onExit, autoLaunch = true }: NeonFlightGameProps) => {
 
     // --- THREE.JS SETUP ---
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x000000);
-    scene.fog = new THREE.FogExp2(0x000000, 0.005);
+    scene.background = new THREE.Color(0xf4ece4);
+    scene.fog = new THREE.FogExp2(0xf4ece4, 0.005);
 
     // Get initial dimensions
     const width = containerRef.current ? containerRef.current.clientWidth : window.innerWidth;
@@ -148,6 +148,7 @@ const NeonFlightGame = ({ onExit, autoLaunch = true }: NeonFlightGameProps) => {
     camera.position.set(0, 4.0, 5.0);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+    renderer.setClearColor(0xf4ece4, 1);
     renderer.setSize(width, height); // Use container size
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     

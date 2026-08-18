@@ -65,33 +65,33 @@ const CityCatalogContent = ({
                 <meta name="robots" content="index, follow" />
             </Head>
 
-            <div className="min-h-screen bg-black text-white relative catalog-page">
-                {/* Background Grid - VISIBLE */}
+            <div className="min-h-screen bg-[#f4ece4] text-[#1d2d44] relative catalog-page font-sans">
+                {/* Background Grid */}
                 <div className="fixed inset-0 z-0 pointer-events-none">
                     <GridBackground inverted={false} />
                 </div>
 
                 <div className="relative z-10 flex flex-col min-h-screen">
                     {/* Header */}
-                    <div className="pt-32 pb-16 px-6 bg-black/20 backdrop-blur-sm shadow-2xl">
+                    <div className="pt-24 pb-12 px-6 bg-[#e6d8cc] border-b border-[#1d2d44]/10 shadow-sm">
                         <div className="max-w-7xl mx-auto px-6 text-center">
-                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 font-bold text-sm mb-6 uppercase tracking-wider shadow-lg">
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#1d2d44]/15 bg-[#f4ece4] text-[#D47E30] font-semibold text-xs mb-6 uppercase tracking-widest shadow-sm">
                                 <FaMapMarkerAlt />
                                 Atendendo {city.name} e Região
                             </div>
 
-                            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-                                Soluções Digitais em <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">{city.name}</span>
+                            <h1 className="text-4xl md:text-6xl font-normal text-[#1d2d44] mb-4" style={{ fontFamily: 'Federo, serif' }}>
+                                Ensaios & Fotografia em <span className="text-[#D47E30]">{city.name}</span>
                             </h1>
 
-                            <p className="text-xl text-gray-200 max-w-2xl mx-auto font-light leading-relaxed">
-                                Desenvolvimento de software, inteligência artificial e consultoria especializada disponível para empresas e profissionais de {city.name}.
+                            <p className="text-base text-[#3b5068] max-w-2xl mx-auto font-sans leading-relaxed">
+                                Produções editoriais, direção de arte e ensaios fine art disponíveis para clientes e projetos em {city.name}.
                             </p>
                         </div>
                     </div>
 
-                    {/* Filters (No Border) */}
-                    <div className="sticky top-0 z-40 bg-black/90 backdrop-blur-md py-4 shadow-xl">
+                    {/* Filters */}
+                    <div className="sticky top-0 z-40 bg-[#f4ece4]/90 backdrop-blur-md py-4 border-b border-[#1d2d44]/10 shadow-sm">
                         <div className="max-w-7xl mx-auto px-6">
                             <div className="flex flex-wrap justify-center gap-3 pb-2 md:pb-0">
                                 {CATEGORIES.map((cat) => {
@@ -102,13 +102,13 @@ const CityCatalogContent = ({
                                             key={cat.id}
                                             onClick={() => setSelectedCategory(cat.id)}
                                             className={`
-                                        flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 border cursor-pointer
+                                        flex items-center gap-2 px-5 py-2 rounded-full text-xs uppercase tracking-wider font-semibold transition-all duration-300 border cursor-pointer
                                         ${isActive
-                                                    ? `${getCategoryColor(cat.id)} scale-105 shadow-[0_0_15px_rgba(255,255,255,0.4)]`
-                                                    : `${getCategoryColor(cat.id)} hover:border-yellow-500 hover:shadow-yellow-500/20`}
+                                                    ? 'bg-[#1d2d44] text-[#f4ece4] border-[#1d2d44] scale-105 shadow-md'
+                                                    : 'bg-[#e6d8cc] text-[#1d2d44] border-[#1d2d44]/15 hover:bg-[#dcd0c4] hover:text-[#D47E30]'}
                                     `}
                                         >
-                                            {Icon && <Icon className={isActive ? "text-white" : "text-gray-400"} />}
+                                            {Icon && <Icon className={isActive ? "text-[#D47E30]" : "text-[#3b5068]"} />}
                                             {cat.label}
                                         </button>
                                     );
@@ -118,50 +118,46 @@ const CityCatalogContent = ({
                     </div>
 
                     {/* Content Grid */}
-                    <div className="max-w-7xl mx-auto px-6 py-24">
+                    <div className="max-w-7xl mx-auto px-6 py-16">
                         {filteredPosts.length > 0 ? (
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                                 {filteredPosts.map((post) => (
                                     <Link
                                         key={post.slug}
                                         href={`/cities/${city.id}/${post.slug}`}
-                                        className="group flex flex-col bg-neutral-900/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 hover:border-yellow-500 hover:shadow-yellow-500/20 hover:shadow-2xl transition-all duration-300 h-full cursor-pointer relative"
+                                        className="group flex flex-col bg-[#e6d8cc] rounded-2xl overflow-hidden border border-[#1d2d44]/15 hover:border-[#D47E30] hover:shadow-xl transition-all duration-300 h-full cursor-pointer relative shadow-sm"
                                     >
-                                        <div className="aspect-video relative overflow-hidden bg-black">
-                                            {/* Gradient Overlay */}
-                                            <div className={`absolute inset-0 z-10 opacity-40 bg-gradient-to-br transition-opacity duration-300 group-hover:opacity-20 ${getCategoryGradient(post.category)}`} />
-
-                                            {/* Image */}
+                                        <div className="aspect-video relative overflow-hidden bg-black/10">
                                             <img
                                                 src={normalizeImage((post as any).featuredImage, post.title)}
                                                 alt={post.title}
-                                                className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                                 onError={(e) => {
                                                     const target = e.target as HTMLImageElement;
-                                                    target.src = normalizeImage(null, post.title); // Fallback to placeholder
+                                                    target.src = normalizeImage(null, post.title);
                                                 }}
                                             />
 
                                             {/* Colored Badge */}
-                                            <div className={`absolute top-4 right-4 z-20 backdrop-blur border text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-lg ${getCategoryColor(post.category)}`}>
+                                            <div className="absolute top-4 right-4 z-20 bg-[#D47E30] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-md">
                                                 {post.category || 'Geral'}
                                             </div>
                                         </div>
 
-                                        <div className="p-8 flex-1 flex flex-col">
-                                            <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors line-clamp-2 leading-tight">
+                                        <div className="p-6 flex-1 flex flex-col">
+                                            <h3 className="text-xl font-normal text-[#1d2d44] mb-2 group-hover:text-[#D47E30] transition-colors leading-tight" style={{ fontFamily: 'Federo, serif' }}>
                                                 {post.title}
                                             </h3>
 
-                                            <div className="text-gray-300 text-base mb-6 line-clamp-3 font-normal leading-relaxed">
-                                                {(post as any).description || `Solução completa de ${post.category} disponível para ${city.name}. Clique para ver detalhes.`}
+                                            <div className="text-[#3b5068] text-sm mb-6 line-clamp-3 font-sans leading-relaxed">
+                                                {(post as any).description || `Produção autoral de ${post.category} disponível para ${city.name}. Clique para ver detalhes.`}
                                             </div>
 
-                                            <div className="mt-auto pt-6 border-t border-white/10 flex items-center justify-between">
-                                                <span className="text-xs text-blue-400 font-bold flex items-center gap-1">
+                                            <div className="mt-auto pt-4 border-t border-[#1d2d44]/10 flex items-center justify-between">
+                                                <span className="text-xs text-[#D47E30] font-bold flex items-center gap-1">
                                                     <FaMapMarkerAlt /> {city.name}
                                                 </span>
-                                                <span className="text-xs text-gray-400 font-bold uppercase tracking-wider group-hover:text-white transition-colors flex items-center gap-1">
+                                                <span className="text-xs text-[#1d2d44] font-bold uppercase tracking-wider group-hover:text-[#D47E30] transition-colors flex items-center gap-1">
                                                     Ver Detalhes &rarr;
                                                 </span>
                                             </div>

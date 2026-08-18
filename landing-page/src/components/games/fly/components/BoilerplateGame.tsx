@@ -25,9 +25,9 @@ export default function BoilerplateGame() {
     const height = containerRef.current?.clientHeight || window.innerHeight;
 
     const scene = new THREE.Scene();
-    // Dark background or simple gradient
-    scene.background = new THREE.Color(0x050510);
-    scene.fog = new THREE.FogExp2(0x050510, 0.02);
+    // Editorial light bege background
+    scene.background = new THREE.Color(0xf4ece4);
+    scene.fog = new THREE.FogExp2(0xf4ece4, 0.02);
     sceneRef.current = scene;
 
     const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
@@ -44,6 +44,7 @@ export default function BoilerplateGame() {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.setClearColor(0xf4ece4, 1);
     
     if (canvasRef.current) {
       canvasRef.current.appendChild(renderer.domElement);

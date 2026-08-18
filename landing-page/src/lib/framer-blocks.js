@@ -50,7 +50,7 @@ class VoxelImageRenderer {
   initScene() {
     // Scene setup
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(0x000000);
+    this.scene.background = new THREE.Color(0xf4ece4);
     
     // Camera
     const aspect = this.container.clientWidth / this.container.clientHeight;
@@ -60,10 +60,11 @@ class VoxelImageRenderer {
     this.cameraTargetZ = 250; // For smooth transitions
     
     // Renderer
-    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
     this.renderer.setSize(this.container.clientWidth, this.container.clientHeight);
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
+    this.renderer.setClearColor(0xf4ece4, 1);
     this.container.appendChild(this.renderer.domElement);
     
     // Controls - DISABLED (image stays fixed)

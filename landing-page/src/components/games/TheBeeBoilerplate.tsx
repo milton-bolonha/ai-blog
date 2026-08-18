@@ -25,9 +25,7 @@ export default function TheBeeBoilerplate() {
     const height = containerRef.current?.clientHeight || window.innerHeight;
 
     const scene = new THREE.Scene();
-    // Transparent background
-    scene.background = null; 
-    // scene.fog = new THREE.FogExp2(0x101005, 0.02); // Removed fog for transparency
+    scene.background = new THREE.Color(0xf4ece4); 
     sceneRef.current = scene;
 
     const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
@@ -45,7 +43,7 @@ export default function TheBeeBoilerplate() {
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     // Clear color alpha 0
-    renderer.setClearColor(0x000000, 0);
+    renderer.setClearColor(0xf4ece4, 1);
     
     if (canvasRef.current) {
       canvasRef.current.appendChild(renderer.domElement);

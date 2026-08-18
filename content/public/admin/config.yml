@@ -14,7 +14,7 @@ media_library:
 
 publish_mode: simple
 
-logo_url: https://res.cloudinary.com/dmrvxajho/image/upload/v1770943682/logo-mobile_oarlcu.png
+logo_url: /blog/mark.png
 
 slug:
   encoding: "ascii"

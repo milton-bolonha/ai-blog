@@ -30,7 +30,7 @@ const testimonials: Testimonial[] = [
       role: "Milão, Itália",
       avatar: "https://randomuser.me/api/portraits/men/32.jpg"
     },
-    content: "Esse cara é um rockstar do código. Eu recomendo! :) Também é uma pessoa muito descontraída e comunicativa. Com certeza voltaremos a trabalhar com ele. CINCO ESTRELAS!",
+    content: "Larissa tem um olhar poético e único para a iluminação de estúdio. Dirigiu nossa campanha editorial de moda em Milão com maestria. Resultado cinematográfico!",
     stats: { likes: 124 }
   },
   {
@@ -41,7 +41,7 @@ const testimonials: Testimonial[] = [
       role: "Lisboa, Portugal",
       avatar: "https://randomuser.me/api/portraits/men/45.jpg"
     },
-    content: "O mercado está inundado de desenvolvedores de baixa experiência, mas Milton está claramente em um nível diferente, GOAT!",
+    content: "A experiência do ensaio portrait com a Larissa foi transformadora. Ela consegue extrair a essência e a vulnerabilidade do fotografado com muita elegância.",
     stats: { likes: 89 }
   },
   {
@@ -52,19 +52,19 @@ const testimonials: Testimonial[] = [
       role: "Denver, EUA",
       avatar: "https://randomuser.me/api/portraits/men/22.jpg"
     },
-    content: "Milton é um desenvolvedor muito talentoso. Contratei-o há vários anos e conheço-o bem. As habilidades de Milton são muito altas. Eu recomendo a ele.",
+    content: "Trabalhar com a Larissa na direção de arte da nossa marca foi excepcional. O cuidado com a estética fine art e a paleta de cores superou nossas expectativas.",
     stats: { likes: 56 }
   },
   {
     id: "4",
     type: "card",
     author: {
-      name: "Jordane P.",
-      role: "França",
+      name: "Tatiana V.",
+      role: "São Paulo, BR",
       avatar: "https://randomuser.me/api/portraits/women/44.jpg"
     },
-    content: "Ótimo.! Boa comunicação e trabalho rápido. Eu recomendo.",
-    stats: { likes: 34 }
+    content: "Sessão impecável! A atenção aos detalhes de textura, iluminação dramática e o ambiente acolhedor fizeram toda a diferença no resultado das fotos.",
+    stats: { likes: 94 }
   },
   {
     id: "5",
@@ -74,7 +74,7 @@ const testimonials: Testimonial[] = [
       role: "Richmond, EUA",
       avatar: "https://randomuser.me/api/portraits/men/67.jpg"
     },
-    content: "Milton nos ajudou a otimizar nosso site Gatsby e resolver nossos problemas de “build”. Ótimo trabalho!",
+    content: "Larissa capturou imagens surreais e poéticas para nossa capa de revista. Profissionalismo admirável do conceito à entrega final.",
     stats: { likes: 78 }
   },
   {
@@ -85,54 +85,18 @@ const testimonials: Testimonial[] = [
       role: "São Paulo, BR",
       avatar: "https://randomuser.me/api/portraits/men/11.jpg"
     },
-    content: "Milton é um excelente profissional e definitivamente um especialista em Gatsby. Ele possui boa qualidade de código e atenção aos prazos.",
-    stats: { likes: 45 }
-  },
-  {
-    id: "7",
-    type: "card",
-    author: {
-      name: "Emily W.",
-      role: "Hollywood, USA",
-      avatar: "https://randomuser.me/api/portraits/women/28.jpg"
-    },
-    content: "Desenvolvimento sólido. Obrigado!",
-    stats: { likes: 23 }
-  },
-  {
-    id: "8",
-    type: "card",
-    author: {
-      name: "Ken Miller",
-      role: "Denver, EUA",
-      avatar: "https://randomuser.me/api/portraits/men/86.jpg"
-    },
-    content: "Milton é um ótimo designer e desenvolvedor. Ele é extremamente talentoso em WordPress, Git e Gatsby. Eu recomendo muito o Milton.",
-    stats: { likes: 67 }
-  },
-  {
-    id: "9",
-    type: "card",
-    author: {
-      name: "Gustavo O.",
-      role: "Brasília, BR",
-      avatar: "https://randomuser.me/api/portraits/men/5.jpg"
-    },
-    content: "Desenvolvedor muito bom para trabalhar. Rápido, eficiente e conhecedor. Certamente recomendo e quero trabalhar novamente com ele.",
-    stats: { likes: 92 }
+    content: "Uma das diretoras de fotografia mais talentosas com quem já colaborei. Sensibilidade autoral ímpar e entrega no mais alto padrão fine art.",
+    stats: { likes: 85 }
   }
 ];
 
 const TestimonialCard = ({ item }: { item: Testimonial }) => {
   return (
-    <div className="mb-6 break-inside-avoid shadow-lg hover:shadow-xl hover:scale-[1.01] transition-all duration-300">
-      <div className={`
-        relative overflow-hidden rounded-2xl border border-white/10
-        bg-white/5 backdrop-blur-md p-6
-      `}>
+    <div className="mb-6 break-inside-avoid shadow-md hover:shadow-lg hover:scale-[1.01] transition-all duration-300">
+      <div className="relative overflow-hidden rounded-2xl border border-[#1d2d44]/15 bg-[#e6d8cc] p-6 text-[#1d2d44]">
         {/* Header */}
         <div className="flex items-center gap-3 mb-4">
-          <div className="relative w-10 h-10 rounded-full overflow-hidden border border-white/10">
+          <div className="relative w-10 h-10 rounded-full overflow-hidden border border-[#1d2d44]/15">
             <OptimizedImage
               src={item.author.avatar}
               alt={item.author.name}
@@ -141,25 +105,25 @@ const TestimonialCard = ({ item }: { item: Testimonial }) => {
             />
           </div>
           <div className="flex-1 min-w-0">
-            <h4 className="font-semibold text-white/90 text-sm truncate">{item.author.name}</h4>
-            <div className="flex items-center gap-2 text-xs text-white/50">
+            <h4 className="font-semibold text-[#1d2d44] text-sm truncate">{item.author.name}</h4>
+            <div className="flex items-center gap-2 text-xs text-[#3b5068]">
               {item.author.role && <span>{item.author.role}</span>}
             </div>
           </div>
-          <div className="text-white/20">
+          <div className="text-[#D47E30]">
             <FaQuoteLeft className="w-3 h-3" />
           </div>
         </div>
 
         {/* Content */}
-        <p className="text-white/80 text-sm leading-relaxed mb-4">
+        <p className="text-[#1d2d44]/90 text-sm leading-relaxed mb-4 font-sans">
           {item.content}
         </p>
 
         {/* Stats / Footer */}
         {item.stats && (
-          <div className="flex items-center gap-6 pt-4 border-t border-white/5 text-xs text-white/40">
-            <div className="flex items-center gap-1.5 hover:text-red-400 transition-colors cursor-pointer">
+          <div className="flex items-center gap-6 pt-4 border-t border-[#1d2d44]/10 text-xs text-[#3b5068]">
+            <div className="flex items-center gap-1.5 hover:text-[#D47E30] transition-colors cursor-pointer">
               <span>❤️</span>
               <span>{item.stats.likes}</span>
             </div>
@@ -172,24 +136,21 @@ const TestimonialCard = ({ item }: { item: Testimonial }) => {
 
 export const TestimonialsSection = () => {
   return (
-    <div className="relative bg-black w-full z-10">
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:linear-gradient(to_right,black_0%,black_40%,transparent_100%)] pointer-events-none" />
-
+    <div className="relative bg-[#f4ece4] text-[#1d2d44] w-full z-10 py-16">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 mb-6">
-            <span className="text-sm font-medium text-white/80 tracking-wide uppercase">
-              Community & Feedback
+          <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#e6d8cc] rounded-full border border-[#1d2d44]/15 mb-6 shadow-sm">
+            <span className="text-xs font-semibold text-[#D47E30] tracking-widest uppercase">
+              Depoimentos & Avaliações
             </span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-semibold text-white mb-6" style={{ fontFamily: 'Noto Serif Variable, serif' }}>
-            O que dizem por aí
+          <h2 className="text-3xl md:text-5xl font-normal text-[#1d2d44] mb-4" style={{ fontFamily: 'Federo, serif' }}>
+            O Que Dizem Nossos Clientes
           </h2>
-          <p className="text-white/50 max-w-2xl mx-auto">
-            Feedback real de clientes, alunos e parceiros de comunidade.
+          <p className="text-[#3b5068] max-w-2xl mx-auto font-sans">
+            Experiências e opiniões de quem vivenciou a direção de fotografia autoral de Larissa Canhas.
           </p>
         </div>
 

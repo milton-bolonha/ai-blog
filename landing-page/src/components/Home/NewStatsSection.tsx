@@ -18,20 +18,18 @@ export const NewStatsSection = () => {
   };
 
   return (
-    <div className="relative w-full h-full">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/3 rounded-full blur-[120px]" />
-      </div>
-
+    <div className="relative w-full h-full bg-[#f4ece4] text-[#1d2d44] py-12">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-12 lg:mb-20">
-          <div className="inline-block px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 mb-6">
-            <span className="text-sm font-medium text-white/80 tracking-wide">{content.title}</span>
+        <div className="text-center mb-12 lg:mb-16">
+          <div className="inline-block px-4 py-2 bg-[#e6d8cc] rounded-full border border-[#1d2d44]/15 mb-6 shadow-sm">
+            <span className="text-xs font-semibold text-[#D47E30] tracking-widest uppercase">
+              Resultados & Métricas
+            </span>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-semibold text-white mb-6" style={{ fontFamily: 'Noto Serif Variable, serif', lineHeight: '1.3' }}>
+          <h2 className="text-3xl md:text-5xl font-normal text-[#1d2d44] mb-4" style={{ fontFamily: 'Federo, serif' }}>
             <TextMotion trigger={true} stagger={0.05}>
-              {content.subtitle}
+              Reconhecimento & Números
             </TextMotion>
           </h2>
         </div>
@@ -40,17 +38,17 @@ export const NewStatsSection = () => {
           {content.items.map((stat: any, index: number) => (
             <div
               key={index}
-              className="group relative flex flex-col items-center justify-center p-8 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/20 transition-all duration-500"
+              className="group relative flex flex-col items-center justify-center p-8 rounded-2xl border border-[#1d2d44]/15 bg-[#e6d8cc] hover:bg-[#dcd0c4] hover:border-[#D47E30]/40 transition-all duration-500 shadow-md"
             >
-              <div className="relative flex items-center gap-2 mb-3">
-                <div className="text-4xl md:text-4xl font-semibold text-white tracking-tight">
+              <div className="relative flex items-center gap-2 mb-2">
+                <div className="text-4xl md:text-4xl font-normal text-[#1d2d44] tracking-tight" style={{ fontFamily: 'Federo, serif' }}>
                   {/^\d+$/.test(stat.value) || /^\d+\+$/.test(stat.value) ? (
                     <NumberCounter
                       end={extractNumber(stat.value)}
                       prefix={stat.value.includes('$') ? '$' : undefined}
                       suffix={stat.value.includes('+') ? '+' : (stat.value.includes('k') ? 'k' : undefined)}
                       duration={2.5}
-                      className="font-bold"
+                      className="font-normal"
                     />
                   ) : (
                     <span>{stat.value}</span>
@@ -59,7 +57,7 @@ export const NewStatsSection = () => {
 
                 {(stat.info || stat.sublabel) && (
                   <button
-                    className="text-white/20 hover:text-white transition-colors focus:outline-none"
+                    className="text-[#3b5068]/60 hover:text-[#1d2d44] transition-colors focus:outline-none cursor-pointer"
                     onMouseEnter={() => setActiveTooltip(index)}
                     onMouseLeave={() => setActiveTooltip(null)}
                     onClick={() => setActiveTooltip(activeTooltip === index ? null : index)}
@@ -69,14 +67,14 @@ export const NewStatsSection = () => {
                 )}
 
                 {(stat.info || stat.sublabel) && (
-                  <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max max-w-[180px] px-3 py-2 bg-black/90 backdrop-blur-md border border-white/20 rounded-lg text-xs text-white transform transition-all duration-200 pointer-events-none z-30 shadow-xl ${activeTooltip === index ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-2 scale-95'}`}>
-                    <div className="text-white/70">- {stat.info || stat.sublabel}</div>
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 border-6 border-transparent border-t-black/90" />
+                  <div className={`absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max max-w-[200px] px-3 py-2 bg-[#1d2d44] text-[#f4ece4] border border-[#1d2d44]/20 rounded-lg text-xs transform transition-all duration-200 pointer-events-none z-30 shadow-xl ${activeTooltip === index ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-2 scale-95'}`}>
+                    <span>{stat.info || stat.sublabel}</span>
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 border-[6px] border-transparent border-t-[#1d2d44]" />
                   </div>
                 )}
               </div>
 
-              <div className="text-lg text-white/90 text-center">
+              <div className="text-xs uppercase tracking-wider text-[#3b5068] font-medium text-center font-sans">
                 {stat.label}
               </div>
             </div>

@@ -28,6 +28,9 @@ export default class MyDocument extends Document {
             href={logos.faviconLogo || "/brandimages/favicon.png"}
             sizes="any"
           />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css2?family=Federo&family=Tenor+Sans&display=swap" rel="stylesheet" />
         </Head>
         <body
           className={`boilerplate-times theme-${theme.generalThemeSettings.themeStyle}`}

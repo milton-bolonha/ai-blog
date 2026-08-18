@@ -15,10 +15,11 @@ const Footer = ({ topCategories }) => {
         <div className="left footer-bottom">
           <Link href="/">
             <Image
-              src={logos.markLogo || "/brandimages/logomark.png"}
+              src={logos.markLogo || "/blog/mark.png"}
               alt={"logo mark"}
               width={52}
               height={52}
+              style={{ objectFit: 'contain' }}
             />
           </Link>
         </div>

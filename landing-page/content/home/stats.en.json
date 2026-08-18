@@ -1,27 +1,27 @@
 {
   "statsSection": {
-    "title": "Our Results",
-    "subtitle": "Real impact on projects and careers around the world.",
+    "title": "Journey & Milestones",
+    "subtitle": "Over a decade capturing timeless moments",
     "items": [
       {
-        "value": "+300",
-        "label": "Web Projects",
-        "sublabel": "Since 1998"
+        "value": "+500",
+        "label": "Families Photographed",
+        "sublabel": "Authentic emotional stories"
       },
       {
-        "value": "$60k+",
-        "label": "Revenue",
-        "info": "International Freelancer"
+        "value": "12+",
+        "label": "Years of Experience",
+        "info": "Sensitive direction & artistry"
       },
       {
-        "value": "+8 Years",
-        "label": "+8 Countries",
-        "info": "Dozens of projects"
+        "value": "+1200",
+        "label": "Sessions & Celebrations",
+        "info": "Timeless memories preserved"
       },
       {
-        "value": "253",
-        "label": "Mentored",
-        "info": "Careers Impacted"
+        "value": "100%",
+        "label": "Natural Light & Presence",
+        "info": "Genuine connection with every family"
       }
     ]
   }

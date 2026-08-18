@@ -1,8 +1,8 @@
 {
-  "faviconLogo": "https://res.cloudinary.com/dmrvxajho/image/upload/v1770944100/favicon-16x16_sxsprw.png",
-  "mainLogo": "https://res.cloudinary.com/dmrvxajho/image/upload/v1770943655/logo-horizontal_xjbkkn.png",
-  "markLogo": "https://res.cloudinary.com/dmrvxajho/image/upload/v1770943682/logo-mobile_oarlcu.png",
-  "cardLogo": "https://res.cloudinary.com/dmrvxajho/image/upload/v1770944048/Frame_1_msi8bc.png",
-  "postAuthorLogo": "https://res.cloudinary.com/dmrvxajho/image/upload/v1770943682/logo-mobile_oarlcu.png",
-  "mainLogoWH": "183x50"
+  "faviconLogo": "/blog/favicon.ico",
+  "mainLogo": "/blog/logo.png",
+  "markLogo": "/blog/mark.png",
+  "cardLogo": "/blog/logo.png",
+  "postAuthorLogo": "/blog/mark.png",
+  "mainLogoWH": "180x60"
 }

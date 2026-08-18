@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaGamepad, FaCode, FaChalkboardTeacher, FaExpand, FaBriefcase } from "react-icons/fa";
+import { FaGamepad, FaCode, FaChalkboardTeacher, FaExpand, FaBriefcase, FaHeart } from "react-icons/fa";
 import { Inicio } from "@/components/Home/Inicio";
 import { AboutSection } from "@/components/Home/AboutSection";
 import { FeaturedProjects } from "@/components/Home/FeaturedProjects";
@@ -11,6 +11,7 @@ import { CTASection } from "@/components/Home/CTASection";
 import ContactSection from "@/components/Home/ContactSection";
 import ExperienceShowcase from "@/components/Home/ExperienceShowcase";
 import TestimonialsSection from "@/components/Home/TestimonialsSection";
+import { Footer } from "@/components/commons/Footer";
 import { AboutMe as TAboutMe } from "@/types/Home";
 import { GetStaticProps } from "next";
 import { getSortedPostsData, PostData } from "@/lib/posts";
@@ -43,7 +44,6 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 import homeData from "../../public/home.json";
 
 import { ImmersiveModal } from "@/components/commons/ImmersiveModal";
-import { DebugControls } from "@/components/commons/DebugControls";
 
 interface HomeProps {
   home: {
@@ -56,6 +56,11 @@ interface HomeProps {
   themeSettings: any;
   categoriesSettings: any;
 }
+
+import { EditorialGallerySection } from "@/components/Home/EditorialGallerySection";
+import { LensRevealSection } from "@/components/Home/LensRevealSection";
+import { HorizontalPanoramaSection } from "@/components/Home/HorizontalPanoramaSection";
+import { InstagramSection } from "@/components/Home/InstagramSection";
 
 const HomeContent = ({
   home,
@@ -75,15 +80,14 @@ const HomeContent = ({
 
   // SECTIONS (Slides)
   const sections = [
-    'inicio',      // 0
-    'o-que-faco',  // 1
-    'sobre',       // 2
-    'projetos',    // 3
-    'historia',    // 4
-    'faq',         // 5
-    // 'poll' removed
-    'contato',     // 6
-    'cta'          // 7
+    'inicio',        // 0: Hero 3D
+    'galeria',       // 1: Galeria Vertical Parallax
+    'lente-reveal',  // 2: Lens Reveal Mask
+    'panorama',      // 3: Horizontal Scroll Panorama
+    'sobre',         // 4: Sobre Larissa Canhas
+    'projetos',      // 5: Categorias
+    'o-que-faco',    // 6: Showcase
+    'contato'        // 7: Contato
   ];
 
   const [isLoaded, setIsLoaded] = useState(false);
@@ -99,12 +103,12 @@ const HomeContent = ({
   };
 
   const seoData = {
-    title: "Milton Bolonha — Desenvolvedor Full Stack | Next.js, React, Node.js",
-    description: "Desenvolvedor Full Stack especializado em Next.js, React e Node.js. Criação de aplicações web modernas, responsivas e escaláveis.",
+    title: "Larissa Canhas — Fotografia Autoral & Direção de Arte",
+    description: "Portfólio de Fotografia Editorial, Retratos Fine Art e Direção Visual por Larissa Canhas.",
     siteUrl: generalSettings.siteUrl,
     slug: "/",
-    author: "Milton Bolonha",
-    keywords: ["desenvolvedor full stack", "next.js", "react", "node.js", "typescript", "desenvolvimento web"],
+    author: "Larissa Canhas",
+    keywords: ["fotografia", "fotografia editorial", "fine art", "retratos", "larissa canhas", "direção de arte"],
     featuredImage: `${generalSettings.siteUrl}/img/og-image.jpg`,
     topology: "page" as const,
   };
@@ -112,14 +116,13 @@ const HomeContent = ({
   return (
     <>
       <Seo data={seoData} />
-      <DebugControls />
       <ImmersiveModal />
       <ScrollContainer>
         {!isLoaded && (
-          <div className="fixed inset-0 z-50 bg-black flex items-center justify-center">
+          <div className="fixed inset-0 z-50 bg-[#f4ece4] text-[#1d2d44] flex items-center justify-center">
             <div className="text-center">
-              <div className="w-16 h-16 border-4 border-white/20 border-t-white rounded-full animate-spin mx-auto mb-4"></div>
-              <p className="text-white/60 text-sm">Carregando experiência premium...</p>
+              <div className="w-16 h-16 border-4 border-[#1d2d44]/20 border-t-[#D47E30] rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="text-[#3b5068] text-sm font-sans">Carregando galeria editorial...</p>
             </div>
           </div>
         )}
@@ -134,8 +137,6 @@ const HomeContent = ({
           isMobile={isMobile}
         />
 
-
-
         <div className={`transition-opacity duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
           <SlideshowLayout
             mode={layoutMode}
@@ -143,12 +144,37 @@ const HomeContent = ({
             onSlideChange={handleSlideChange}
             sections={sections}
           >
-            {/* Slide 0: Hero */}
+            {/* Slide 0: Hero 3D Perspective */}
             <SectionWrapper id="inicio" vPadding="py-0" fullHeight>
               <Inicio onNavigate={handleSlideChange} />
             </SectionWrapper>
 
-            {/* Slide 1: Showcase Merged */}
+            {/* Slide 1: Galeria Vertical Parallax & Modal Fullscreen (layoutId) */}
+            <SectionWrapper id="galeria" vPadding="py-0">
+              <EditorialGallerySection />
+            </SectionWrapper>
+
+            {/* Slide 2: Lens Reveal Mask (Máscara de Lente Interativa) */}
+            <SectionWrapper id="lente-reveal" vPadding="py-0">
+              <LensRevealSection />
+            </SectionWrapper>
+
+            {/* Slide 3: Panorama Scroll Horizontal (0% -> -75%) */}
+            <SectionWrapper id="panorama" vPadding="py-0">
+              <HorizontalPanoramaSection />
+            </SectionWrapper>
+
+            {/* Slide 4: About Larissa Canhas */}
+            <SectionWrapper id="sobre" vPadding="py-0">
+              <AboutSection />
+            </SectionWrapper>
+
+            {/* Slide 5: Featured Projects */}
+            <SectionWrapper id="projetos" vPadding="pt-24 pb-0">
+              <FeaturedProjects categories={categoriesSettings.categories} />
+            </SectionWrapper>
+
+            {/* Slide 6: Showcase Merged */}
             <SectionWrapper
               id="o-que-faco"
               vPadding="pt-24 pb-0"
@@ -158,78 +184,62 @@ const HomeContent = ({
               <div className="mb-24">
                 <ClientOnly>
                   <ExperienceShowcase
-                    badge="+20 Anos de Experiência"
-                    title="O Que Faço?"
-                    description="Explore as diferentes facetas da minha jornada profissional, desde o desenvolvimento de games imersivos até soluções web inteligentes e mentoria técnica."
+                    badge="Capítulos & Histórias"
+                    title="Experiências & Registros"
+                    description="Explore as diferentes coleções de fotografia documental e direção sensível por Larissa Canhas."
                     tabs={[
                       {
-                        id: 'web',
-                        label: 'IA & Web Apps',
-                        icon: FaCode,
+                        id: 'familias',
+                        label: 'Gestante & Família',
+                        icon: FaHeart,
                         content: {
                           type: 'slideshow',
                           manualSlideshow: true,
                           slides: [
-                            { bg: "/img/thumb-insights-a.jpg", fg: "/img/thumb-insights-b.jpg" }, // Placeholder 1
-                            { bg: "/img/thumb-blog-a.jpg", fg: "/img/thumb-blog-b.jpg" }, // Placeholder 2
-                            { bg: "/img/thumb-wp-a.jpg", fg: "/img/thumb-wp-b.jpg" }, // Placeholder 3
+                            { bg: "/img/thumb-insights-a.jpg", fg: "/img/thumb-insights-b.jpg" },
+                            { bg: "/img/thumb-blog-a.jpg", fg: "/img/thumb-blog-b.jpg" },
                           ],
                           buttons: [
-                            { text: 'AI Insights', variant: 'primary', link: '/catalogo/plataforma-ia-ai-insights-system' },
-                            { text: 'AI AutoBlog', variant: 'secondary', link: '/catalogo/ai-blog-automatic' },
-                            { text: 'WordPress Sites', variant: 'secondary', link: '/catalogo/websites-wordpress-development' },
+                            { text: 'Reserve seu Capítulo', variant: 'primary', link: '/contato' },
+                            { text: 'Ver Coleção Família', variant: 'secondary', link: '/catalogo' },
                           ]
                         },
                       },
                       {
-                        id: 'game',
-                        label: '3D & Game Dev',
-                        icon: FaGamepad,
+                        id: 'casais',
+                        label: 'Casais & Celebrações',
+                        icon: FaBriefcase,
                         content: {
                           type: 'slideshow',
                           manualSlideshow: true,
                           slides: [
-                            { bg: "/img/fly-1-a.jpg", fg: "/img/fly-1-b.jpg" },      // Button 1 Hover: Neon Flight
-                            { bg: "/img/thumb-stranger-b.jpg", fg: "/img/thumb-stranger-a.jpg" },       // Button 2 Hover: Stranger Craft
-                            { bg: "/img/fly-3-a.jpg", fg: "/img/fly-3-b.jpg" },       // Button 3 Hover: Air Flight
+                            { bg: "/img/thumb-wp-a.jpg", fg: "/img/thumb-wp-b.jpg" },
+                            { bg: "/img/fly-1-a.jpg", fg: "/img/fly-1-b.jpg" },
                           ],
-                          games: {
-                            neon: <NeonFlightGame onExit={() => { }} />,
-                            stranger: <StrangerCraftGame />
-                          },
-                          // gameComponent key kept for backward compatibility if needed, but not strictly required with new logic if using actions
-                          gameComponent: <NeonFlightGame onExit={() => { }} />,
                           buttons: [
-                            { text: 'JOGAR DEMO', variant: 'primary', action: 'playGame:neon' },
-                            { text: 'Jogar StrangerCraft', variant: 'primary', link: '/games/stranger-craft' },
-                            { text: 'Air Flight', link: '/games/airplane', variant: 'secondary', icon: FaGamepad },
-                          ],
+                            { text: 'Reserve seu Ensaio', variant: 'primary', link: '/contato' },
+                            { text: 'Ver Galeria de Casais', variant: 'secondary', link: '/catalogo' },
+                          ]
                         },
                       },
                       {
-                        id: 'mentor',
-                        label: 'Mentoria',
+                        id: 'lifestyle',
+                        label: 'Documental & Lifestyle',
                         icon: FaChalkboardTeacher,
                         content: {
                           type: 'slideshow',
                           manualSlideshow: true,
                           slides: [
-                            { bg: "/img/thumb-mentoria-1-b.jpg", fg: "/img/thumb-mentoria-1-a.jpg" }, // Placeholder 1
-                            { bg: "/img/thumb-mentoria-2-b.jpg", fg: "/img/thumb-mentoria-2-a.jpg" }, // Placeholder 2
+                            { bg: "/img/thumb-stranger-b.jpg", fg: "/img/thumb-stranger-a.jpg" },
                           ],
                           buttons: [
-                            { text: 'Ver Vídeo', variant: 'primary', link: '#' },
-                            {
-                              text: 'Falar com o Mentor',
-                              variant: 'secondary',
-                              link: `https://wa.me/5512981062959?text=${encodeURIComponent("Olá Milton! Vi seu portfólio e gostaria de saber mais sobre a mentoria.")}`,
-                              icon: FaChalkboardTeacher
-                            },
+                            { text: 'Conheça o Estilo', variant: 'primary', link: '/contato' },
+                            { text: 'Ver Galeria Lifestyle', variant: 'secondary', link: '/catalogo' },
                           ]
                         },
                       },
                     ]}
-                    defaultTab="web"
+                    defaultTab="familias"
                   />
                 </ClientOnly>
               </div>
@@ -243,67 +253,34 @@ const HomeContent = ({
               </div>
             </SectionWrapper>
 
-            {/* Slide 2: About (Open to Work) - INVERTED GRID */}
-            <SectionWrapper
-              id="sobre"
-              vPadding="pt-0 pb-0"
-              background={<GridBackground inverted={true} />}
-            >
-              <AboutSection />
-            </SectionWrapper>
-
-            {/* Slide 3: Featured Projects (Catálogo) */}
-            <SectionWrapper
-              id="projetos"
-              vPadding="pt-24 pb-0"
-              background={<GridBackground />}
-            >
-              <FeaturedProjects categories={categoriesSettings.categories} />
-            </SectionWrapper>
-
-            {/* Slide 4: Timeline Section */}
-            <SectionWrapper
-              id="historia"
-              vPadding="pt-12 pb-0"
-              background={<GridBackground />}
-            >
-              <NewTimelineSection />
-            </SectionWrapper>
-
-            {/* Slide 5: FAQ Section */}
-            <SectionWrapper
-              id="faq"
-              vPadding="pt-24 pb-0"
-              background={<GridBackground />}
-            >
-              <FAQSection />
-            </SectionWrapper>
-
             {/* Slide 7: Contact Section */}
-            <SectionWrapper
-              id="contato"
-              vPadding="pt-0 pb-0"
-              background={<GridBackground />}
-            >
+            <SectionWrapper id="contato" vPadding="pt-0 pb-0">
               <ContactSection
                 contacts={[
-                  { name: "LinkedIn", link: "https://www.linkedin.com/in/miltonbolonha/" },
-                  { name: "GitHub", link: "https://github.com/miltonbolonha" },
-                  { name: "Email", link: "contato@miltonbolonha.com.br", isMail: true },
-                  { name: "Baixar Currículo", link: "/files/Curriculo 02072025.pdf", isDownload: true },
+                  { name: "Instagram", link: "https://instagram.com/larissacanhas" },
+                  { name: "Email", link: "contato@larissacanhas.com.br", isMail: true },
+                  { name: "Agendar Sessão", link: "/contato" },
                 ]}
                 title="Entre em Contato"
-                formTitle="Envie uma Mensagem"
+                formTitle="Solicite um Orçamento para seu Ensaio"
               />
             </SectionWrapper>
 
-            {/* Slide 8: CTA Final */}
+            {/* Instagram Section */}
+            <SectionWrapper id="instagram" vPadding="pt-12 pb-0">
+              <InstagramSection />
+            </SectionWrapper>
+
+            {/* Slide 8: CTA Final ("Vamos Conversar") */}
             <SectionWrapper id="cta" vPadding="pt-12 pb-0">
               <CTASection />
             </SectionWrapper>
           </SlideshowLayout>
+
+          {/* Footer as the absolute last element */}
+          <Footer />
         </div>
-      </ScrollContainer >
+      </ScrollContainer>
     </>
   );
 };

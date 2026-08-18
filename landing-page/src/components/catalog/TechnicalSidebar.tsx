@@ -27,7 +27,6 @@ const RelatedPostCard = ({ post }: { post: PostData }) => {
     const [imgSrc, setImgSrc] = useState(normalizeImage(post.featuredImage, post.title));
     const [hasError, setHasError] = useState(false);
 
-    // Update image source when post changes
     useEffect(() => {
         setImgSrc(normalizeImage(post.featuredImage, post.title));
         setHasError(false);
@@ -43,25 +42,24 @@ const RelatedPostCard = ({ post }: { post: PostData }) => {
     return (
         <Link
             href={`/catalogo/${post.slug}`}
-            className="block group relative rounded-xl overflow-hidden bg-white/5 hover:bg-white/10 transition-all duration-300"
+            className="block group relative rounded-xl overflow-hidden bg-[#e6d8cc] border border-[#1d2d44]/15 hover:border-[#D47E30] transition-all duration-300 shadow-sm"
         >
-            {/* Image (if available) - using a simple height constraint */}
             <div className="h-32 w-full relative">
                 <img
                     src={imgSrc}
                     alt={post.title}
                     onError={handleImageError}
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1d2d44]/90 to-transparent" />
             </div>
 
             <div className="p-4 relative mt-[-40px]">
-                <div className="text-base font-bold text-white group-hover:text-yellow-400 transition-colors shadow-lg">
+                <div className="text-sm font-normal text-white group-hover:text-[#D47E30] transition-colors leading-tight" style={{ fontFamily: 'Federo, serif' }}>
                     {post.title}
                 </div>
                 {post.description && (
-                    <div className="text-xs text-gray-300 mt-2 line-clamp-2 leading-relaxed">
+                    <div className="text-xs text-[#f4ece4]/80 mt-1 line-clamp-2 leading-relaxed font-sans">
                         {post.description}
                     </div>
                 )}
@@ -72,30 +70,27 @@ const RelatedPostCard = ({ post }: { post: PostData }) => {
 
 export const TechnicalSidebar = ({ specs, images, title, link, technologies, relatedPosts, category }: TechnicalSidebarProps) => {
 
-    // Helper to get icon for tech
     const getTechIcon = (tech: string) => {
         const lower = tech.toLowerCase().trim();
-        if (lower.includes('next')) return <SiNextdotjs className="text-white hover:text-white" />;
-        if (lower.includes('openai') || lower.includes('gpt')) return <BsOpenai className="text-green-400 hover:text-green-300" />;
-        if (lower.includes('mongo')) return <SiMongodb className="text-green-500 hover:text-green-400" />;
-        if (lower.includes('clerk')) return <FaCheckCircle className="text-blue-400" />; // No simple icon for Clerk yet, fallback
-        if (lower.includes('stripe')) return <SiStripe className="text-purple-400 hover:text-purple-300" />;
-        if (lower.includes('tailwind')) return <SiTailwindcss className="text-cyan-400 hover:text-cyan-300" />;
-        if (lower.includes('react')) return <SiReact className="text-blue-400 hover:text-blue-300" />;
-        if (lower.includes('prisma')) return <SiPrisma className="text-white hover:text-gray-300" />;
-        if (lower.includes('postgres')) return <SiPostgresql className="text-blue-400 hover:text-blue-300" />;
-        if (lower.includes('vercel')) return <SiVercel className="text-white hover:text-gray-300" />;
-        if (lower.includes('typescript')) return <SiTypescript className="text-blue-500" />;
-        if (lower.includes('javascript')) return <SiJavascript className="text-yellow-400" />;
-        if (lower.includes('node')) return <SiNodedotjs className="text-green-500" />;
-        if (lower.includes('docker')) return <SiDocker className="text-blue-500" />;
-        if (lower.includes('aws')) return <BsAmazon className="text-yellow-500" />;
-        if (lower.includes('firebase')) return <SiFirebase className="text-yellow-400" />;
-        if (lower.includes('python')) return <SiPython className="text-blue-400" />;
-        return <FaCode className="text-gray-400" />;
+        if (lower.includes('next')) return <SiNextdotjs className="text-[#1d2d44]" />;
+        if (lower.includes('openai') || lower.includes('gpt')) return <BsOpenai className="text-[#D47E30]" />;
+        if (lower.includes('mongo')) return <SiMongodb className="text-green-600" />;
+        if (lower.includes('stripe')) return <SiStripe className="text-purple-600" />;
+        if (lower.includes('tailwind')) return <SiTailwindcss className="text-cyan-600" />;
+        if (lower.includes('react')) return <SiReact className="text-blue-600" />;
+        if (lower.includes('prisma')) return <SiPrisma className="text-[#1d2d44]" />;
+        if (lower.includes('postgres')) return <SiPostgresql className="text-blue-600" />;
+        if (lower.includes('vercel')) return <SiVercel className="text-[#1d2d44]" />;
+        if (lower.includes('typescript')) return <SiTypescript className="text-blue-600" />;
+        if (lower.includes('javascript')) return <SiJavascript className="text-amber-600" />;
+        if (lower.includes('node')) return <SiNodedotjs className="text-green-600" />;
+        if (lower.includes('docker')) return <SiDocker className="text-blue-600" />;
+        if (lower.includes('aws')) return <BsAmazon className="text-[#D47E30]" />;
+        if (lower.includes('firebase')) return <SiFirebase className="text-amber-600" />;
+        if (lower.includes('python')) return <SiPython className="text-blue-600" />;
+        return <FaCode className="text-[#3b5068]" />;
     };
 
-    // Use technologies prop if available, otherwise fall back to specs parsing
     const allTechs = technologies && technologies.length > 0
         ? technologies
         : Array.from(new Set(
@@ -112,24 +107,23 @@ export const TechnicalSidebar = ({ specs, images, title, link, technologies, rel
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 w-full bg-transparent hover:bg-white/10 text-white font-bold py-4 px-6 rounded-xl border-2 border-white/20 hover:border-white/40 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                        className="flex items-center justify-center gap-2 w-full bg-[#D47E30] text-white font-semibold py-4 px-6 rounded-xl border border-[#D47E30] hover:bg-[#b86924] transition-all uppercase tracking-wider text-xs shadow-md"
                     >
-                        <span>Acessar Projeto</span>
-                        <FaExternalLinkAlt className="text-sm" />
+                        <span>Acessar Obra / Projeto</span>
+                        <FaExternalLinkAlt className="text-xs" />
                     </a>
                 ) : null}
             </div>
 
-            {/* Tech Stack Icons (Right Sidebar) */}
+            {/* Tech Stack Icons */}
             {allTechs.length > 0 && (
-                <div className="flex flex-wrap gap-4 justify-center py-4 border-b border-white/5">
+                <div className="flex flex-wrap gap-4 justify-center py-4 border-b border-[#1d2d44]/10 bg-[#e6d8cc] rounded-xl p-4 shadow-sm">
                     {allTechs.map((tech, idx) => (
                         <div key={idx} className="relative group cursor-help">
                             <div className="text-2xl transition-transform group-hover:scale-110">
                                 {getTechIcon(tech)}
                             </div>
-                            {/* Tooltip */}
-                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-black/90 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-white/10 z-50">
+                            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-[#1d2d44] text-[#f4ece4] text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-[#1d2d44]/10 z-50">
                                 {tech}
                             </div>
                         </div>
@@ -141,12 +135,10 @@ export const TechnicalSidebar = ({ specs, images, title, link, technologies, rel
             <div>
                 <ImageGallery images={images} title={title} />
 
-                {/* Detailed Specs list REMOVED as requested */}
-
                 {/* Related Posts */}
                 {relatedPosts && relatedPosts.length > 0 && category && (
                     <div className="mt-8">
-                        <h3 className="text-white font-bold text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+                        <h3 className="text-[#1d2d44] font-normal text-base uppercase tracking-wider mb-4 flex items-center gap-2" style={{ fontFamily: 'Federo, serif' }}>
                             + {category}
                         </h3>
                         <div className="space-y-4">

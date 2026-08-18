@@ -95,7 +95,7 @@ const TransitionAd: React.FC<TransitionAdProps> = ({ onComplete, direction = 'le
     console.log('[TransitionDebug] Canvas Size:', width, height);
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x111111); // Dark Grey, not pitch black
+    scene.background = new THREE.Color(0xf4ece4);
 
     const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });

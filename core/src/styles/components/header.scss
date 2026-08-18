@@ -20,9 +20,15 @@
 }
 header {
   max-width: 100%;
-  background: $primary__colorOne;
-
+  background: #f4ece4 !important;
+  border-bottom: none !important;
+  border: none !important;
   width: 100%;
+
+  hr {
+    display: none !important;
+  }
+
   .main-header {
     max-width: $ext_page__size;
     width: 94%;
@@ -39,7 +45,7 @@ header {
 
     justify-content: space-between;
 
-    height: 60px;
+    height: 70px;
     padding: 0;
 
     .door {
@@ -59,11 +65,13 @@ header {
       li {
         padding: 0 15px;
         a {
-          color: #fff;
-          font-size: 16px;
-          font-weight: normal;
+          color: #1d2d44 !important;
+          font-family: 'Tenor Sans', sans-serif !important;
+          font-weight: 600 !important;
+          font-size: 14px;
+          transition: color 0.3s ease;
           &:hover {
-            color: $primary__colorTwo;
+            color: #D47E30 !important;
           }
         }
       }

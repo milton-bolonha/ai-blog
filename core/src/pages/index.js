@@ -228,47 +228,57 @@ const Home = () => {
 
             <div className="row main-index-grid">
               <div className="first-row">
-                <div className="tag-news-wrapper">
-                  <h4 className="tag-news primary">
-                    Popular in {mostPopularCategory}
-                  </h4>
-                  <hr className="blue" />
-                </div>
-                {/* BlogList para o layout de "Popular Category" */}
-                <BlogList
-                  posts={popularCategoryPosts}
-                  postsToShow={4}
-                  city={city || "Los Angeles"}
-                  state={state || "CA"}
-                  designType={2}
-                  gap={10}
-                />
+                {popularCategoryPosts?.length > 0 && (
+                  <>
+                    <div className="tag-news-wrapper">
+                      <h4 className="tag-news primary">
+                        Popular in {mostPopularCategory}
+                      </h4>
+                      <hr className="blue" />
+                    </div>
+                    {/* BlogList para o layout de "Popular Category" */}
+                    <BlogList
+                      posts={popularCategoryPosts}
+                      postsToShow={4}
+                      city={city || "Los Angeles"}
+                      state={state || "CA"}
+                      designType={2}
+                      gap={10}
+                    />
+                  </>
+                )}
 
-                <div className="tag-news-wrapper">
-                  <h4 className="tag-news primary">{general?.homeCategory}</h4>
-                  <hr className="blue" />
-                </div>
-                <div className="news-column">
-                  {/* BlogList para o primeiro bloco de "Health" */}
-                  <BlogList
-                    posts={manualCategoryPosts1}
-                    postsToShow={3}
-                    city={city || "Los Angeles"}
-                    state={state || "CA"}
-                    designType={3}
-                    gap={10}
-                  />
+                {manualCategoryPosts1?.length > 0 && (
+                  <>
+                    <div className="tag-news-wrapper">
+                      <h4 className="tag-news primary">{general?.homeCategory}</h4>
+                      <hr className="blue" />
+                    </div>
+                    <div className="news-column">
+                      {/* BlogList para o primeiro bloco */}
+                      <BlogList
+                        posts={manualCategoryPosts1}
+                        postsToShow={3}
+                        city={city || "Los Angeles"}
+                        state={state || "CA"}
+                        designType={3}
+                        gap={10}
+                      />
 
-                  {/* BlogList para o segundo bloco de "Health" */}
-                  <BlogList
-                    posts={manualCategoryPosts2}
-                    postsToShow={3}
-                    city={city || "Los Angeles"}
-                    state={state || "CA"}
-                    designType={3}
-                    gap={10}
-                  />
-                </div>
+                      {/* BlogList para o segundo bloco */}
+                      {manualCategoryPosts2?.length > 0 && (
+                        <BlogList
+                          posts={manualCategoryPosts2}
+                          postsToShow={3}
+                          city={city || "Los Angeles"}
+                          state={state || "CA"}
+                          designType={3}
+                          gap={10}
+                        />
+                      )}
+                    </div>
+                  </>
+                )}
               </div>
 
               <div className="home-sidebar">
@@ -285,7 +295,7 @@ const Home = () => {
                     rel="nofollow noreferrer"
                   >
                     <Image
-                      src={`brandimages/${slugify(lt.label)}.svg`}
+                      src={`/blog/brandimages/${slugify(lt.label).toLowerCase()}.svg`}
                       alt={lt.label}
                       width={30}
                       height={30}

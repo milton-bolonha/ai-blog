@@ -83,11 +83,12 @@ const Header = ({
             id={`${pathname}-logo-link`}
           >
             <Image
-              src={logos?.mainLogo || "/brandimages/logo.png"}
+              src={logos?.mainLogo || "/blog/logo.png"}
               alt={"Business logo"}
               className={"main-logo"}
-              width={logoW || 183}
-              height={logoH || 50}
+              width={logoW || 180}
+              height={logoH || 60}
+              style={{ objectFit: 'contain', height: '48px', width: 'auto' }}
             />
           </Link>
           <Link
@@ -97,11 +98,12 @@ const Header = ({
             id={"small-logo-link"}
           >
             <Image
-              src={logos?.mainLogo || "/brandimages/logo.png"}
+              src={logos?.mainLogo || "/blog/logo.png"}
               alt={"Business logo"}
               className={"main-logo"}
-              width={logoW || 183}
-              height={logoH || 50}
+              width={logoW || 180}
+              height={logoH || 60}
+              style={{ objectFit: 'contain', height: '48px', width: 'auto' }}
             />
           </Link>
         </div>

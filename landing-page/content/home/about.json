@@ -1,22 +1,22 @@
 {
   "about": {
-    "title": "Vamos Trabalhar",
-    "badge1": "Inteligência Artificial",
-    "badge2": "+20 Anos de Experiência",
-    "description": "O mundo digital mudou. Hoje, produtos são inteligentes, automatizados e conectados.\n\nTrabalho ajudando pessoas e empresas a transformarem ideias em:",
+    "title": "Fotografar é um ato de atenção",
+    "badge1": "Fotografia Documental de Família",
+    "badge2": "Direção Sensível & Luz Natural",
+    "description": "Minha fotografia nasce da escuta, da conexão e da direção sensível. Não busco cenas perfeitas — busco o que é essencial.",
     "list": [
-      "Produtos web reais",
-      "Sistemas com inteligência artificial",
-      "Experiências gamificadas",
-      "Carreiras sustentáveis no digital"
+      "Gestante",
+      "Família",
+      "Casal & Pré-Wedding",
+      "Celebrações & Bodas"
     ],
-    "closing": "Seja um site, uma plataforma, um jogo ou uma mentoria, meu foco é clareza, execução e resultado.",
-    "cta": "Solicitar Contato",
+    "closing": "Cada registro é um capítulo vivo eternizado com afeto e presença.",
+    "cta": "Conheça Meu Trabalho",
     "photo": {
-        "url": "/img/perfil2.jpg",
-        "alt": "Milton Bolonha",
-        "width": 500,
-        "height": 500
+      "url": "/img/perfil2.jpg",
+      "alt": "Larissa Canhas Fotografia Documental",
+      "width": 500,
+      "height": 500
     }
   }
 }

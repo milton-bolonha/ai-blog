@@ -13,6 +13,7 @@ import ContactSection from "@/components/Home/ContactSection";
 import { normalizeImage } from "@/lib/media";
 import { getCategoryGradient, getCategoryColor } from "@/lib/colors";
 import { CatalogFilterSidebar } from "@/components/catalog/CatalogFilterSidebar";
+import { Footer } from "@/components/commons/Footer";
 
 interface CatalogoProps {
     businessSettings: any;
@@ -76,8 +77,8 @@ const CatalogoContent = ({
                 />
             </Head>
 
-            <div className="min-h-screen bg-black text-white relative catalog-page font-sans">
-                {/* Background Grid - VISIBLE */}
+            <div className="min-h-screen bg-[#f4ece4] text-[#1d2d44] relative catalog-page font-sans">
+                {/* Background Grid */}
                 <div className="fixed inset-0 z-0 pointer-events-none">
                     <GridBackground inverted={false} />
                 </div>
@@ -86,20 +87,20 @@ const CatalogoContent = ({
                 <div className="relative z-10 flex flex-col min-h-screen">
 
                     {/* Header */}
-                    <div className="pt-8 pb-12 px-6 bg-black/40 backdrop-blur-sm">
+                    <div className="pt-12 pb-12 px-6 bg-[#e6d8cc]/80 backdrop-blur-sm border-b border-[#1d2d44]/10">
                         <div className="full-width mx-auto flex flex-col gap-6">
 
-                            <div className="flex flex-col items-center full-width">
-                                <Link href="/" className="mb-6 group flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 hover:border-yellow-500 hover:text-yellow-400 transition-all duration-300">
+                            <div className="flex flex-col items-center full-width text-center">
+                                <Link href="/" className="mb-6 group flex items-center justify-center gap-2 px-5 py-2 rounded-full bg-[#f4ece4] border border-[#1d2d44]/15 hover:border-[#D47E30] hover:text-[#D47E30] transition-all duration-300 shadow-sm">
                                     <FaHome className="text-sm" />
-                                    <span className="font-bold text-xs tracking-widest uppercase">Voltar ao Início</span>
+                                    <span className="font-semibold text-xs tracking-widest uppercase text-[#1d2d44]">Voltar ao Início</span>
                                 </Link>
 
-                                <h1 className="text-4xl md:text-6xl font-bold text-white mb-2 tracking-tighter">
-                                    Catálogo de <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-500">Soluções</span>
+                                <h1 className="text-4xl md:text-6xl font-normal text-[#1d2d44] mb-3" style={{ fontFamily: 'Federo, serif' }}>
+                                    Catálogo de <span className="text-[#D47E30]">Coleções</span>
                                 </h1>
-                                <p className="text-lg text-gray-300 max-w-2xl font-light leading-relaxed">
-                                    Explore produtos de IA, serviços web, games e mentorias.
+                                <p className="text-base text-[#3b5068] max-w-2xl font-sans leading-relaxed">
+                                    Explore os ensaios de moda, retratos fine art, editoriais e direções de arte por Larissa Canhas.
                                 </p>
                             </div>
                         </div>
@@ -117,18 +118,14 @@ const CatalogoContent = ({
                                             <Link
                                                 key={post.slug}
                                                 href={`/catalogo/${post.slug}`}
-                                                className="group flex flex-col bg-neutral-900/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 hover:border-yellow-500 hover:shadow-yellow-500/20 hover:shadow-2xl transition-all duration-300 h-full cursor-pointer relative"
+                                                className="group flex flex-col bg-[#e6d8cc] rounded-2xl overflow-hidden border border-[#1d2d44]/15 hover:border-[#D47E30] hover:shadow-xl transition-all duration-300 h-full cursor-pointer relative shadow-sm"
                                             >
                                                 {/* Image Placeholder */}
-                                                <div className="aspect-video relative overflow-hidden bg-black">
-                                                    {/* Gradient Overlay */}
-                                                    <div className={`absolute inset-0 z-10 opacity-40 bg-gradient-to-br transition-opacity duration-300 group-hover:opacity-20 ${getCategoryGradient(post.category)}`} />
-
-                                                    {/* Actual Image or Placeholder */}
+                                                <div className="aspect-video relative overflow-hidden bg-black/10">
                                                     <img
                                                         src={normalizeImage((post as any).featuredImage, post.title)}
                                                         alt={post.title}
-                                                        className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+                                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                                         onError={(e) => {
                                                             const target = e.target as HTMLImageElement;
                                                             target.src = normalizeImage(null, post.title);
@@ -136,23 +133,23 @@ const CatalogoContent = ({
                                                     />
 
                                                     {/* Colored Badge */}
-                                                    <div className={`absolute top-4 right-4 z-20 backdrop-blur border text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-lg ${getCategoryColor(post.category)}`}>
+                                                    <div className="absolute top-4 right-4 z-20 bg-[#D47E30] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-md">
                                                         {post.category || 'Geral'}
                                                     </div>
                                                 </div>
 
                                                 <div className="p-6 flex-1 flex flex-col">
-                                                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors leading-tight">
+                                                    <h3 className="text-xl font-normal text-[#1d2d44] mb-2 group-hover:text-[#D47E30] transition-colors leading-tight" style={{ fontFamily: 'Federo, serif' }}>
                                                         {post.title}
                                                     </h3>
 
-                                                    <div className="text-gray-400 text-sm mb-4 line-clamp-3 leading-relaxed font-normal">
-                                                        {(post as any).description || "Solução completa disponível. Clique para ver detalhes."}
+                                                    <div className="text-[#3b5068] text-sm mb-4 line-clamp-3 leading-relaxed font-sans">
+                                                        {(post as any).description || "Coleção autoral disponível. Clique para ver detalhes."}
                                                     </div>
 
-                                                    <div className="mt-auto pt-4 border-t border-white/10 flex items-center justify-between">
-                                                        <span className="text-xs text-yellow-500/80 font-bold uppercase tracking-wider group-hover:text-yellow-400 transition-colors flex items-center gap-1">
-                                                            Acessar Item &rarr;
+                                                    <div className="mt-auto pt-4 border-t border-[#1d2d44]/10 flex items-center justify-between">
+                                                        <span className="text-xs text-[#D47E30] font-bold uppercase tracking-wider group-hover:underline flex items-center gap-1">
+                                                            Ver Obra &rarr;
                                                         </span>
                                                     </div>
                                                 </div>
@@ -160,14 +157,14 @@ const CatalogoContent = ({
                                         ))}
                                     </div>
                                 ) : (
-                                    <div className="text-center py-32 border border-dashed border-white/10 rounded-3xl bg-white/5">
-                                        <h3 className="text-2xl font-bold text-white mb-2">Nenhum item encontrado</h3>
-                                        <p className="text-white/50">
+                                    <div className="text-center py-32 border border-dashed border-[#1d2d44]/20 rounded-3xl bg-[#e6d8cc]">
+                                        <h3 className="text-2xl font-normal text-[#1d2d44] mb-2" style={{ fontFamily: 'Federo, serif' }}>Nenhum item encontrado</h3>
+                                        <p className="text-[#3b5068]">
                                             Não encontramos itens nesta categoria no momento.
                                         </p>
                                         <button
                                             onClick={() => updateCategory("Todos")}
-                                            className="mt-6 text-yellow-400 hover:text-yellow-300 font-medium underline underline-offset-4"
+                                            className="mt-6 text-[#D47E30] hover:underline font-medium uppercase tracking-wider text-xs"
                                         >
                                             Limpar filtros
                                         </button>
@@ -189,17 +186,8 @@ const CatalogoContent = ({
                         </div>
                     </div>
 
-                    {/* Contact Section at the bottom */}
-                    <div className="relative z-10 w-full bg-black mt-auto">
-                        <ContactSection
-                            contacts={[
-                                { name: "LinkedIn", link: "https://www.linkedin.com/in/miltonbolonha/" },
-                                { name: "GitHub", link: "https://github.com/miltonbolonha" },
-                                { name: "Email", link: "contato@miltonbolonha.com.br", isMail: true },
-                                { name: "Baixar Currículo", link: "/files/Curriculo 02072025.pdf", isDownload: true },
-                            ]}
-                        />
-                    </div>
+                    {/* Footer at the bottom */}
+                    <Footer />
                 </div>
             </div>
         </>

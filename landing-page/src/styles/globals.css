@@ -10,29 +10,42 @@
 /* Local effects */
 @import './effects.css';
 
-/* Configuração de tema - Dark Mode Forçado */
+/* Configuração de tema - Editorial / Boutique (Navy & Canela) */
 :root {
-  --background: #000000;
-  --foreground: #ffffff;
-  --card: #111111;
-  --card-foreground: #ffffff;
-  --popover: #111111;
-  --popover-foreground: #ffffff;
-  --primary: #f0f0f0;
-  --primary-foreground: #000000;
-  --secondary: #333333;
-  --secondary-foreground: #ffffff;
-  --muted: #333333;
-  --muted-foreground: #cccccc;
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --accent: #333333;
+  /* Backgrounds */
+  --bg-primary: #f4ece4;   /* Fundo principal bege/areia */
+  --bg-secondary: #e6d8cc; /* Blocos de destaque */
+
+  /* Textos */
+  --text-primary: #1d2d44;   /* Navy escuro */
+  --text-secondary: #3b5068; /* Navy suave */
+
+  /* Acento */
+  --accent-primary: #D47E30; /* Canela / Laranja editorial */
+
+  /* Modo Invertido (Para seções macro/lente) */
+  --bg-invert: #1d2d44;
+  --text-invert: #f4ece4;
+
+  /* Mapeamento de variáveis legadas */
+  --background: var(--bg-primary);
+  --foreground: var(--text-primary);
+  --card: var(--bg-secondary);
+  --card-foreground: var(--text-primary);
+  --popover: var(--bg-secondary);
+  --popover-foreground: var(--text-primary);
+  --primary: var(--text-primary);
+  --primary-foreground: var(--bg-primary);
+  --secondary: var(--bg-secondary);
+  --secondary-foreground: var(--text-primary);
+  --muted: #dcd0c4;
+  --muted-foreground: var(--text-secondary);
+  --accent: var(--accent-primary);
   --accent-foreground: #ffffff;
   --destructive: #ff4444;
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.1);
-  --ring: #ffffff;
+  --border: rgba(29, 45, 68, 0.15);
+  --input: rgba(29, 45, 68, 0.15);
+  --ring: var(--text-primary);
   --radius: 0.625rem;
 }
 
@@ -40,40 +53,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Catalog HUD Styles - Minimalist B&W */
+/* Catalog HUD Styles - Editorial Palette */
 .catalog-header {
-  @apply bg-white/5 border border-white/10 rounded-xl p-6 mb-8 backdrop-blur-sm relative overflow-hidden;
+  @apply bg-[#e6d8cc]/60 border border-[#1d2d44]/15 rounded-xl p-6 mb-8 backdrop-blur-sm relative overflow-hidden text-[#1d2d44];
 }
 
 .catalog-header::before {
   content: "";
-  @apply absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-50;
+  @apply absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D47E30]/40 to-transparent opacity-70;
 }
 
 .catalog-header h2 {
-  @apply text-xl font-bold text-white mb-4 flex items-center gap-2 uppercase tracking-widest;
-}
-
-.catalog-header table {
-  @apply w-full border-collapse text-left;
+  @apply text-xl font-bold text-[#1d2d44] mb-4 flex items-center gap-2 uppercase tracking-widest;
+  font-family: 'Federo', serif;
 }
 
 .catalog-header td {
-  @apply p-3 border-b border-white/10 align-top;
+  @apply p-3 border-b border-[#1d2d44]/10 align-top;
 }
 
 .catalog-header td strong {
-  @apply text-white/60 block text-xs uppercase tracking-wide mb-1 font-semibold;
+  @apply text-[#3b5068] block text-xs uppercase tracking-wide mb-1 font-semibold;
 }
 
 .catalog-header td span {
-  @apply text-white font-medium block;
+  @apply text-[#1d2d44] font-medium block;
 }
 
 .catalog-header hr {
-  @apply border-white/10 my-6;
+  @apply border-[#1d2d44]/10 my-6;
 }
 
+
+::selection {
+  background-color: #D47E30 !important;
+  color: #ffffff !important;
+}
+
+::-moz-selection {
+  background-color: #D47E30 !important;
+  color: #ffffff !important;
+}
 
 * {
   border-color: hsl(var(--border));
@@ -84,15 +104,20 @@ html {
 }
 
 body {
-  font-family: "Inter Variable", sans-serif;
-  background-color: #000000 !important;
-  color: #ffffff;
+  font-family: 'Tenor Sans', sans-serif;
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Prevent horizontal scroll on mobile */
   overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif, .font-heading {
+  font-family: 'Federo', serif;
+  letter-spacing: 0.02em;
 }
 
 /* Mobile-specific optimizations */

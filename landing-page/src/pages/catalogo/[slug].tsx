@@ -20,6 +20,8 @@ import { TechnicalSidebar } from '@/components/catalog/TechnicalSidebar';
 const SignedIn = dynamic(() => import("@clerk/nextjs").then((mod) => mod.SignedIn), { ssr: false });
 const SignedOut = dynamic(() => import("@clerk/nextjs").then((mod) => mod.SignedOut), { ssr: false });
 
+import { Footer } from '@/components/commons/Footer';
+
 interface PostProps {
     postData: PostData;
     seoSettings: any;
@@ -28,7 +30,7 @@ interface PostProps {
 
 const CatalogItem = ({ postData, seoSettings, relatedPosts }: PostProps) => {
     if (!postData) {
-        return <div className="min-h-screen flex items-center justify-center text-white bg-black">Carregando...</div>;
+        return <div className="min-h-screen flex items-center justify-center text-[#1d2d44] bg-[#f4ece4] font-sans">Carregando...</div>;
     }
 
     // Extract technical specs from markdown
@@ -82,18 +84,18 @@ const CatalogItem = ({ postData, seoSettings, relatedPosts }: PostProps) => {
 
     const ParagraphRenderer = ({ node, ...props }: any) => {
         return (
-            <p {...props} className="mb-6 leading-relaxed text-lg text-white/70" />
+            <p {...props} className="mb-6 leading-relaxed text-base text-[#3b5068] font-sans" />
         );
     };
 
     const HeadingRenderer = ({ node, ...props }: any) => {
-        return <h2 {...props} className="text-2xl font-bold text-white mt-8 mb-4" />;
+        return <h2 {...props} className="text-2xl font-normal text-[#1d2d44] mt-8 mb-4" style={{ fontFamily: 'Federo, serif' }} />;
     };
 
     return (
         <>
             <Seo data={seoData} />
-            <div className="min-h-screen bg-black text-white font-sans selection:bg-blue-500 selection:text-white relative catalog-page">
+            <div className="min-h-screen bg-[#f4ece4] text-[#1d2d44] font-sans relative catalog-page">
                 {/* Background Grid */}
                 <div className="fixed inset-0 z-0 pointer-events-none opacity-50">
                     <GridBackground inverted={false} />
@@ -101,19 +103,19 @@ const CatalogItem = ({ postData, seoSettings, relatedPosts }: PostProps) => {
 
                 <div className="relative z-10">
                     {/* Navigation Bar */}
-                    <div className="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10 px-6 py-4">
+                    <div className="sticky top-0 z-50 bg-[#f4ece4]/90 backdrop-blur-md border-b border-[#1d2d44]/10 px-6 py-4">
                         <div className="max-w-7xl mx-auto grid grid-cols-3 items-center">
                             {/* Left: Back */}
                             <div className="flex justify-start">
-                                <Link href="/catalogo" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors font-medium">
+                                <Link href="/catalogo" className="inline-flex items-center gap-2 text-[#1d2d44] hover:text-[#D47E30] transition-colors font-medium text-sm">
                                     &larr; Voltar
                                 </Link>
                             </div>
 
                             {/* Center: Home */}
                             <div className="flex justify-center">
-                                <Link href="/" className="inline-flex items-center gap-2 text-white/70 hover:text-yellow-400 transition-colors font-semibold uppercase tracking-widest text-sm">
-                                    <FaHome size={18} />
+                                <Link href="/" className="inline-flex items-center gap-2 text-[#1d2d44] hover:text-[#D47E30] transition-colors font-semibold uppercase tracking-widest text-xs">
+                                    <FaHome size={16} />
                                     <span className="hidden md:inline">Home</span>
                                 </Link>
                             </div>
@@ -125,29 +127,29 @@ const CatalogItem = ({ postData, seoSettings, relatedPosts }: PostProps) => {
                                         href={externalLink}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 transition-colors font-medium text-sm"
+                                        className="inline-flex items-center gap-2 text-[#D47E30] hover:underline transition-colors font-semibold text-xs uppercase tracking-wider"
                                     >
                                         <span className="hidden md:inline">Visitar</span>
-                                        <FaExternalLinkAlt size={14} />
+                                        <FaExternalLinkAlt size={12} />
                                     </a>
                                 )}
                             </div>
                         </div>
                     </div>
 
-                    {/* Hero Header - Compact */}
-                    <div className="pt-24 pb-12 px-6 bg-gradient-to-b from-gray-900 to-black">
+                    {/* Hero Header */}
+                    <div className="pt-16 pb-12 px-6 bg-[#e6d8cc] border-b border-[#1d2d44]/10">
                         <div className="max-w-7xl mx-auto">
                             {postData.category && (
-                                <div className="inline-block px-4 py-1.5 rounded-full border border-white/20 bg-white/10 text-white font-semibold tracking-wide uppercase text-xs mb-4">
+                                <div className="inline-block px-4 py-1.5 rounded-full border border-[#1d2d44]/15 bg-[#f4ece4] text-[#D47E30] font-semibold tracking-widest uppercase text-xs mb-4 shadow-sm">
                                     {postData.category}
                                 </div>
                             )}
-                            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                            <h1 className="text-4xl md:text-5xl font-normal text-[#1d2d44] mb-4" style={{ fontFamily: 'Federo, serif' }}>
                                 {postData.title}
                             </h1>
                             {(postData as any).description && (
-                                <p className="text-xl text-white/60 max-w-3xl">
+                                <p className="text-lg text-[#3b5068] max-w-3xl font-sans leading-relaxed">
                                     {(postData as any).description}
                                 </p>
                             )}
@@ -161,22 +163,22 @@ const CatalogItem = ({ postData, seoSettings, relatedPosts }: PostProps) => {
                             <main>
                                 {/* Attributes Header */}
                                 {specs.length > 0 && (
-                                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12 border-b border-white/10 pb-12">
+                                    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12 border-b border-[#1d2d44]/15 pb-12">
                                         {specs.map((spec, idx) => {
                                             if (['Link', 'Demo'].includes(spec.label)) return null;
 
-                                            let icon = <FaCheck className="text-green-400" />;
-                                            let colorClass = "text-white";
+                                            let icon = <FaCheck className="text-green-600" />;
+                                            let colorClass = "text-[#1d2d44]";
 
-                                            if (spec.label === 'Categoria') { icon = <FaTag className="text-yellow-400" />; colorClass = "text-yellow-100"; }
-                                            if (spec.label === 'Tipo') { icon = <FaLayerGroup className="text-purple-400" />; }
-                                            if (spec.label === 'Stack Principal') { icon = <FaCode className="text-yellow-400" />; colorClass = "text-yellow-100 font-bold"; }
-                                            if (spec.label === 'Tecnologias') { icon = <FaDatabase className="text-cyan-400" />; }
-                                            if (spec.label === 'Status') { icon = <FaCheck className="text-green-400" />; }
+                                            if (spec.label === 'Categoria') { icon = <FaTag className="text-[#D47E30]" />; colorClass = "text-[#D47E30] font-semibold"; }
+                                            if (spec.label === 'Tipo') { icon = <FaLayerGroup className="text-purple-600" />; }
+                                            if (spec.label === 'Stack Principal') { icon = <FaCode className="text-[#D47E30]" />; colorClass = "text-[#1d2d44] font-bold"; }
+                                            if (spec.label === 'Tecnologias') { icon = <FaDatabase className="text-cyan-600" />; }
+                                            if (spec.label === 'Status') { icon = <FaCheck className="text-green-600" />; }
 
                                             return (
-                                                <div key={idx} className="bg-white/5 rounded-xl p-4 border border-white/5 hover:border-white/10 transition-colors">
-                                                    <div className="flex items-center gap-2 mb-2 text-xs font-bold uppercase tracking-widest text-white/40">
+                                                <div key={idx} className="bg-[#e6d8cc] rounded-xl p-4 border border-[#1d2d44]/15 shadow-sm">
+                                                    <div className="flex items-center gap-2 mb-2 text-xs font-bold uppercase tracking-widest text-[#3b5068]">
                                                         {icon}
                                                         {spec.label}
                                                     </div>
@@ -190,13 +192,13 @@ const CatalogItem = ({ postData, seoSettings, relatedPosts }: PostProps) => {
                                 )}
 
                                 {postData.public ? (
-                                    <div className="prose prose-lg prose-invert max-w-none 
-                                        prose-headings:text-white prose-h2:text-white prose-h3:text-white 
-                                        prose-p:text-gray-300 prose-li:text-gray-300 prose-strong:text-white 
-                                        prose-a:text-yellow-400 hover:prose-a:text-yellow-300 prose-a:underline prose-a:decoration-blue-400/50
-                                        prose-blockquote:border-l-white prose-blockquote:bg-white/5 prose-blockquote:text-gray-300
-                                        prose-code:text-gray-200 prose-code:bg-white/10 prose-code:px-1 prose-code:rounded
-                                        prose-th:text-white prose-td:text-gray-300">
+                                    <div className="prose prose-lg max-w-none 
+                                        prose-headings:text-[#1d2d44] prose-h2:text-[#1d2d44] prose-h3:text-[#1d2d44] 
+                                        prose-p:text-[#3b5068] prose-li:text-[#3b5068] prose-strong:text-[#1d2d44] 
+                                        prose-a:text-[#D47E30] hover:prose-a:text-[#b86924] prose-a:underline
+                                        prose-blockquote:border-l-[#D47E30] prose-blockquote:bg-[#e6d8cc] prose-blockquote:text-[#1d2d44]
+                                        prose-code:text-[#1d2d44] prose-code:bg-[#e6d8cc] prose-code:px-1 prose-code:rounded
+                                        prose-th:text-[#1d2d44] prose-td:text-[#3b5068]">
                                         <ReactMarkdown
                                             remarkPlugins={[remarkGfm]}
                                             rehypePlugins={[rehypeRaw]}
@@ -215,14 +217,14 @@ const CatalogItem = ({ postData, seoSettings, relatedPosts }: PostProps) => {
                                              {process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY ? (
                                                  <>
                                                      <SignedOut>
-                                                         <div className="bg-red-900/10 border border-red-500/20 text-red-200 px-8 py-10 rounded-2xl text-center backdrop-blur-sm">
-                                                             <h3 className="text-2xl font-bold mb-4">Conteúdo Exclusivo 🔒</h3>
-                                                             <p className="mb-8 text-white/70">Este material é reservado para membros. Por favor, faça login para ter acesso completo.</p>
+                                                         <div className="bg-[#e6d8cc] border border-[#1d2d44]/15 text-[#1d2d44] px-8 py-10 rounded-2xl text-center shadow-md">
+                                                             <h3 className="text-2xl font-normal mb-4" style={{ fontFamily: 'Federo, serif' }}>Conteúdo Exclusivo 🔒</h3>
+                                                             <p className="mb-8 text-[#3b5068]">Este material é reservado para membros. Por favor, faça login para ter acesso completo.</p>
                                                              <CustomSignInButton />
                                                          </div>
                                                      </SignedOut>
                                                      <SignedIn>
-                                                         <div className="prose prose-lg prose-invert max-w-none">
+                                                         <div className="prose prose-lg max-w-none text-[#3b5068]">
                                                              <ReactMarkdown
                                                                  remarkPlugins={[remarkGfm]}
                                                                  rehypePlugins={[rehypeRaw]}
@@ -237,9 +239,9 @@ const CatalogItem = ({ postData, seoSettings, relatedPosts }: PostProps) => {
                                                      </SignedIn>
                                                  </>
                                              ) : (
-                                                 <div className="bg-red-900/10 border border-red-500/20 text-red-200 px-8 py-10 rounded-2xl text-center backdrop-blur-sm">
-                                                     <h3 className="text-2xl font-bold mb-4">Conteúdo Exclusivo 🔒</h3>
-                                                     <p className="mb-8 text-white/70">Este material é reservado para membros.</p>
+                                                 <div className="bg-[#e6d8cc] border border-[#1d2d44]/15 text-[#1d2d44] px-8 py-10 rounded-2xl text-center shadow-md">
+                                                     <h3 className="text-2xl font-normal mb-4" style={{ fontFamily: 'Federo, serif' }}>Conteúdo Exclusivo 🔒</h3>
+                                                     <p className="mb-8 text-[#3b5068]">Este material é reservado para membros.</p>
                                                  </div>
                                              )}
                                          </ClientOnly>
@@ -261,17 +263,8 @@ const CatalogItem = ({ postData, seoSettings, relatedPosts }: PostProps) => {
                     </div>
                 </div>
 
-                {/* Contact Footer */}
-                <div className="relative z-10 w-full bg-black">
-                    <ContactSection
-                        contacts={[
-                            { name: "LinkedIn", link: "https://www.linkedin.com/in/miltonbolonha/" },
-                            { name: "GitHub", link: "https://github.com/miltonbolonha" },
-                            { name: "Email", link: "contato@miltonbolonha.com.br", isMail: true },
-                            { name: "Baixar Currículo", link: "/files/Curriculo 02072025.pdf", isDownload: true },
-                        ]}
-                    />
-                </div>
+                {/* Footer */}
+                <Footer />
             </div>
         </>
     );

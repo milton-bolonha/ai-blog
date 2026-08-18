@@ -1,39 +1,34 @@
 {
   "hero": {
-    "badge": "AI, Games & Mentorship",
-    "title": "Milton Bolonha",
-    "subtitle": "Equipping dreamers for web success since 2005 with modern platforms and SaaS. Transforming ideas into international products since 2018.",
+    "badge": "Documentary Family, Couples & Celebrations Photography",
+    "title": "Larissa Canhas",
+    "subtitle": "Before the shot, the connection. Before the image, the story.",
     "cta": {
-      "primary": "Let's Talk",
-      "secondary": "View Projects"
+      "primary": "Book Your Chapter",
+      "secondary": "Explore Experiences"
     },
     "stats": [
       {
-        "value": "1M",
-        "label": "Monthly Views",
-        "info": "Social Networks"
+        "value": "+500",
+        "label": "Sessions Completed",
+        "info": "Families, couples and lifetime celebrations"
       },
       {
-        "value": "$60k+",
-        "label": "Revenue",
-        "info": "International Freelancer"
+        "value": "12",
+        "label": "Years of Experience",
+        "info": "Over a decade capturing timeless memories"
       },
       {
-        "value": "+8",
-        "label": "Countries",
-        "info": "Dozens of projects"
-      },
-      {
-        "value": "+200",
-        "label": "Mentored",
-        "info": "Careers Impacted"
+        "value": "100%",
+        "label": "Sensitive Direction",
+        "info": "Authentic and natural light approach"
       }
     ],
     "photo": {
-        "url": "/img/foto-perfil.jpg",
-        "alt": "Milton Bolonha",
-        "width": 500,
-        "height": 600
+      "url": "/img/foto-perfil.jpg",
+      "alt": "Larissa Canhas Photography",
+      "width": 500,
+      "height": 600
     }
   }
 }

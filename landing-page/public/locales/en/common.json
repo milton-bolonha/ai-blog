@@ -8,8 +8,15 @@
   },
   "home": {
     "title": "Pleasure, I am",
-    "titleBold": "Milton",
-    "subtitle": "Full Stack Developer who transforms ideas into functional digital solutions",
+    "titleBold": "Larissa",
+    "subtitle": "Photographer & Art Director creating timeless visual stories",
+    "cta": {
+      "letsTalk": "Let's Talk",
+      "viewProjects": "View Projects",
+      "title": "Ready to bring your next visual narrative to life?",
+      "description": "Get in touch to schedule your session, check available dates, or discuss a tailored art direction project.",
+      "button": "Request Session & Quote"
+    },
     "whatsapp": "WhatsApp",
     "hero": {
       "experience": "years of experience"

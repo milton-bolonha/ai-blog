@@ -1,27 +1,27 @@
 {
   "statsSection": {
-    "title": "Meus Resultados",
-    "subtitle": "+2 Décadas de Experiência",
+    "title": "Trajetória & Indicadores",
+    "subtitle": "Mais de uma década eternizando momentos",
     "items": [
       {
-        "value": "+900",
-        "label": "Projetos Web",
-        "sublabel": "Desde 1998"
+        "value": "+500",
+        "label": "Famílias Fotografadas",
+        "sublabel": "Registros afetivos únicos"
       },
       {
-        "value": "U$70k+",
-        "label": "Faturamento USD",
-        "info": "Freelancer Internacional"
+        "value": "12+",
+        "label": "Anos de Experiência",
+        "info": "Dedicação e olhar sensível"
       },
       {
-        "value": "+8 Países",
-        "label": "Projetos internacionais",
-        "info": "EUA, Europa e Brasil"
+        "value": "+1200",
+        "label": "Ensaios & Celebrações",
+        "info": "Histórias vivas eternizadas"
       },
       {
-        "value": "253",
-        "label": "Mentorados",
-        "info": "Carreiras Impactadas"
+        "value": "100%",
+        "label": "Luz Natural & Presença",
+        "info": "Conexão genuína com cada história"
       }
     ]
   }

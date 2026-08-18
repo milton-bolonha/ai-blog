@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { getGeneralSettings, getLinkTreeData } from '@/lib/settings';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
@@ -28,7 +29,7 @@ export const Footer = ({ className = "" }: FooterProps) => {
 
   if (!mounted) {
     return (
-      <footer className={`bg-black border-t border-white/10 ${className}`}>
+      <footer className={`bg-[#1d2d44] text-[#f4ece4] border-t border-[#f4ece4]/10 ${className}`}>
         <div className="max-w-7xl mx-auto px-6 py-12">
           <div className="h-64"></div>
         </div>
@@ -49,44 +50,57 @@ export const Footer = ({ className = "" }: FooterProps) => {
         </svg>
       ),
     };
-    return icons[iconName] || icons.FaGithub;
+    return icons[iconName] || (() => <span className="w-5 h-5 block" />);
   };
 
   return (
-    <footer className={`bg-black ${className}`}>
+    <footer className={`bg-[#1d2d44] text-[#f4ece4] border-t border-[#e6d8cc]/15 ${className}`}>
       <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-
-          {/* Brand */}
-          <div>
-            <h3 className="text-xl text-white mb-4">
-              {businessSettings.brandName}
-            </h3>
-            <p className="text-white/60 leading-relaxed">
-              {t('home.subtitle')}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          
+          {/* Brand Info */}
+          <div className="md:col-span-2 space-y-4">
+            <div className="mb-4">
+              <Image
+                src="/mark.png"
+                alt="Larissa Canhas Mark Logo"
+                width={54}
+                height={54}
+                className="h-12 w-auto object-contain"
+                unoptimized
+              />
+            </div>
+            <span className="text-xs uppercase tracking-widest text-[#D47E30] font-bold block mb-4">
+              Antes do clique, o encontro.
+            </span>
+            <p className="text-[#e6d8cc]/80 leading-relaxed text-sm font-sans max-w-md">
+              Fotografia documental de famílias, casais e celebrações com direção sensível.
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <ul className="space-y-3">
+            <h4 className="text-sm font-normal text-[#D47E30] uppercase tracking-widest block mb-4" style={{ fontFamily: 'Federo, serif' }}>
+              Navegação
+            </h4>
+            <ul className="space-y-3 text-sm font-sans">
               <li>
-                <Link href="/" className="text-white/60 hover:text-white transition-colors">
+                <Link href="/" className="text-[#e6d8cc]/80 hover:text-[#D47E30] transition-colors">
                   {t('navigation.home')}
                 </Link>
               </li>
               <li>
-                <Link href="/sobre" className="text-white/60 hover:text-white transition-colors">
+                <Link href="/#galeria" className="text-[#e6d8cc]/80 hover:text-[#D47E30] transition-colors">
+                  Galeria Fine Art
+                </Link>
+              </li>
+              <li>
+                <Link href="/sobre" className="text-[#e6d8cc]/80 hover:text-[#D47E30] transition-colors">
                   {t('navigation.about')}
                 </Link>
               </li>
               <li>
-                <Link href="/projetos" className="text-white/60 hover:text-white transition-colors">
-                  {t('navigation.projects')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/contato" className="text-white/60 hover:text-white transition-colors">
+                <Link href="/contato" className="text-[#e6d8cc]/80 hover:text-[#D47E30] transition-colors">
                   {t('navigation.contact')}
                 </Link>
               </li>
@@ -95,26 +109,16 @@ export const Footer = ({ className = "" }: FooterProps) => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-sm font-medium text-white/80 mb-4 tracking-wide">
-              CONTATO
-            </h3>
-            <div className="space-y-3">
-              <p className="text-white/60">
+            <h4 className="text-sm font-normal text-[#D47E30] uppercase tracking-widest mb-4" style={{ fontFamily: 'Federo, serif' }}>
+              Contato & Redes
+            </h4>
+            <div className="space-y-3 text-sm font-sans">
+              <p className="text-[#e6d8cc]/80">
                 <a
-                  href={`mailto:${businessSettings.brandEmail}`}
-                  className="hover:text-white transition-colors"
+                  href="mailto:contato@larissacanhas.com.br"
+                  className="hover:text-[#D47E30] transition-colors"
                 >
-                  {businessSettings.brandEmail}
-                </a>
-              </p>
-              <p className="text-white/60">
-                <a
-                  href="https://wa.me/5543991575781"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
-                >
-                  {businessSettings.brandPhone}
+                  contato@larissacanhas.com.br
                 </a>
               </p>
 
@@ -128,7 +132,7 @@ export const Footer = ({ className = "" }: FooterProps) => {
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 bg-white/5 rounded-lg hover:bg-white/10 transition-colors text-white/60 hover:text-white"
+                      className="p-2.5 bg-[#e6d8cc]/10 rounded-lg hover:bg-[#D47E30] transition-colors text-[#f4ece4] hover:text-white"
                       aria-label={link.label}
                     >
                       <IconComponent />
@@ -141,9 +145,9 @@ export const Footer = ({ className = "" }: FooterProps) => {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-white/10 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-white/40 text-sm">
-            <p>© {new Date().getFullYear()} {businessSettings.brandName}. Todos os direitos reservados.</p>
+        <div className="border-t border-[#e6d8cc]/15 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[#e6d8cc]/60 text-xs font-sans">
+            <p>© {new Date().getFullYear()} Larissa Canhas Fotografia. Todos os direitos reservados.</p>
           </div>
         </div>
       </div>

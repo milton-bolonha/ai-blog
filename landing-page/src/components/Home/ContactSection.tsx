@@ -19,7 +19,7 @@ export interface ContactSectionProps {
 export default function ContactSection({
   contacts,
   title = "Contatos",
-  formTitle = "Envie uma Mensagem"
+  formTitle = "Solicite um Orçamento"
 }: ContactSectionProps) {
   const [formData, setFormData] = useState({
     name: '',
@@ -46,14 +46,14 @@ export default function ContactSection({
       const data = await response.json();
 
       if (response.ok) {
-        alert(data.message);
+        alert(data.message || 'Mensagem enviada com sucesso!');
         setFormData({
           name: '',
           email: '',
           message: '',
         });
       } else {
-        alert(data.message);
+        alert(data.message || 'Ocorreu um erro ao enviar.');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -62,43 +62,39 @@ export default function ContactSection({
   };
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col">
-      {/* Grid Pattern Restored */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:linear-gradient(to_bottom,black_20%,transparent_90%)] pointer-events-none" />
-
-      <div className="flex-grow flex flex-col justify-center max-w-7xl mx-auto px-6 w-full py-24 relative z-10">
+    <div className="relative w-full min-h-screen flex flex-col bg-[#f4ece4] text-[#1d2d44] py-20">
+      <div className="flex-grow flex flex-col justify-center max-w-7xl mx-auto px-6 w-full relative z-10">
         <div className="text-center mb-12">
-          {/* Added Badge */}
-          <div className="inline-block px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 mb-6">
-            <span className="text-sm font-medium text-white/80 tracking-wide">Contato</span>
+          <div className="inline-block px-4 py-2 bg-[#e6d8cc] rounded-full border border-[#1d2d44]/15 mb-6 shadow-sm">
+            <span className="text-xs font-semibold text-[#D47E30] tracking-widest uppercase">Contato & Agendamento</span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-semibold mb-4 text-white">
+          <h2 className="text-4xl md:text-6xl font-normal mb-4 text-[#1d2d44]" style={{ fontFamily: 'Federo, serif' }}>
             {title}
           </h2>
-          <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            Entre em contato, estou à disposição.
+          <p className="text-base text-[#3b5068] max-w-2xl mx-auto font-sans">
+            Entre em contato para agendar ensaios, conversar sobre produções editoriais ou tirar dúvidas.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Contact Links */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-white mb-6">Meus Links</h3>
+            <h3 className="text-2xl font-normal text-[#1d2d44] mb-6" style={{ fontFamily: 'Federo, serif' }}>Meus Canais</h3>
             <ul className="space-y-4">
               {contacts.map(({ link, name, isMail, isDownload }, idx) => (
                 <li
                   key={name + idx}
-                  className="flex items-center gap-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
+                  className="flex items-center gap-4 p-4 bg-[#e6d8cc] rounded-xl border border-[#1d2d44]/15 hover:border-[#D47E30]/40 transition-all duration-300 shadow-sm"
                 >
-                  <span className="text-2xl">
+                  <span className="text-xl text-[#D47E30]">
                     {isMail ? "📧" : isDownload ? <FaDownload /> : "🔗"}
                   </span>
                   <a
                     href={isMail ? `mailto:${link}` : link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white hover:text-white/80 transition-colors font-medium text-lg flex-1"
+                    className="text-[#1d2d44] hover:text-[#D47E30] transition-colors font-medium text-base flex-1"
                     download={isDownload}
                   >
                     {name}
@@ -110,11 +106,11 @@ export default function ContactSection({
           </div>
 
           {/* Contact Form */}
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-white mb-6">{formTitle}</h3>
+          <div className="space-y-6 bg-[#e6d8cc] p-8 rounded-2xl border border-[#1d2d44]/15 shadow-md">
+            <h3 className="text-2xl font-normal text-[#1d2d44] mb-4" style={{ fontFamily: 'Federo, serif' }}>{formTitle}</h3>
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-2">
+                <label htmlFor="name" className="block text-xs uppercase tracking-wider font-semibold text-[#3b5068] mb-2 font-sans">
                   Nome:
                 </label>
                 <input
@@ -123,14 +119,14 @@ export default function ContactSection({
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full p-3 rounded-lg bg-white/5 backdrop-blur-sm text-white placeholder-white/40 border border-white/10 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
-                  placeholder="Seu Nome"
+                  className="w-full p-3 rounded-xl bg-[#f4ece4] text-[#1d2d44] placeholder-[#3b5068]/50 border border-[#1d2d44]/15 focus:outline-none focus:ring-2 focus:ring-[#D47E30] transition-all font-sans text-sm"
+                  placeholder="Seu Nome Completo"
                   required
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-2">
-                  Email:
+                <label htmlFor="email" className="block text-xs uppercase tracking-wider font-semibold text-[#3b5068] mb-2 font-sans">
+                  E-mail:
                 </label>
                 <input
                   type="email"
@@ -138,29 +134,29 @@ export default function ContactSection({
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full p-3 rounded-lg bg-white/5 backdrop-blur-sm text-white placeholder-white/40 border border-white/10 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
+                  className="w-full p-3 rounded-xl bg-[#f4ece4] text-[#1d2d44] placeholder-[#3b5068]/50 border border-[#1d2d44]/15 focus:outline-none focus:ring-2 focus:ring-[#D47E30] transition-all font-sans text-sm"
                   placeholder="seu.email@exemplo.com"
                   required
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-2">
-                  Mensagem:
+                <label htmlFor="message" className="block text-xs uppercase tracking-wider font-semibold text-[#3b5068] mb-2 font-sans">
+                  Mensagem / Projeto:
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  rows={5}
+                  rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full p-3 rounded-lg bg-white/5 backdrop-blur-sm text-white placeholder-white/40 border border-white/10 focus:outline-none focus:ring-2 focus:ring-white/30 transition-all resize-none"
-                  placeholder="Sua mensagem..."
+                  className="w-full p-3 rounded-xl bg-[#f4ece4] text-[#1d2d44] placeholder-[#3b5068]/50 border border-[#1d2d44]/15 focus:outline-none focus:ring-2 focus:ring-[#D47E30] transition-all resize-none font-sans text-sm"
+                  placeholder="Detalhes do ensaio ou orçamento..."
                   required
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-white text-black font-bold py-3 px-6 rounded-lg hover:bg-white/90 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]"
+                className="w-full bg-[#D47E30] text-white font-semibold py-4 px-6 rounded-xl hover:bg-[#b86924] transition-all duration-300 shadow-md uppercase tracking-wider text-xs cursor-pointer"
               >
                 Enviar Mensagem
               </button>
@@ -168,8 +164,6 @@ export default function ContactSection({
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

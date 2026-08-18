@@ -264,7 +264,7 @@ const CategoryPage = () => {
                     rel="nofollow noreferrer"
                   >
                     <Image
-                      src={`brandimages/${slugify(lt.label)}.svg`}
+                      src={`/blog/brandimages/${slugify(lt.label).toLowerCase()}.svg`}
                       alt={lt.label}
                       width={30}
                       height={30}

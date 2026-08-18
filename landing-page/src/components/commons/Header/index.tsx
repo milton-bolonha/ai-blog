@@ -35,108 +35,62 @@ export const Header = () => {
 
   return (
     <header
-      className="bg-black/90 text-sm flex py-3 px-5 justify-between items-center sticky top-0 z-50"
+      className="bg-[#f4ece4]/90 backdrop-blur-md text-[#1d2d44] text-sm flex py-4 px-6 justify-between items-center sticky top-0 z-50 border-b border-[#1d2d44]/10"
     >
-      {/* Download Resume Button */}
+      {/* Brand / Logomarca */}
       <div className="flex items-center">
-        <a
-          href="/files/Curriculo 02072025.pdf"
-          download="Curriculo_Milton_Bolonha.pdf"
-          className="flex items-center gap-2 bg-white hover:bg-white/90 text-black font-semibold py-2 px-4 rounded-lg transition-colors duration-200 shadow-md hover:shadow-lg"
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-          {t('download.resume')}
-        </a>
+        <Link href="/" className="flex items-center gap-3 group cursor-pointer">
+          <Image
+            src="/logo.png"
+            alt="Larissa Canhas Logomarca"
+            width={240}
+            height={72}
+            className="h-12 md:h-14 w-auto object-contain transition-transform group-hover:scale-105"
+            priority
+            unoptimized
+          />
+          <span className="text-xl md:text-2xl font-normal tracking-wide text-[#1d2d44] group-hover:text-[#D47E30] transition-colors hidden sm:inline-block" style={{ fontFamily: 'Federo, serif' }}>
+            Larissa Canhas
+          </span>
+        </Link>
       </div>
 
       {/* Mobile menu button */}
-      <button className="p-1 md:hidden" onClick={openMenu}>
-        <MenuIcon className="fill-gray-700 dark:fill-white w-8 h-8" />
+      <button className="p-1 md:hidden cursor-pointer" onClick={openMenu} aria-label="Abrir Menu">
+        <MenuIcon className="fill-[#1d2d44] w-8 h-8" />
       </button>
 
       {/* Desktop navigation */}
-      <nav className="hidden md:flex items-center gap-2 text-md">
+      <nav className="hidden md:flex items-center gap-3 text-sm font-medium">
         <Link
           href="/"
-          className={`px-4 py-2 rounded-md transition-colors duration-200 ${router.pathname === '/'
-              ? 'bg-white text-black font-medium'
-              : 'text-white/80 hover:bg-white/10 hover:text-yellow-500'
+          className={`px-4 py-2 rounded-full transition-colors duration-200 ${router.pathname === '/'
+              ? 'bg-[#1d2d44] text-[#f4ece4]'
+              : 'text-[#1d2d44] hover:bg-[#e6d8cc] hover:text-[#D47E30]'
             }`}
         >
           {t('navigation.home')}
         </Link>
         <Link
+          href="/#galeria"
+          className="px-4 py-2 rounded-full text-[#1d2d44] hover:bg-[#e6d8cc] hover:text-[#D47E30] transition-colors"
+        >
+          Galeria Fine Art
+        </Link>
+        <Link
           href="/sobre"
-          className={`px-4 py-2 rounded-md transition-colors duration-200 ${router.pathname === '/sobre'
-              ? 'bg-white text-black font-medium'
-              : 'text-white/80 hover:bg-white/10 hover:text-white'
+          className={`px-4 py-2 rounded-full transition-colors duration-200 ${router.pathname === '/sobre'
+              ? 'bg-[#1d2d44] text-[#f4ece4]'
+              : 'text-[#1d2d44] hover:bg-[#e6d8cc] hover:text-[#D47E30]'
             }`}
         >
           {t('navigation.about')}
         </Link>
-        <div className="relative group">
-          <Link
-            href="/projetos"
-            className={`px-4 py-2 rounded-md transition-colors duration-200 flex items-center gap-1 ${router.pathname === '/projetos'
-                ? 'bg-white text-black font-medium'
-                : 'text-white/80 hover:bg-white/10 hover:text-white'
-              }`}
-          >
-            {t('navigation.projects')}
-            <svg className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </Link>
-
-          {/* Dropdown Menu */}
-          <div className="absolute left-0 mt-0 w-48 bg-gray-900 rounded-lg shadow-xl border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50">
-            <div className="py-2">
-              <Link
-                href="/projetos?category=Web App"
-                className="block px-4 py-2 text-sm text-white/80 hover:bg-white/10 hover:text-white"
-              >
-                Web Apps
-              </Link>
-              <Link
-                href="/projetos?category=E-commerce"
-                className="block px-4 py-2 text-sm text-white/80 hover:bg-white/10 hover:text-white"
-              >
-                E-commerce
-              </Link>
-              <Link
-                href="/projetos?category=Landing Page"
-                className="block px-4 py-2 text-sm text-white/80 hover:bg-white/10 hover:text-white"
-              >
-                Landing Pages
-              </Link>
-              <Link
-                href="/projetos?category=Backend"
-                className="block px-4 py-2 text-sm text-white/80 hover:bg-white/10 hover:text-white"
-              >
-                Backend
-              </Link>
-            </div>
-          </div>
-        </div>
-        <Link
-          href="/blog"
-          className={`px-4 py-2 rounded-md transition-colors duration-200 ${router.pathname === '/blog'
-              ? 'bg-white text-black font-medium'
-              : 'text-white/80 hover:bg-white/10 hover:text-white'
-            }`}
-        >
-          {t('navigation.blog')}
-        </Link>
         <Link
           href="/contato"
-          className={`px-4 py-2 rounded-md transition-colors duration-200 ${router.pathname === '/contato'
-              ? 'bg-white text-black font-medium'
-              : 'text-white/80 hover:bg-white/10 hover:text-white'
-            }`}
+          className="px-5 py-2.5 rounded-full bg-[#D47E30] text-white hover:bg-[#b86924] font-semibold transition-colors shadow-sm"
         >
-          {t('navigation.contact')}
+          Agendar Ensaio
         </Link>
       </nav>
 

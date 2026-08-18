@@ -9,10 +9,22 @@
       "href": "#inicio"
     },
     {
-      "id": "o-que-faco",
-      "label": "O Que Faço",
-      "icon": "FaGamepad",
-      "href": "#o-que-faco"
+      "id": "galeria",
+      "label": "Galeria Fine Art",
+      "icon": "FaUser",
+      "href": "#galeria"
+    },
+    {
+      "id": "lente-reveal",
+      "label": "Lente 50mm",
+      "icon": "FaFlask",
+      "href": "#lente-reveal"
+    },
+    {
+      "id": "panorama",
+      "label": "Panorama",
+      "icon": "FaClock",
+      "href": "#panorama"
     },
     {
       "id": "sobre",
@@ -22,33 +34,33 @@
     },
     {
       "id": "projetos",
-      "label": "Catálogo",
+      "label": "Especialidades",
       "icon": "FaCode",
       "href": "#projetos"
     },
     {
-      "id": "historia",
-      "label": "História",
-      "icon": "FaClock",
-      "href": "#historia"
-    },
-    {
-      "id": "faq",
-      "label": "FAQ",
-      "icon": "FaQuestionCircle",
-      "href": "#faq"
+      "id": "o-que-faco",
+      "label": "Coleção",
+      "icon": "FaGamepad",
+      "href": "#o-que-faco"
     },
     {
       "id": "contato",
       "label": "Contato",
       "icon": "FaEnvelope",
       "href": "#contato"
+    },
+    {
+      "id": "cta",
+      "label": "Vamos Conversar",
+      "icon": "FaEnvelope",
+      "href": "#cta"
     }
   ],
   "style": {
-    "backgroundColor": "rgba(0, 0, 0, 0.7)",
-    "activeColor": "#ffffff",
-    "inactiveColor": "rgba(255, 255, 255, 0.5)",
-    "hoverColor": "rgba(255, 255, 255, 0.8)"
+    "backgroundColor": "rgba(29, 45, 68, 0.85)",
+    "activeColor": "#D47E30",
+    "inactiveColor": "#e6d8cc",
+    "hoverColor": "#ffffff"
   }
 }

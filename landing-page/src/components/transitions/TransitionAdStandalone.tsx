@@ -44,7 +44,7 @@ export const TransitionAdStandalone = () => {
     const height = containerRef.current.clientHeight;
 
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x111111);
+    scene.background = new THREE.Color(0xf4ece4);
 
     const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });

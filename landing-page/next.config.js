@@ -20,7 +20,6 @@ const nextConfig = {
       },
     ],
   },
-  // Headers removed for static export compatibility
 };
 
 module.exports = nextConfig;

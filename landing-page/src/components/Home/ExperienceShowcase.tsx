@@ -78,73 +78,85 @@ function ActionButton({ button, onAction }: ActionButtonProps) {
       onClick={handleClick}
       className={`
         group relative inline-flex items-center gap-3 font-medium py-4 px-8 rounded-full 
-        transition-all duration-300 cursor-pointer
+        transition-all duration-300 cursor-pointer uppercase tracking-wider text-xs
         ${isPrimary
-          ? 'bg-white text-black hover:bg-white/90 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)]'
-          : 'bg-black/10 backdrop-blur-md text-white border border-white hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] shadow-[0_0_20px_rgba(0,0,0,0.6)]'
+          ? 'bg-[#D47E30] text-white hover:bg-[#b86924] shadow-md'
+          : 'bg-[#e6d8cc] text-[#1d2d44] border border-[#1d2d44]/20 hover:bg-[#dcd0c4]'
         }
       `}
     >
-      <span className={`relative z-10 tracking-widest text-sm font-bold ${isPrimary ? '' : 'pt-[2px]'}`}>
+      <span className="relative z-10 tracking-widest text-xs font-bold">
         {button.text}
       </span>
-      {Icon && <Icon className="w-4 h-4 relative z-10 text-white" />}
+      {Icon && <Icon className="w-4 h-4 relative z-10" />}
     </MagneticButton>
   );
 }
 
 import Image from "next/image";
 
+import { motion, AnimatePresence } from "framer-motion";
+import { FaExpand, FaTimes } from "react-icons/fa";
+
 interface SlideshowContentProps {
   slides: Array<{ bg: string; fg: string }>;
   currentSlide: number;
-  // manualSlideshow and hoveredIndex removed from props as logic moved to parent
-
   buttons?: TabButton[];
   onAction?: (action: string) => void;
   onHover?: (index: number | null) => void;
+  onOpenModal?: (slide: { bg: string; fg: string; title: string }) => void;
 }
 
-function SlideshowContent({ slides, currentSlide, buttons, onAction, onHover }: SlideshowContentProps) {
+function SlideshowContent({ slides, currentSlide, buttons, onAction, onHover, onOpenModal }: SlideshowContentProps) {
   return (
     <div className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden">
       {/* SLIDESHOW LAYER */}
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute w-full h-full transition-opacity duration-[1000ms] ease-in-out ${currentSlide === index ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
-          style={{ pointerEvents: 'none' }}
-        >
-          {/* Background Image (Blurred & Darkened) */}
-          <div className="absolute inset-0">
-            <Image
-              src={slide.bg}
-              alt="Background"
-              fill
-              className="object-cover filter brightness-[0.3] blur-[8px]"
-              loading="lazy"
-            />
-          </div>
+      {slides.map((slide, index) => {
+        const isCurrent = currentSlide === index;
+        const currentButton = buttons && buttons[index];
+        const slideTitle = currentButton ? currentButton.text : `Obra Selecionada #${index + 1}`;
 
-          {/* Central Box Image (Sharp & Glowing) */}
-          <div className="absolute inset-x-20 top-20 bottom-0 flex items-center justify-center">
-            <div className="w-[85%] h-[200px] relative border border-white/10 shadow-[0_0_50px_rgba(0,255,255,0.15)] overflow-hidden rounded-xl">
+        return (
+          <div
+            key={index}
+            className={`absolute w-full h-full transition-opacity duration-[1000ms] ease-in-out ${isCurrent ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+          >
+            {/* Background Image (Blurred & Darkened) */}
+            <div className="absolute inset-0">
               <Image
-                src={slide.fg}
-                alt="Foreground"
+                src={slide.bg}
+                alt="Background"
                 fill
-                className="object-cover transition-transform duration-[6000ms] ease-out"
-                style={{
-                  transform: currentSlide === index ? 'scale(1.05)' : 'scale(1.0)'
-                }}
+                className="object-cover filter brightness-[0.35] blur-[8px]"
                 loading="lazy"
               />
-              {/* Vignette */}
-              <div className="absolute inset-0 bg-radial-gradient from-transparent to-black/60 opacity-60 pointer-events-none" />
+            </div>
+
+            {/* Central Box Image (Interactive Modal Trigger) */}
+            <div className="absolute inset-x-12 md:inset-x-20 top-16 md:top-20 bottom-0 flex items-center justify-center pointer-events-auto">
+              <div
+                onClick={() => onOpenModal && onOpenModal({ bg: slide.bg, fg: slide.fg, title: slideTitle })}
+                className="group/box w-[90%] md:w-[80%] max-w-4xl h-[240px] md:h-[280px] relative border border-[#1d2d44]/30 shadow-2xl overflow-hidden rounded-2xl cursor-pointer bg-[#1d2d44]"
+              >
+                <Image
+                  src={slide.fg}
+                  alt={slideTitle}
+                  fill
+                  className="object-cover transition-transform duration-700 ease-out group-hover/box:scale-105"
+                  loading="lazy"
+                />
+                {/* Overlay on Hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1d2d44]/90 via-[#1d2d44]/20 to-transparent opacity-50 group-hover/box:opacity-80 transition-opacity flex items-center justify-center">
+                  <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-[#f4ece4]/90 text-[#1d2d44] font-semibold text-xs uppercase tracking-widest opacity-0 group-hover/box:opacity-100 transition-all duration-300 transform group-hover/box:scale-105 shadow-xl">
+                    <FaExpand className="text-[#D47E30]" />
+                    <span>Expandir Obra Em Tela Cheia</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
 
       {/* CONTENT LAYER */}
       <div className="relative z-20 mt-24 md:mt-72 flex flex-col items-center gap-4">
@@ -217,6 +229,8 @@ export default function ExperienceShowcase({
   const [hoveredButtonIndex, setHoveredButtonIndex] = useState<number | null>(null);
   const [isPageVisible, setIsPageVisible] = useState(true);
 
+  const [modalSlide, setModalSlide] = useState<{ bg: string; fg: string; title: string } | null>(null);
+
   const activeTabData = tabs.find(tab => tab.id === activeTab);
   const slides = activeTabData?.content.slides || [];
   const isManual = activeTabData?.content.manualSlideshow;
@@ -249,25 +263,24 @@ export default function ExperienceShowcase({
 
   return (
     <div className="relative w-full flex flex-col items-center justify-center overflow-hidden">
-      {/* HEADER & TABS CONTAINER */}
-      <div className="relative z-30 max-w-7xl mx-auto px-6 w-full flex flex-col items-center text-center">
-
+      {/* HEADER AREA */}
+      <div className="text-center z-20 relative max-w-4xl px-6">
         {/* Badge */}
         {badge && (
-          <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 mb-6">
-            <span className="text-sm font-medium text-white/80 tracking-wide uppercase">
+          <div className="inline-block px-3.5 py-1.5 bg-[#e6d8cc] rounded-full border border-[#1d2d44]/15 mb-6 shadow-sm">
+            <span className="text-[11px] font-bold text-[#D47E30] tracking-widest uppercase">
               {badge}
             </span>
           </div>
         )}
 
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl text-white font-semibold mb-4" style={{ fontFamily: 'Noto Serif Variable, serif' }}>
+        <h2 className="text-4xl md:text-6xl text-[#1d2d44] font-normal mb-4" style={{ fontFamily: 'Federo, serif' }}>
           {title}
         </h2>
 
         {/* Description */}
-        <p className="text-lg text-white/60 font-normal max-w-2xl mx-auto leading-relaxed mb-10">
+        <p className="text-base text-[#3b5068] font-sans max-w-2xl mx-auto leading-relaxed mb-10">
           {description}
         </p>
 
@@ -282,17 +295,17 @@ export default function ExperienceShowcase({
                   setActiveTab(tab.id);
                   setIsGameActive(false);
                   setActiveGameKey(null);
-                  setCurrentSlide(0); // Reset slide on tab change 
+                  setCurrentSlide(0);
                 }}
                 className={`
                   px-8 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-3 cursor-pointer border
                   ${activeTab === tab.id
-                    ? 'bg-white text-black border-white scale-105 shadow-[0_0_20px_rgba(255,255,255,0.3)]'
-                    : 'bg-white/5 text-white/70 border-white/10 hover:bg-white/10 hover:text-white hover:border-white/30'}
+                    ? 'bg-[#1d2d44] text-[#f4ece4] border-[#1d2d44] scale-105 shadow-md'
+                    : 'bg-[#e6d8cc] text-[#1d2d44] border-[#1d2d44]/15 hover:bg-[#dcd0c4] hover:text-[#D47E30]'}
                 `}
               >
                 <Icon className="text-lg" />
-                <span className="tracking-wide uppercase text-sm font-semibold pt-[2px]">{tab.label}</span>
+                <span className="tracking-widest uppercase text-xs font-semibold pt-[2px]">{tab.label}</span>
               </button>
             );
           })}
@@ -308,7 +321,6 @@ export default function ExperienceShowcase({
               <SlideshowContent
                 slides={slides}
                 currentSlide={currentSlide}
-                // manualSlideshow and hoveredIndex no longer needed as props
                 buttons={activeTabData.content.buttons}
                 onAction={(action) => {
                   if (action === 'startGame') {
@@ -321,6 +333,7 @@ export default function ExperienceShowcase({
                   }
                 }}
                 onHover={setHoveredButtonIndex}
+                onOpenModal={(slide) => setModalSlide(slide)}
               />
             )}
 
@@ -359,6 +372,70 @@ export default function ExperienceShowcase({
           </div>
         )}
       </div>
+
+      {/* MODAL FULLSCREEN VIEWER */}
+      <AnimatePresence>
+        {modalSlide && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setModalSlide(null)}
+            className="fixed inset-0 z-50 bg-[#1d2d44]/95 backdrop-blur-xl flex items-center justify-center p-6"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-w-5xl w-full bg-[#f4ece4] text-[#1d2d44] rounded-3xl overflow-hidden shadow-2xl border border-[#1d2d44]/20 flex flex-col md:flex-row"
+            >
+              {/* Fechar */}
+              <button
+                onClick={() => setModalSlide(null)}
+                className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-[#1d2d44]/80 text-white flex items-center justify-center hover:bg-[#D47E30] transition-colors cursor-pointer"
+              >
+                <FaTimes size={16} />
+              </button>
+
+              {/* Imagem */}
+              <div className="w-full md:w-2/3 h-[320px] md:h-[500px] relative bg-black">
+                <Image
+                  src={modalSlide.fg || modalSlide.bg}
+                  alt={modalSlide.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              {/* Conteúdo do Modal */}
+              <div className="w-full md:w-1/3 p-8 flex flex-col justify-between bg-[#f4ece4]">
+                <div className="space-y-4">
+                  <span className="text-xs uppercase tracking-widest text-[#D47E30] font-bold block">
+                    {activeTabData?.label || "Coleção Autoral"}
+                  </span>
+                  <h3 className="text-3xl font-normal text-[#1d2d44]" style={{ fontFamily: "Federo, serif" }}>
+                    {modalSlide.title}
+                  </h3>
+                  <p className="text-sm text-[#3b5068] font-sans leading-relaxed">
+                    Obra integrante da coleção de fotografia e direção de arte por Larissa Canhas. Conceito de iluminação autoral e enquadramento dramático.
+                  </p>
+                </div>
+
+                <div className="pt-6 border-t border-[#1d2d44]/15">
+                  <a
+                    href="/contato"
+                    onClick={() => setModalSlide(null)}
+                    className="inline-flex items-center justify-center w-full bg-[#D47E30] text-white hover:bg-[#b86924] font-semibold py-3.5 px-6 rounded-full transition-all duration-300 uppercase tracking-wider text-xs shadow-md"
+                  >
+                    Solicitar Ensaio Semelhante
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

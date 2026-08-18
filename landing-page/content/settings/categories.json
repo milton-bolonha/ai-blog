@@ -1,40 +1,46 @@
 {
   "categories": [
     {
-      "id": "AI",
-      "label": "AI & SaaS",
-      "icon": "FaRobot",
-      "description": "Intelligent AI solutions and modern SaaS applications"
+      "id": "GESTANTE",
+      "label": "Gestante",
+      "icon": "FaHeart",
+      "description": "A espera, a transformação e a poesia do começo de uma nova vida."
     },
     {
-      "id": "WEB",
-      "label": "Web Services",
-      "icon": "FaGlobe",
-      "description": "High-performance and scalable web development"
+      "id": "FAMILIA",
+      "label": "Família",
+      "icon": "FaHome",
+      "description": "Hoje é rotina. Amanhã será memória. O lar e os pequenos gestos de afeto."
     },
     {
-      "id": "GAME DEV",
-      "label": "Game Dev",
-      "icon": "FaGamepad",
-      "description": "Games and interactive 3D experiences"
+      "id": "CASAL",
+      "label": "Casal & Pré-Wedding",
+      "icon": "FaHeart",
+      "description": "A cumplicidade, a intimidade e a verdade da história a dois."
     },
     {
-      "id": "BOOK",
-      "label": "Books",
-      "icon": "FaBook",
-      "description": "Technical books and educational content"
+      "id": "CELEBRACOES",
+      "label": "Celebrações & Bodas",
+      "icon": "FaGlassCheers",
+      "description": "Festas de vida, renovação de votos e grandes encontros de amor."
     },
     {
-      "id": "MENTORIA",
-      "label": "Mentoring",
-      "icon": "FaChalkboardTeacher",
-      "description": "Personalized mentoring for developers"
+      "id": "LIFESTYLE",
+      "label": "Recém-Nascido & Lifestyle",
+      "icon": "FaSmile",
+      "description": "Primeiros dias em casa, a ternura silenciosa e a nova rotina."
     },
     {
-      "id": "ENTREPRENEUR",
-      "label": "Entrepreneur",
-      "icon": "FaRocket",
-      "description": "Entrepreneurial projects and innovation"
+      "id": "NATAL",
+      "label": "Sessões Sazonais & Natal",
+      "icon": "FaSun",
+      "description": "Tradições de fim de ano e registros afetivos para celebrar juntos."
+    },
+    {
+      "id": "PROJETOS",
+      "label": "Projetos sob Medida",
+      "icon": "FaCamera",
+      "description": "Projetos fotográficos autorais e acervos de memórias personalizadas."
     }
   ]
 }

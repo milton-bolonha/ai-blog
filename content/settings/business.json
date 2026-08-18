@@ -1,13 +1,14 @@
 {
-  "brandName": "I/O Blog",
-  "brandDescription": "I/O Blog is here to deliver tips and tricks to live a better life.",
-  "brandEmail": "miltonbolonha@gmail.com",
+  "brandName": "Larissa Canhas | Journal",
+  "brandDescription": "Fotografia autoral, ensaios fine art, iluminação de estúdio e diário de direção de arte por Larissa Canhas.",
+  "brandEmail": "contato@larissacanhas.com.br",
   "brandKeywords": [
-    "I/O Blog",
-    "news",
-    "boilerplate",
-    "nextjs",
-    "theme"
+    "Larissa Canhas",
+    "fotografia",
+    "fine art",
+    "retratos",
+    "direção de arte",
+    "journal"
   ],
-  "brandPhone": "+1"
+  "brandPhone": ""
 }

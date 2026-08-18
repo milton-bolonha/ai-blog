@@ -165,7 +165,7 @@ const TransitionAdError: React.FC<TransitionAdErrorProps> = ({ onComplete, direc
         const height = containerRef.current.clientHeight;
 
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x111111);
+        scene.background = new THREE.Color(0xf4ece4);
         sceneRef.current = scene;
 
         const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 2000);

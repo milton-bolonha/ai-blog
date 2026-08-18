@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { FloatingContactButton } from './FloatingContactButton';
 import { GlobalClickFeedback } from '../ui/Animocon';
 import { FloatingLanguageSelector } from './FloatingLanguageSelector';
-// import { SectionNavigator } from './SectionNavigator';
+import { BoutiqueCursor } from './BoutiqueCursor';
 
 interface LayoutProps {
   children: ReactNode;
@@ -10,18 +10,17 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="min-h-screen bg-black flex flex-col">
+    <div className="min-h-screen bg-[#f4ece4] text-[#1d2d44] flex flex-col selection:bg-[#D47E30] selection:text-white">
+      <BoutiqueCursor />
       <main className="flex-1">
         {children}
       </main>
-      {/* <Footer /> Moved to Contact Section */}
       <FloatingLanguageSelector />
       <FloatingContactButton />
-      {/* <SectionNavigator /> */}
       <GlobalClickFeedback />
       <style>{`
         body {
-          background-color: #000000;
+          background-color: #f4ece4;
         }
       `}</style>
     </div>

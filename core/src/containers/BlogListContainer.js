@@ -27,10 +27,11 @@ const BlogList = ({
     "news-one-wrapper",
     "news-two-wrapper",
   ];
+  const isSingle = current?.length === 1;
   return (
     <div
-      className={typeSwitch[designType]}
-      style={{ gap: `${gap}px`, flexBasis: "50%" }}
+      className={`${typeSwitch[designType]} ${isSingle ? 'single-post-grid' : ''}`}
+      style={{ gap: `${gap}px`, flexBasis: isSingle ? "100%" : "50%" }}
     >
       {current?.map((post, i) => {
         if (i >= postsToShow) {

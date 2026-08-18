@@ -10,7 +10,7 @@ export const GridBackground = ({ inverted = false }: GridBackgroundProps) => {
             <div
                 className={`
           absolute inset-0 
-          bg-[linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] 
+          bg-[linear-gradient(rgba(29,45,68,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(29,45,68,0.06)_1px,transparent_1px)] 
           bg-[size:100px_100px]
         `}
                 style={{

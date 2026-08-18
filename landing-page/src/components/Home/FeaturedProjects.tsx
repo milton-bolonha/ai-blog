@@ -4,8 +4,7 @@ import { trackEvent } from "@/lib/analytics";
 import MagneticButton from "@/components/ui/MagneticButton";
 import { TextMotion } from "@/components/ui/TextMotion";
 import { useEffect, useRef } from "react";
-import { FaRobot, FaGlobe, FaBook, FaGamepad, FaChalkboardTeacher, FaRocket } from "react-icons/fa";
-import { getCategoryGradient } from "@/lib/colors";
+import { FaHeart, FaHome, FaGlassCheers, FaSmile, FaSun, FaCamera, FaGlobe } from "react-icons/fa";
 
 interface Category {
   id: string;
@@ -20,12 +19,13 @@ interface FeaturedProjectsProps {
 
 // Icon mapping
 const ICON_MAP: Record<string, any> = {
-  FaRobot,
+  FaHeart,
+  FaHome,
+  FaGlassCheers,
+  FaSmile,
+  FaSun,
+  FaCamera,
   FaGlobe,
-  FaGamepad,
-  FaBook,
-  FaChalkboardTeacher,
-  FaRocket,
 };
 
 export const FeaturedProjects = ({ categories }: FeaturedProjectsProps) => {
@@ -57,44 +57,36 @@ export const FeaturedProjects = ({ categories }: FeaturedProjectsProps) => {
   }, [categories]);
 
   return (
-    <div className="relative w-full h-full min-h-screen">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-white/3 rounded-full blur-[150px]" />
-      </div>
-
+    <div id="projetos" className="relative w-full h-full min-h-screen bg-[#f4ece4] text-[#1d2d44] py-20">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-12">
-          {/* Badge: Catálogo */}
-          <div className="inline-block px-4 py-2 bg-white/5 backdrop-blur-sm rounded-full border border-white/10 mb-6">
-            <span className="text-sm font-medium text-white/80 tracking-wide">
-              Catálogo de Soluções
+        <div className="text-center mb-16">
+          {/* Badge: Experiências */}
+          <div className="inline-block px-3.5 py-1.5 bg-[#e6d8cc] rounded-full border border-[#1d2d44]/15 mb-4 shadow-sm">
+            <span className="text-[11px] font-bold text-[#D47E30] tracking-widest uppercase">
+              Experiências Fotográficas
             </span>
           </div>
 
           {/* Title */}
           <h2
-            className="text-4xl md:text-5xl font-semibold text-white mb-6"
-            style={{
-              fontFamily: "Noto Serif Variable, serif",
-              lineHeight: "1.3",
-            }}
+            className="text-4xl md:text-6xl font-normal text-[#1d2d44] mb-4 leading-tight"
+            style={{ fontFamily: "Federo, serif" }}
           >
             <TextMotion trigger={true} stagger={0.05}>
-              O Que Você Procura?
+              Cada história tem seus capítulos.
             </TextMotion>
           </h2>
 
           {/* Description */}
-          <p className="text-xl text-white/60 max-w-3xl mx-auto mb-10">
-            De boilerplates de IA a mentorias de carreira, encontre a ferramenta certa para o seu próximo nível.
+          <p className="text-lg text-[#3b5068] max-w-2xl mx-auto font-sans leading-relaxed">
+            Experiências fotográficas documentais pensadas para guardar o essencial de cada fase da sua família.
           </p>
         </div>
 
-        {/* CATEGORY CARDS GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 px-4">
+        {/* 7 CATEGORY EXPERIENCES GRID */}
+        <div className="flex flex-wrap justify-center gap-6 mb-12">
           {categories.map((category, index) => {
-            const Icon = ICON_MAP[category.icon] || FaGlobe;
-            const gradient = getCategoryGradient(category.id);
+            const Icon = ICON_MAP[category.icon] || FaHeart;
 
             return (
               <Link
@@ -107,46 +99,25 @@ export const FeaturedProjects = ({ categories }: FeaturedProjectsProps) => {
                     `Category ${category.id} - Home`
                   )
                 }
-                className="group relative block h-full flex flex-col"
+                className="group relative flex flex-col justify-between bg-[#e6d8cc] rounded-2xl p-7 border border-[#1d2d44]/15 hover:border-[#D47E30] hover:shadow-xl transition-all duration-300 shadow-sm w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
               >
-                <div
-                  ref={(el) => {
-                    if (el) {
-                      tiltRefs.current[index] = el;
-                    }
-                  }}
-                  className="aspect-[4/3] rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/20 transition-all duration-500 flex flex-col items-center justify-center relative overflow-hidden shadow-2xl"
-                  style={{ transformStyle: "preserve-3d" }}
-                >
-                  {/* Dynamic Background Gradient based on Category */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-20 group-hover:opacity-30 transition-opacity duration-500`} />
-
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                    <span className="px-6 py-2 bg-white/10 backdrop-blur-md rounded-full text-white font-bold border border-white/20">
-                      Ver Categoria
-                    </span>
+                <div>
+                  <div className="w-12 h-12 rounded-xl bg-[#f4ece4] border border-[#1d2d44]/10 flex items-center justify-center text-[#D47E30] mb-6 group-hover:scale-110 transition-transform">
+                    <Icon className="text-xl" />
                   </div>
 
-                  {/* Icon */}
-                  <div className="text-6xl text-white/20 group-hover:text-white/40 transition-colors duration-500 transform group-hover:scale-110 z-10">
-                    <Icon />
-                  </div>
-
-                  {/* Category Label Badge */}
-                  <span className="absolute top-4 left-4 bg-white/10 text-white/80 text-xs font-bold px-3 py-1 rounded-full border border-white/10 z-20 backdrop-blur-sm">
-                    {category.label}
-                  </span>
-                </div>
-
-                {/* Category Info */}
-                <div className="mt-6 space-y-3 flex-1">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors line-clamp-1">
+                  <h3 className="text-2xl font-normal text-[#1d2d44] mb-3 group-hover:text-[#D47E30] transition-colors" style={{ fontFamily: 'Federo, serif' }}>
                     {category.label}
                   </h3>
-                  <p className="text-white/60 leading-relaxed text-sm line-clamp-2">
+
+                  <p className="text-sm text-[#3b5068] font-sans leading-relaxed mb-6">
                     {category.description}
                   </p>
+                </div>
+
+                <div className="inline-flex items-center gap-2 text-xs font-bold text-[#D47E30] uppercase tracking-wider group-hover:underline pt-4 border-t border-[#1d2d44]/10">
+                  <span>Conheça</span>
+                  <span>&rarr;</span>
                 </div>
               </Link>
             );
@@ -160,11 +131,11 @@ export const FeaturedProjects = ({ categories }: FeaturedProjectsProps) => {
               onClick={() =>
                 trackEvent("click", "CTA", "View All Items - Home")
               }
-              className="inline-flex items-center gap-2 bg-white text-black hover:bg-white/90 font-medium py-4 px-8 rounded-full transition-all duration-300"
+              className="inline-flex items-center gap-3 bg-[#D47E30] text-white hover:bg-[#b86924] font-semibold py-4 px-8 rounded-full transition-all duration-300 uppercase tracking-wider text-xs shadow-md"
             >
               Ver Catálogo Completo
               <svg
-                className="w-5 h-5"
+                className="w-4 h-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
