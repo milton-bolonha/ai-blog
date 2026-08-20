@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <?xml-stylesheet type="text/xsl" href="https://blog-instituto.netlify.app/blog//template.xsl"?>
-    <!-- Created in Tue Aug 18 2026 06:22:01 GMT-0300 (Horário Padrão de Brasília) -->
+    <!-- Created in Wed Aug 19 2026 21:52:16 GMT-0300 (Horário Padrão de Brasília) -->
     <urlset
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd"
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
         <loc>https://blog-instituto.netlify.app/blog/atom-feed.xml</loc>
-        <lastmod>2026-08-18T09:22:01.544Z</lastmod>
+        <lastmod>2026-08-20T00:52:16.564Z</lastmod>
         <image:image>
         <image:loc>https://blog-instituto.netlify.app/blog//blog/logo.png</image:loc>
       </image:image>
       </url>,<url>
         <loc>https://blog-instituto.netlify.app/blog/rss-feed.xml</loc>
-        <lastmod>2026-08-18T09:22:01.544Z</lastmod>
+        <lastmod>2026-08-20T00:52:16.564Z</lastmod>
         <image:image>
         <image:loc>https://blog-instituto.netlify.app/blog//blog/logo.png</image:loc>
       </image:image>
       </url>,<url>
         <loc>https://blog-instituto.netlify.app/blog/robots.txt</loc>
-        <lastmod>2026-08-18T09:22:01.544Z</lastmod>
+        <lastmod>2026-08-20T00:52:16.564Z</lastmod>
         <image:image>
         <image:loc>https://blog-instituto.netlify.app/blog//blog/logo.png</image:loc>
       </image:image>

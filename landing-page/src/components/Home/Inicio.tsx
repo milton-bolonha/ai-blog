@@ -168,7 +168,7 @@ export const Inicio = ({ onNavigate }: { onNavigate?: (index: number) => void })
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="relative aspect-[3/4] shadow-2xl rounded-2xl overflow-hidden bg-[#e6d8cc]" style={{ transform: "translateZ(30px)" }}>
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-[#f4ece4]" style={{ transform: "translateZ(30px)", boxShadow: "0 0 50px 30px #f4ece4" }}>
                 <OptimizedImage
                   src={content.photo.url}
                   alt={content.photo.alt}
@@ -177,11 +177,6 @@ export const Inicio = ({ onNavigate }: { onNavigate?: (index: number) => void })
                   cubeFrame={true}
                   shouldLoad={enable3D}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1d2d44]/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
-                <div className="absolute bottom-6 left-6 right-6 text-white" style={{ transform: "translateZ(50px)" }}>
-                  <span className="text-xs uppercase tracking-widest text-[#D47E30] font-bold">Portfólio Autoral</span>
-                  <h3 className="text-2xl font-normal text-white mt-1" style={{ fontFamily: 'Federo, serif' }}>Larissa Canhas</h3>
-                </div>
               </div>
             </motion.div>
           </div>

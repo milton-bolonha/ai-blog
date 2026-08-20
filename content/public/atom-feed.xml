@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog-instituto.netlify.app/blog/</id>
     <title>Larissa Canhas | Journal Atom Feed</title>
-    <updated>2026-08-18T09:22:01.648Z</updated>
+    <updated>2026-08-20T00:52:16.656Z</updated>
     <generator>Fotografia autoral, ensaios fine art, iluminação de estúdio e diário de direção de arte por Larissa Canhas. Feed</generator>
     <author>
         <name>Larissa Canhas | Journal</name>
@@ -386,10 +386,54 @@
         </author>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Terms and Conditions]]></title>
+        <id>https://blog-instituto.netlify.app/blog/terms-and-conditions</id>
+        <link href="https://blog-instituto.netlify.app/blog/terms-and-conditions"/>
+        <updated>2026-08-20T00:52:11.109Z</updated>
+        <summary type="html"><![CDATA[Please read these Terms of Use (“Terms”, “Terms of Use”) carefully before using the https://blog-instituto.netlify.app/blog website (the “Service”) operated by I/O Blog (“us”, “we”, or “our”).]]></summary>
+        <content type="html"><![CDATA[<p>Last updated: December 31, 2019</p>
+<p>Please read these Terms and Conditions (“Terms”, “Terms and Conditions”) carefully before using the https://www.moderntips.com website (the “Service”) operated by I/O Blog (“us”, “we”, or “our”).</p>
+<p>Your access to and use of the Service is conditioned upon your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who wish to access or use the Service.</p>
+<p>By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you do not have permission to access the Service.</p>
+<h2 id="intellectualproperty">Intellectual Property</h2>
+<p>The Service and its original content, features and functionality are and will remain the exclusive property of I/O Blog and its licensors. The Service is protected by copyright, trademark, and other laws of both the United States and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of I/O Blog.</p>
+<h2 id="linkstootherwebsites">Links To Other Web Sites</h2>
+<p>Our Service may contain links to third party web sites or services that are not owned or controlled by I/O Blog.</p>
+<p>I/O Blog has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.</p>
+<p>You acknowledge and agree that I/O Blog shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such third party web sites or services.</p>
+<p>We strongly advise you to read the terms and conditions and privacy policies of any third party web sites or services that you visit.</p>
+<h2 id="termination">Termination</h2>
+<p>We may terminate or suspend your access to the Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.</p>
+<p>All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.</p>
+<h2 id="indemnification">Indemnification</h2>
+<p>You agree to defend, indemnify and hold harmless I/O Blog and its licensee and licensors, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney’s fees), resulting from or arising out of a) your use and access of the Service, or b) a breach of these Terms.</p>
+<h2 id="limitationofliability">Limitation Of Liability</h2>
+<p>In no event shall I/O Blog, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.</p>
+<h2 id="disclaimer">Disclaimer</h2>
+<p>Your use of the Service is at your sole risk. The Service is provided on an “AS IS” and “AS AVAILABLE” basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement or course of performance.</p>
+<p>I/O Blog its subsidiaries, affiliates, and its licensors do not warrant that a) the Service will function uninterrupted, secure or available at any particular time or location; b) any errors or defects will be corrected; c) the Service is free of viruses or other harmful components; or d) the results of using the Service will meet your requirements.</p>
+<h2 id="exclusions">Exclusions</h2>
+<p>Some jurisdictions do not allow the exclusion of certain warranties or the exclusion or limitation of liability for consequential or incidental damages, so the limitations above may not apply to you.</p>
+<h2 id="governinglaw">Governing Law</h2>
+<p>These Terms shall be governed and construed in accordance with the laws of California, United States, without regard to its conflict of law provisions.</p>
+<p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have had between us regarding the Service.</p>
+<h2 id="changes">Changes</h2>
+<p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+<p>By continuing to access or use our Service after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Service.</p>
+<p><strong>I/O Blog</strong></p>
+<p><em>PO Box 515381</em></p>
+<p><em>Los Angeles, CA 90051</em></p>]]></content>
+        <author>
+            <name>Larissa Canhas | Journal</name>
+            <email>contato@larissacanhas.com.br</email>
+            <uri>https://blog-instituto.netlify.app/blog</uri>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Privacy Policy]]></title>
         <id>https://blog-instituto.netlify.app/blog/privacy-policy</id>
         <link href="https://blog-instituto.netlify.app/blog/privacy-policy"/>
-        <updated>2026-08-18T09:21:58.246Z</updated>
+        <updated>2026-08-20T00:52:11.108Z</updated>
         <summary type="html"><![CDATA[Privacy police for I/O Blog blog.]]></summary>
         <content type="html"><![CDATA[<p>Effective date: December 31, 2019</p>
 <p>I/O Blog (“us”, “we”, or “our”) operates the https://www.moderntips.com website (hereinafter referred to as the “Service”).</p>
@@ -537,54 +581,10 @@
         </author>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Terms and Conditions]]></title>
-        <id>https://blog-instituto.netlify.app/blog/terms-and-conditions</id>
-        <link href="https://blog-instituto.netlify.app/blog/terms-and-conditions"/>
-        <updated>2026-08-18T09:21:58.246Z</updated>
-        <summary type="html"><![CDATA[Please read these Terms of Use (“Terms”, “Terms of Use”) carefully before using the https://blog-instituto.netlify.app/blog website (the “Service”) operated by I/O Blog (“us”, “we”, or “our”).]]></summary>
-        <content type="html"><![CDATA[<p>Last updated: December 31, 2019</p>
-<p>Please read these Terms and Conditions (“Terms”, “Terms and Conditions”) carefully before using the https://www.moderntips.com website (the “Service”) operated by I/O Blog (“us”, “we”, or “our”).</p>
-<p>Your access to and use of the Service is conditioned upon your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who wish to access or use the Service.</p>
-<p>By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you do not have permission to access the Service.</p>
-<h2 id="intellectualproperty">Intellectual Property</h2>
-<p>The Service and its original content, features and functionality are and will remain the exclusive property of I/O Blog and its licensors. The Service is protected by copyright, trademark, and other laws of both the United States and foreign countries. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of I/O Blog.</p>
-<h2 id="linkstootherwebsites">Links To Other Web Sites</h2>
-<p>Our Service may contain links to third party web sites or services that are not owned or controlled by I/O Blog.</p>
-<p>I/O Blog has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.</p>
-<p>You acknowledge and agree that I/O Blog shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such third party web sites or services.</p>
-<p>We strongly advise you to read the terms and conditions and privacy policies of any third party web sites or services that you visit.</p>
-<h2 id="termination">Termination</h2>
-<p>We may terminate or suspend your access to the Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of the Terms.</p>
-<p>All provisions of the Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.</p>
-<h2 id="indemnification">Indemnification</h2>
-<p>You agree to defend, indemnify and hold harmless I/O Blog and its licensee and licensors, and their employees, contractors, agents, officers and directors, from and against any and all claims, damages, obligations, losses, liabilities, costs or debt, and expenses (including but not limited to attorney’s fees), resulting from or arising out of a) your use and access of the Service, or b) a breach of these Terms.</p>
-<h2 id="limitationofliability">Limitation Of Liability</h2>
-<p>In no event shall I/O Blog, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Service; (ii) any conduct or content of any third party on the Service; (iii) any content obtained from the Service; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.</p>
-<h2 id="disclaimer">Disclaimer</h2>
-<p>Your use of the Service is at your sole risk. The Service is provided on an “AS IS” and “AS AVAILABLE” basis. The Service is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement or course of performance.</p>
-<p>I/O Blog its subsidiaries, affiliates, and its licensors do not warrant that a) the Service will function uninterrupted, secure or available at any particular time or location; b) any errors or defects will be corrected; c) the Service is free of viruses or other harmful components; or d) the results of using the Service will meet your requirements.</p>
-<h2 id="exclusions">Exclusions</h2>
-<p>Some jurisdictions do not allow the exclusion of certain warranties or the exclusion or limitation of liability for consequential or incidental damages, so the limitations above may not apply to you.</p>
-<h2 id="governinglaw">Governing Law</h2>
-<p>These Terms shall be governed and construed in accordance with the laws of California, United States, without regard to its conflict of law provisions.</p>
-<p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service, and supersede and replace any prior agreements we might have had between us regarding the Service.</p>
-<h2 id="changes">Changes</h2>
-<p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
-<p>By continuing to access or use our Service after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Service.</p>
-<p><strong>I/O Blog</strong></p>
-<p><em>PO Box 515381</em></p>
-<p><em>Los Angeles, CA 90051</em></p>]]></content>
-        <author>
-            <name>Larissa Canhas | Journal</name>
-            <email>contato@larissacanhas.com.br</email>
-            <uri>https://blog-instituto.netlify.app/blog</uri>
-        </author>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Advertising Disclosure]]></title>
         <id>https://blog-instituto.netlify.app/blog/advertising-disclosure</id>
         <link href="https://blog-instituto.netlify.app/blog/advertising-disclosure"/>
-        <updated>2026-08-18T09:21:58.245Z</updated>
+        <updated>2026-08-20T00:52:11.106Z</updated>
         <summary type="html"><![CDATA[I/O Blog.com has a financial relationship with some of the companies mentioned throughout the site and this site may be compensated through the credit card issuer or advertiser’s partner programs.]]></summary>
         <content type="html"><![CDATA[<p>moderntips.com has a financial relationship with some of the companies mentioned throughout the site and this site may be compensated through the credit card issuer or advertiser’s partner programs. We do not make recommendations based on these relationships alone. Compensation may impact which companies we review and write about and how and where products appear on this site (including, for example, the order in which they appear).</p>
 <h2 id="disclaimer">Disclaimer:</h2>
@@ -599,7 +599,7 @@
         <title type="html"><![CDATA[About Us]]></title>
         <id>https://blog-instituto.netlify.app/blog/about-us</id>
         <link href="https://blog-instituto.netlify.app/blog/about-us"/>
-        <updated>2026-08-18T09:21:58.244Z</updated>
+        <updated>2026-08-20T00:52:11.104Z</updated>
         <summary type="html"><![CDATA[I/O Blog is here to deliver tips and tricks to live a better life.]]></summary>
         <content type="html"><![CDATA[<h2 id="aboutus">About Us</h2>
 <p><strong>I/O Blog is here to deliver tips and tricks to live a better life.</strong> We cover a broad range of topics including finance, health, and travel to help enhance your everyday life. We’re passionate about spreading meaningful content that makes an immediate and noticeable difference in your life.</p>

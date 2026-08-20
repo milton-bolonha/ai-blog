@@ -10,7 +10,7 @@ export const AboutSection = () => {
   const { t } = useLanguage();
 
   return (
-    <div className="relative w-full h-full min-h-screen flex items-center bg-[#e6d8cc] text-[#1d2d44]">
+    <div className="relative w-full h-full min-h-screen flex items-center bg-[#f4ece4] text-[#1d2d44]">
       <GridBackground inverted={false} />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full py-24">
@@ -19,7 +19,7 @@ export const AboutSection = () => {
           {/* Left: Image Card */}
           <div className="order-2 lg:order-1">
             <div className="relative max-w-sm mx-auto lg:mx-0">
-              <div className="relative aspect-[3/4] overflow-hidden shadow-2xl bg-[#f4ece4] border-2 border-[#1d2d44]/20 md:rounded-2xl">
+              <div className="relative aspect-[3/4] overflow-hidden md:rounded-2xl bg-[#f4ece4]" style={{ boxShadow: "0 0 50px 30px #f4ece4" }}>
                 <OptimizedImage
                   src={aboutData.about.photo.url}
                   alt={aboutData.about.photo.alt}
@@ -27,6 +27,7 @@ export const AboutSection = () => {
                   className="object-cover"
                   cubeFrame={true}
                   enableFlip={true}
+                  bgColor="#f4ece4"
                 />
               </div>
             </div>

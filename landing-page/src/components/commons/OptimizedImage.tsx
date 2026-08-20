@@ -7,6 +7,8 @@ interface OptimizedImageProps extends Omit<ImageProps, 'onError' | 'onLoad'> {
   cubeFrame?: boolean;
   enableFlip?: boolean;
   shouldLoad?: boolean;
+  bgColor?: string;
+  shape?: 'rect' | 'circle';
 }
 
 export const OptimizedImage = ({
@@ -20,6 +22,8 @@ export const OptimizedImage = ({
   cubeFrame = false,
   enableFlip = true,
   shouldLoad, // Destructured here to remove from ...props
+  bgColor = '#f4ece4',
+  shape = 'rect',
   ...props
 }: OptimizedImageProps) => {
   const [error, setError] = useState(false);
@@ -42,8 +46,8 @@ export const OptimizedImage = ({
   }, [src]);
 
   // Initialize framer-blocks when cubeFrame is enabled
-  // Lazy load state
-  const [isInView, setIsInView] = useState(false);
+  // Lazy load state (priority loads immediately)
+  const [isInView, setIsInView] = useState(priority);
   
   useEffect(() => {
     if (!containerRef.current) return;
@@ -89,7 +93,9 @@ export const OptimizedImage = ({
           resolution: 128,
           size: 180,
           layeredDelay: true,
-          voxelizeImage: false 
+          voxelizeImage: false,
+          bgColor: bgColor,
+          shape: shape,
         }) as any;
         
         rendererRef.current = result.renderer;
@@ -115,7 +121,7 @@ export const OptimizedImage = ({
       rendererRef.current = null;
       setIs3DReady(false); // Resetar ao desmontar
     };
-  }, [cubeFrame, imgSrc, loading, error, isInView, shouldLoadVal]);
+  }, [cubeFrame, imgSrc, loading, error, isInView, shouldLoadVal, shape, bgColor]);
 
   // Funções de controle do 3D
   const [isGravityOn, setIsGravityOn] = useState(false);
@@ -136,17 +142,17 @@ export const OptimizedImage = ({
   // Renderização Composta
   return (
     <div 
-      className={`relative w-full h-full ${loading ? 'animate-pulse bg-gray-200 dark:bg-gray-700' : ''}`}
-      style={{ width: '100%', height: '100%' }}
+      className={`relative w-full h-full ${loading ? 'animate-pulse' : ''}`}
+      style={{ width: '100%', height: '100%', background: loading ? `${bgColor}cc` : bgColor }}
     >
       {/* 1. Imagem Base de Fallback - Reduzida para 75% para casar com o 3D */}
       <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}>
-         <div className={`relative ${cubeFrame ? 'w-[75%] h-[75%]' : 'w-full h-full'}`}>
+         <div className={`relative ${cubeFrame ? 'w-[75%] h-[75%]' : 'w-full h-full'} ${shape === 'circle' ? 'rounded-full overflow-hidden' : ''}`}>
             <Image
               src={error ? fallback : imgSrc}
               alt={alt}
               fill
-              className={`${className} object-contain`}
+              className={`${className} ${shape === 'circle' ? 'rounded-full' : ''} object-contain`}
               loading={priority ? undefined : 'lazy'}
               priority={priority}
               {...props}
@@ -186,8 +192,8 @@ export const OptimizedImage = ({
         <>
           <div 
             ref={containerRef}
-            className={`absolute inset-0 w-full h-full z-10 ${className} transition-opacity duration-1000 ${is3DReady ? 'opacity-100' : 'opacity-0'}`}
-            style={{ width: '100%', height: '100%' }}
+            className={`absolute inset-0 w-full h-full z-10 transition-opacity duration-1000 ${is3DReady ? 'opacity-100' : 'opacity-0'}`}
+            style={{ width: '100%', height: '100%', background: bgColor, border: 'none', outline: 'none', boxShadow: 'none' }}
           />
           
           {/* Control Buttons - Only show if enableFlip is true */}
@@ -196,7 +202,7 @@ export const OptimizedImage = ({
               {/* Gravity Toggle Button */}
               <button
                 onClick={handleGravityToggle}
-                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full p-3 transition-all duration-300 group cursor-pointer"
+                className="w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm border-2 border-white flex items-center justify-center transition-all duration-300 cursor-pointer hover:bg-black/70"
                 aria-label="Toggle Gravity"
                 title="Ligar/Desligar Gravidade"
               >
@@ -218,7 +224,7 @@ export const OptimizedImage = ({
               {/* Rotation Button */}
               <button
                 onClick={handleRotate}
-                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full p-3 transition-all duration-300 group cursor-pointer"
+                className="w-12 h-12 rounded-full bg-black/50 backdrop-blur-sm border-2 border-white flex items-center justify-center transition-all duration-300 cursor-pointer hover:bg-black/70"
                 aria-label="Rotate 360°"
                 title="Girar 360°"
               >

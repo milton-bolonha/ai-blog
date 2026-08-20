@@ -105,18 +105,24 @@ export const Animocon = ({ type = "like", size = 24 }: AnimoconProps) => {
   );
 };
 
+const CLICK_EMOJIS = ["📸", "📷", "✨", "🤍"];
+
 // Global click feedback
 export const GlobalClickFeedback = () => {
-  const [clicks, setClicks] = useState<{ id: number; x: number; y: number }[]>(
-    []
-  );
+  const [clicks, setClicks] = useState<
+    { id: number; x: number; y: number; emoji: string }[]
+  >([]);
 
   useEffect(() => {
+    let index = 0;
+
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (!target.closest("a, button, input, textarea, select")) {
         const id = Date.now();
-        setClicks((prev) => [...prev, { id, x: e.clientX, y: e.clientY }]);
+        const emoji = CLICK_EMOJIS[index % CLICK_EMOJIS.length];
+        index++;
+        setClicks((prev) => [...prev, { id, x: e.clientX, y: e.clientY, emoji }]);
         setTimeout(() => {
           setClicks((prev) => prev.filter((click) => click.id !== id));
         }, 1000);
@@ -143,7 +149,7 @@ export const GlobalClickFeedback = () => {
               exit={{ scale: 0, y: -60, opacity: 0 }}
               transition={{ duration: 0.6 }}
             >
-              👍
+              {click.emoji}
             </motion.div>
 
             {/* Filled circle */}

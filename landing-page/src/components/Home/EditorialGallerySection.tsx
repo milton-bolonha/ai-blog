@@ -64,6 +64,50 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
 ];
 
+// Spring config compartilhado — dá o efeito App Store fluido
+const SPRING = { type: "spring" as const, stiffness: 300, damping: 30 };
+
+// ─── GalleryCard ──────────────────────────────────────────────────────────────
+interface GalleryCardProps {
+  item: GalleryItem;
+  onSelect: (item: GalleryItem) => void;
+}
+
+const GalleryCard = ({ item, onSelect }: GalleryCardProps) => (
+  <motion.div
+    layoutId={`card-${item.id}`}
+    onClick={() => onSelect(item)}
+    className="group relative rounded-2xl overflow-hidden shadow-xl border border-[#1d2d44]/15 cursor-pointer bg-[#e6d8cc] hover-lily"
+    whileHover={{ scale: 1.015 }}
+    transition={SPRING}
+  >
+    <motion.div className={`relative w-full ${item.aspect} overflow-hidden`}>
+      <motion.img
+        layoutId={`img-${item.id}`}
+        src={item.image}
+        alt={item.title}
+        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#1d2d44]/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+    </motion.div>
+
+    <div className="absolute bottom-6 left-6 right-6 text-[#f4ece4] flex justify-between items-end z-10">
+      <div>
+        <span className="text-xs uppercase tracking-wider text-[#D47E30] font-bold">
+          {item.category}
+        </span>
+        <h3 className="text-2xl font-normal text-white mt-1" style={{ fontFamily: "Federo, serif" }}>
+          {item.title}
+        </h3>
+      </div>
+      <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+        <FaExpand size={14} />
+      </div>
+    </div>
+  </motion.div>
+);
+
+// ─── EditorialGallerySection ──────────────────────────────────────────────────
 export const EditorialGallerySection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
@@ -106,118 +150,22 @@ export const EditorialGallerySection = () => {
 
         {/* Grid Parallax de Três Colunas Assimétricas no Desktop */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-          {/* Coluna 1 */}
+
           <motion.div style={{ y: col1Y }} className="space-y-8">
             {col1Items.map((item) => (
-              <motion.div
-                key={item.id}
-                layoutId={`card-${item.id}`}
-                onClick={() => setSelectedItem(item)}
-                className="group relative rounded-2xl overflow-hidden shadow-xl border border-[#1d2d44]/15 cursor-pointer bg-[#e6d8cc] hover-lily"
-                whileHover={{ scale: 1.015 }}
-                transition={{ duration: 0.4 }}
-              >
-                <motion.div className={`relative w-full ${item.aspect} overflow-hidden`}>
-                  <motion.img
-                    layoutId={`img-${item.id}`}
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1d2d44]/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-                </motion.div>
-
-                <div className="absolute bottom-6 left-6 right-6 text-[#f4ece4] flex justify-between items-end z-10">
-                  <div>
-                    <span className="text-xs uppercase tracking-wider text-[#D47E30] font-bold">
-                      {item.category}
-                    </span>
-                    <h3 className="text-2xl font-normal text-white mt-1" style={{ fontFamily: "Federo, serif" }}>
-                      {item.title}
-                    </h3>
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                    <FaExpand size={14} />
-                  </div>
-                </div>
-              </motion.div>
+              <GalleryCard key={item.id} item={item} onSelect={setSelectedItem} />
             ))}
           </motion.div>
 
-          {/* Coluna 2 */}
           <motion.div style={{ y: col2Y }} className="space-y-8 md:pt-8 lg:pt-12">
             {col2Items.map((item) => (
-              <motion.div
-                key={item.id}
-                layoutId={`card-${item.id}`}
-                onClick={() => setSelectedItem(item)}
-                className="group relative rounded-2xl overflow-hidden shadow-xl border border-[#1d2d44]/15 cursor-pointer bg-[#e6d8cc] hover-lily"
-                whileHover={{ scale: 1.015 }}
-                transition={{ duration: 0.4 }}
-              >
-                <motion.div className={`relative w-full ${item.aspect} overflow-hidden`}>
-                  <motion.img
-                    layoutId={`img-${item.id}`}
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1d2d44]/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-                </motion.div>
-
-                <div className="absolute bottom-6 left-6 right-6 text-[#f4ece4] flex justify-between items-end z-10">
-                  <div>
-                    <span className="text-xs uppercase tracking-wider text-[#D47E30] font-bold">
-                      {item.category}
-                    </span>
-                    <h3 className="text-2xl font-normal text-white mt-1" style={{ fontFamily: "Federo, serif" }}>
-                      {item.title}
-                    </h3>
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                    <FaExpand size={14} />
-                  </div>
-                </div>
-              </motion.div>
+              <GalleryCard key={item.id} item={item} onSelect={setSelectedItem} />
             ))}
           </motion.div>
 
-          {/* Coluna 3 */}
           <motion.div style={{ y: col3Y }} className="space-y-8 lg:pt-24">
             {col3Items.map((item) => (
-              <motion.div
-                key={item.id}
-                layoutId={`card-${item.id}`}
-                onClick={() => setSelectedItem(item)}
-                className="group relative rounded-2xl overflow-hidden shadow-xl border border-[#1d2d44]/15 cursor-pointer bg-[#e6d8cc] hover-lily"
-                whileHover={{ scale: 1.015 }}
-                transition={{ duration: 0.4 }}
-              >
-                <motion.div className={`relative w-full ${item.aspect} overflow-hidden`}>
-                  <motion.img
-                    layoutId={`img-${item.id}`}
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1d2d44]/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-                </motion.div>
-
-                <div className="absolute bottom-6 left-6 right-6 text-[#f4ece4] flex justify-between items-end z-10">
-                  <div>
-                    <span className="text-xs uppercase tracking-wider text-[#D47E30] font-bold">
-                      {item.category}
-                    </span>
-                    <h3 className="text-2xl font-normal text-white mt-1" style={{ fontFamily: "Federo, serif" }}>
-                      {item.title}
-                    </h3>
-                  </div>
-                  <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                    <FaExpand size={14} />
-                  </div>
-                </div>
-              </motion.div>
+              <GalleryCard key={item.id} item={item} onSelect={setSelectedItem} />
             ))}
           </motion.div>
 
@@ -231,12 +179,14 @@ export const EditorialGallerySection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={SPRING}
             onClick={() => setSelectedItem(null)}
             className="fixed inset-0 z-[99990] bg-[#1d2d44]/90 backdrop-blur-xl flex items-center justify-center p-4 md:p-12 cursor-pointer"
           >
             <motion.div
               layoutId={`card-${selectedItem.id}`}
-              onClick={(e) => e.stopPropagation()}
+              transition={SPRING}
+              onClick={(e: React.MouseEvent) => e.stopPropagation()}
               className="relative max-w-5xl w-full bg-[#f4ece4] text-[#1d2d44] rounded-3xl overflow-hidden shadow-2xl border border-[#e6d8cc]"
             >
               {/* Botão Fechar */}
@@ -253,6 +203,7 @@ export const EditorialGallerySection = () => {
                 <div className="relative h-[50vh] lg:h-[75vh] w-full bg-black">
                   <motion.img
                     layoutId={`img-${selectedItem.id}`}
+                    transition={SPRING}
                     src={selectedItem.image}
                     alt={selectedItem.title}
                     className="w-full h-full object-cover"

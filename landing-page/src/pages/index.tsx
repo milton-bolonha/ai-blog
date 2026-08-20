@@ -57,6 +57,7 @@ interface HomeProps {
   categoriesSettings: any;
 }
 
+import { IntroSection } from "@/components/Home/IntroSection";
 import { EditorialGallerySection } from "@/components/Home/EditorialGallerySection";
 import { LensRevealSection } from "@/components/Home/LensRevealSection";
 import { HorizontalPanoramaSection } from "@/components/Home/HorizontalPanoramaSection";
@@ -80,14 +81,15 @@ const HomeContent = ({
 
   // SECTIONS (Slides)
   const sections = [
-    'inicio',        // 0: Hero 3D
-    'galeria',       // 1: Galeria Vertical Parallax
-    'lente-reveal',  // 2: Lens Reveal Mask
-    'panorama',      // 3: Horizontal Scroll Panorama
-    'sobre',         // 4: Sobre Larissa Canhas
-    'projetos',      // 5: Categorias
-    'o-que-faco',    // 6: Showcase
-    'contato'        // 7: Contato
+    'intro',         // 0: Nova Seção 3D Circular Centralizado
+    'inicio',        // 1: Hero 3D Perspective
+    'galeria',       // 2: Galeria Vertical Parallax
+    'lente-reveal',  // 3: Lens Reveal Mask
+    'panorama',      // 4: Horizontal Scroll Panorama
+    'sobre',         // 5: Sobre Larissa Canhas
+    'projetos',      // 6: Categorias
+    'o-que-faco',    // 7: Showcase
+    'contato'        // 8: Contato
   ];
 
   const [isLoaded, setIsLoaded] = useState(false);
@@ -144,7 +146,12 @@ const HomeContent = ({
             onSlideChange={handleSlideChange}
             sections={sections}
           >
-            {/* Slide 0: Hero 3D Perspective */}
+            {/* Slide 0: Nova Seção 3D Circular Centralizado */}
+            <SectionWrapper id="intro" vPadding="py-0" fullHeight>
+              <IntroSection onNavigate={handleSlideChange} />
+            </SectionWrapper>
+
+            {/* Slide 1: Hero 3D Perspective */}
             <SectionWrapper id="inicio" vPadding="py-0" fullHeight>
               <Inicio onNavigate={handleSlideChange} />
             </SectionWrapper>

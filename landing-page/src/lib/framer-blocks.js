@@ -11,11 +11,13 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 class VoxelImageRenderer {
   constructor(container, options = {}) {
     this.container = container;
+    this.bgColor = options.bgColor || '#f4ece4';
+    this.shape = options.shape || 'rect'; // 'rect' | 'circle'
     this.baseResolution = options.resolution || 128;
     this.resX = 128;
     this.resY = 128;
     this.baseSize = options.size || 180;
-    this.width = 135; // 3:4 aspect ratio (180 * 0.75)
+    this.width = this.shape === 'circle' ? 180 : 135; // 3:4 aspect ratio for rect (180 * 0.75), 1:1 for circle
     this.height = 180;
     this.borderThickness = 3; // Border thickness for cursor detection
     this.layeredDelay = options.layeredDelay !== undefined ? options.layeredDelay : false;
@@ -48,24 +50,32 @@ class VoxelImageRenderer {
   }
 
   initScene() {
-    // Scene setup
+    // Scene setup — sem background: canvas transparente, cor vem do CSS
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(0xf4ece4);
     
     // Camera
-    const aspect = this.container.clientWidth / this.container.clientHeight;
-    this.camera = new THREE.PerspectiveCamera(45, aspect, 0.1, 5000);
+    const width = this.container.clientWidth || 300;
+    const height = this.container.clientHeight || (this.shape === 'circle' ? 300 : 400);
+    const aspect = width / height;
+    this.camera = new THREE.PerspectiveCamera(45, aspect || 1, 0.1, 5000);
     this.camera.position.set(0, 0, 250); // Close framing for normal view
     this.cameraBaseZ = 250; // Store base position
     this.cameraTargetZ = 250; // For smooth transitions
     
-    // Renderer
-    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
-    this.renderer.setSize(this.container.clientWidth, this.container.clientHeight);
+    // Renderer com alpha:true — canvas é transparente, o bg vem do CSS
+    // Isso garante correspondência perfeita com qualquer cor de fundo CSS
+    this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    this.renderer.setSize(width, height);
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.outputColorSpace = THREE.SRGBColorSpace;
-    this.renderer.setClearColor(0xf4ece4, 1);
+    this.renderer.setClearColor(0x000000, 0); // Completamente transparente
     this.container.appendChild(this.renderer.domElement);
+    
+    // Garantir que o canvas não tem borda nem sombra própria
+    this.renderer.domElement.style.border = 'none';
+    this.renderer.domElement.style.boxShadow = 'none';
+    this.renderer.domElement.style.outline = 'none';
+    this.renderer.domElement.style.display = 'block';
     
     // Controls - DISABLED (image stays fixed)
     this.orbit = new OrbitControls(this.camera, this.renderer.domElement);
@@ -125,11 +135,12 @@ class VoxelImageRenderer {
   }
 
   handleResize() {
-    const width = this.container.clientWidth;
-    const height = this.container.clientHeight;
+    const width = this.container.clientWidth || 300;
+    const height = this.container.clientHeight || (this.shape === 'circle' ? 300 : 400);
     
     this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     this.renderer.setSize(width, height);
   }
 
@@ -206,11 +217,20 @@ class VoxelImageRenderer {
         imageUrl,
         (texture) => {
           texture.colorSpace = THREE.SRGBColorSpace;
+          texture.generateMipmaps = true;
+          texture.minFilter = THREE.LinearMipmapLinearFilter;
+          texture.magFilter = THREE.LinearFilter;
+          if (this.renderer && this.renderer.capabilities) {
+            texture.anisotropy = this.renderer.capabilities.getMaxAnisotropy();
+          }
+          texture.needsUpdate = true;
+
           this.cachedTexture = texture;
           this.originalWidth = texture.image.width;
           this.originalHeight = texture.image.height;
           
-          console.log(`[Framer-Blocks] Texture loaded: ${this.originalWidth}x${this.originalHeight}`);
+          console.log(`[Framer-Blocks] Texture loaded: ${this.originalWidth}x${this.originalHeight} (Anisotropy: ${texture.anisotropy})`);
+          this.handleResize();
           this.calculateResolution(this.baseResolution);
           this.process();
           this.active = true;
@@ -226,6 +246,16 @@ class VoxelImageRenderer {
   }
 
   calculateResolution(targetRes) {
+    if (this.shape === 'circle') {
+      const size = typeof targetRes === 'number' ? targetRes : 128;
+      this.resX = size;
+      this.resY = size;
+      this.width = this.baseSize;
+      this.height = this.baseSize;
+      console.log(`[Framer-Blocks] Circle Resolution: ${this.resX}x${this.resY}`);
+      return;
+    }
+
     if (targetRes === 'original') {
       const maxDim = 256;
       const aspect = this.originalWidth / this.originalHeight;
@@ -293,7 +323,9 @@ class VoxelImageRenderer {
     // 1. CENTER: Flat image plane (high quality, lightweight)
     // Use fixed gap in pixels for uniform spacing on all sides
     const gapSize = 8; // pixels of gap between image and border
-    const planeGeo = new THREE.PlaneGeometry(this.width - gapSize, this.height - gapSize);
+    const planeGeo = this.shape === 'circle'
+      ? new THREE.CircleGeometry((this.width - gapSize) / 2, 64)
+      : new THREE.PlaneGeometry(this.width - gapSize, this.height - gapSize);
     const planeMat = new THREE.MeshBasicMaterial({
       map: this.cachedTexture,
       side: THREE.DoubleSide,
@@ -356,14 +388,27 @@ class VoxelImageRenderer {
     let voxelCount = 0;
     for (let y = 0; y < this.resY; y++) {
       for (let x = 0; x < this.resX; x++) {
-        // Only borders (top, bottom, left, right)
-        const isTopBorder = y < borderThickness;
-        const isBottomBorder = y >= this.resY - borderThickness;
-        const isLeftBorder = x < borderThickness;
-        const isRightBorder = x >= this.resX - borderThickness;
+        if (this.shape === 'circle') {
+          const cx = (this.resX - 1) / 2;
+          const cy = (this.resY - 1) / 2;
+          const nx = (x - cx) / cx;
+          const ny = (y - cy) / cy;
+          const dist = Math.sqrt(nx * nx + ny * ny);
 
-        if (!(isTopBorder || isBottomBorder || isLeftBorder || isRightBorder)) {
-          continue; // Skip center
+          const borderThicknessRatio = (borderThickness * 2.0) / (this.resX / 2);
+          if (dist > 1.0 || dist < (1.0 - borderThicknessRatio)) {
+            continue; // Skip pixels outside the circle or inside the flat image area
+          }
+        } else {
+          // Only borders (top, bottom, left, right)
+          const isTopBorder = y < borderThickness;
+          const isBottomBorder = y >= this.resY - borderThickness;
+          const isLeftBorder = x < borderThickness;
+          const isRightBorder = x >= this.resX - borderThickness;
+
+          if (!(isTopBorder || isBottomBorder || isLeftBorder || isRightBorder)) {
+            continue; // Skip center
+          }
         }
 
         // HOLLOW OPTIMIZATION: Only render edges within border area

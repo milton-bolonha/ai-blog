@@ -3,9 +3,15 @@
   "position": "right",
   "items": [
     {
+      "id": "intro",
+      "label": "Destaque 3D",
+      "icon": "FaHome",
+      "href": "#intro"
+    },
+    {
       "id": "inicio",
       "label": "Início",
-      "icon": "FaHome",
+      "icon": "FaUser",
       "href": "#inicio"
     },
     {
