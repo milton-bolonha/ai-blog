@@ -92,11 +92,11 @@ export const ServicesSection = () => {
         <div className="text-center mt-16">
           <MagneticButton>
             <Link
-              href="/sobre"
+              href="/#contato"
               className="inline-flex items-center gap-2 text-white hover:text-white/80 font-medium group transition-all duration-300"
             >
               <span className="relative">
-                Ver todos os serviços
+                Fale com a equipe
                 <span className="absolute bottom-0 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
               </span>
               <svg

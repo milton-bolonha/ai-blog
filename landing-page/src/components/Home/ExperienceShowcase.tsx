@@ -80,12 +80,12 @@ function ActionButton({ button, onAction }: ActionButtonProps) {
         group relative inline-flex items-center gap-3 font-medium py-4 px-8 rounded-full 
         transition-all duration-300 cursor-pointer uppercase tracking-wider text-xs
         ${isPrimary
-          ? 'bg-[#D47E30] text-white hover:bg-[#b86924] shadow-md'
-          : 'bg-[#e6d8cc] text-[#1d2d44] border border-[#1d2d44]/20 hover:bg-[#dcd0c4]'
+          ? 'bg-[#d4af37] text-black hover:bg-[#eab308] shadow-lg font-bold'
+          : 'bg-zinc-900 text-white border border-zinc-700 hover:bg-zinc-800'
         }
       `}
     >
-      <span className="relative z-10 tracking-widest text-xs font-bold">
+      <span className="relative z-10 tracking-widest text-xs">
         {button.text}
       </span>
       {Icon && <Icon className="w-4 h-4 relative z-10" />}
@@ -267,25 +267,25 @@ export default function ExperienceShowcase({
       <div className="text-center z-20 relative max-w-4xl px-6">
         {/* Badge */}
         {badge && (
-          <div className="inline-block px-3.5 py-1.5 bg-[#e6d8cc] rounded-full border border-[#1d2d44]/15 mb-6 shadow-sm">
-            <span className="text-[11px] font-bold text-[#D47E30] tracking-widest uppercase">
+          <div className="inline-block px-4 py-1.5 bg-zinc-100 rounded-full border border-zinc-200 mb-6 shadow-sm">
+            <span className="text-xs font-bold text-[#d4af37] tracking-widest uppercase">
               {badge}
             </span>
           </div>
         )}
 
         {/* Title */}
-        <h2 className="text-4xl md:text-6xl text-[#1d2d44] font-normal mb-4" style={{ fontFamily: 'Federo, serif' }}>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl text-zinc-950 font-bold mb-4" style={{ fontFamily: 'Federo, serif' }}>
           {title}
         </h2>
 
         {/* Description */}
-        <p className="text-base text-[#3b5068] font-sans max-w-2xl mx-auto leading-relaxed mb-10">
+        <p className="text-base text-zinc-600 font-sans max-w-2xl mx-auto leading-relaxed mb-10">
           {description}
         </p>
 
         {/* Tabs / Selectors */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
           {tabs.map((tab) => {
             const Icon = tab.icon;
             return (
@@ -298,14 +298,14 @@ export default function ExperienceShowcase({
                   setCurrentSlide(0);
                 }}
                 className={`
-                  px-8 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-3 cursor-pointer border
+                  px-7 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2.5 cursor-pointer border text-xs uppercase tracking-wider
                   ${activeTab === tab.id
-                    ? 'bg-[#1d2d44] text-[#f4ece4] border-[#1d2d44] scale-105 shadow-md'
-                    : 'bg-[#e6d8cc] text-[#1d2d44] border-[#1d2d44]/15 hover:bg-[#dcd0c4] hover:text-[#D47E30]'}
+                    ? 'bg-[#09090b] text-[#d4af37] border-[#09090b] scale-105 shadow-md font-bold'
+                    : 'bg-zinc-100 text-zinc-700 border-zinc-200 hover:bg-zinc-200 hover:text-black'}
                 `}
               >
-                <Icon className="text-lg" />
-                <span className="tracking-widest uppercase text-xs font-semibold pt-[2px]">{tab.label}</span>
+                <Icon className="text-sm" />
+                <span className="pt-[1px]">{tab.label}</span>
               </button>
             );
           })}

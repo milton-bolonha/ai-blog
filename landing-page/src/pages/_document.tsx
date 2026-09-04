@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="pt-BR">
       <Head>
         {/* Metatags essenciais */}
         <meta charSet="utf-8" />
@@ -17,14 +17,12 @@ export default function Document() {
         {/* Metatags Open Graph padrão */}
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Larissa Canhas | Fotografia & Direção de Arte" />
+        <meta property="og:site_name" content="Escola de Artes Gráficas e Design" />
 
         {/* Metatags Twitter padrão */}
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <body className="bg-[#f4ece4] text-[#1d2d44] selection:bg-[#D47E30] selection:text-white">
-
-
+      <body className="bg-white text-zinc-900 selection:bg-[#d4af37] selection:text-black">
         <Main />
         <NextScript />
       </body>

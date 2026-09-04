@@ -1,34 +1,34 @@
 {
   "hero": {
-    "badge": "Fotografia Documental de Famílias, Casais e Celebrações",
-    "title": "Larissa Canhas",
-    "subtitle": "Antes do clique, o encontro. Antes da imagem, a conexão.",
+    "badge": "Material Exclusivo Para Você Ser Um Arte Finalista Completo",
+    "title": "Arte-Final para Designers:<br />Manual de Impressão Digital e Offset",
+    "subtitle": "Chega de aprender arte-final no erro e no retrabalho. Este manual reúne mais de 20 anos de experiência em pré-impressão, gerenciamento de cor e fechamento de arquivos, com material complementar pronto para aprender na prática.",
     "cta": {
-      "primary": "Reserve seu Capítulo",
-      "secondary": "Conheça as Experiências"
+      "primary": "Quero Meu Exemplar",
+      "secondary": "Ver o Que Está Incluso"
     },
     "stats": [
       {
-        "value": "+500",
-        "label": "Ensaios Realizados",
-        "info": "Famílias, casais e celebrações retratados"
+        "value": "I/O",
+        "label": "Instituto Organizacionista",
+        "info": "esse kit e manual é gerido pelo Instituto Organizacionista"
       },
       {
-        "value": "12",
-        "label": "Anos de Experiência",
-        "info": "Mais de uma década eternizando histórias"
+        "value": "+7",
+        "label": "anos de mercado",
+        "info": "o Instituto está há +7 anos criando conteúdo técnico de qualidade."
       },
       {
-        "value": "100%",
-        "label": "Direção Sensível",
-        "info": "Abordagem acolhedora e luz natural"
+        "value": "+10",
+        "label": "Materiais Complementares",
+        "info": "livro, apps pedagógicos, fichas técnicas, ..."
       }
     ],
     "photo": {
       "url": "/img/foto-perfil-png.png",
-      "alt": "Larissa Canhas Fotografia Documental",
-      "width": 500,
-      "height": 600
+      "alt": "Escola de Artes Gráficas e Design",
+      "width": 1334,
+      "height": 2000
     }
   }
 }

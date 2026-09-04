@@ -105,7 +105,7 @@ export const Animocon = ({ type = "like", size = 24 }: AnimoconProps) => {
   );
 };
 
-const CLICK_EMOJIS = ["📸", "📷", "✨", "🤍"];
+const CLICK_EMOJIS = ["🎨", "🖨️", "📐", "🖌️"];
 
 // Global click feedback
 export const GlobalClickFeedback = () => {
@@ -122,7 +122,10 @@ export const GlobalClickFeedback = () => {
         const id = Date.now();
         const emoji = CLICK_EMOJIS[index % CLICK_EMOJIS.length];
         index++;
-        setClicks((prev) => [...prev, { id, x: e.clientX, y: e.clientY, emoji }]);
+        setClicks((prev) => [
+          ...prev,
+          { id, x: e.clientX, y: e.clientY, emoji },
+        ]);
         setTimeout(() => {
           setClicks((prev) => prev.filter((click) => click.id !== id));
         }, 1000);

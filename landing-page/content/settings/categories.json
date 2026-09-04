@@ -1,46 +1,46 @@
 {
   "categories": [
     {
-      "id": "GESTANTE",
-      "label": "Gestante",
-      "icon": "FaHeart",
-      "description": "A espera, a transformação e a poesia do começo de uma nova vida."
+      "id": "PRE_IMPRESSAO",
+      "label": "Pré-Impressão",
+      "icon": "FaPrint",
+      "description": "Sangria, marcas de corte/registro, separação de cores CMYK, PDF/X e preflight profissional."
     },
     {
-      "id": "FAMILIA",
-      "label": "Família",
-      "icon": "FaHome",
-      "description": "Hoje é rotina. Amanhã será memória. O lar e os pequenos gestos de afeto."
+      "id": "TRATAMENTO_IMAGEM",
+      "label": "Tratamento de Imagens",
+      "icon": "FaPalette",
+      "description": "Resolução, conversão de perfis ICC, controle de ganho de ponto e calibração de cor."
     },
     {
-      "id": "CASAL",
-      "label": "Casal & Pré-Wedding",
-      "icon": "FaHeart",
-      "description": "A cumplicidade, a intimidade e a verdade da história a dois."
+      "id": "DIAGRAMACAO",
+      "label": "Diagramação Editorial",
+      "icon": "FaBookOpen",
+      "description": "Grids, tipografia técnica, alinhamentos, paginação e arquivos multipágina prontos para máquina."
     },
     {
-      "id": "CELEBRACOES",
-      "label": "Celebrações & Bodas",
-      "icon": "FaGlassCheers",
-      "description": "Festas de vida, renovação de votos e grandes encontros de amor."
+      "id": "DIGITAL_OFFSET",
+      "label": "Digital & Offset",
+      "icon": "FaLayerGroup",
+      "description": "Diferenças de processos, papéis, acabamentos nobres, vernizes, facas especiais e imposição."
     },
     {
-      "id": "LIFESTYLE",
-      "label": "Recém-Nascido & Lifestyle",
-      "icon": "FaSmile",
-      "description": "Primeiros dias em casa, a ternura silenciosa e a nova rotina."
+      "id": "AUTOMACAO_FLUXO",
+      "label": "Fluxos & Automação",
+      "icon": "FaCogs",
+      "description": "PitStop Pro, Enfocus Switch, padronização, conferência automática e produtividade."
     },
     {
-      "id": "NATAL",
-      "label": "Sessões Sazonais & Natal",
-      "icon": "FaSun",
-      "description": "Tradições de fim de ano e registros afetivos para celebrar juntos."
+      "id": "EMBALAGENS",
+      "label": "Embalagens & Mockups",
+      "icon": "FaBoxOpen",
+      "description": "Design de embalagens, desenvolvimento de facas de corte e vincos, e simulações 3D."
     },
     {
-      "id": "PROJETOS",
-      "label": "Projetos sob Medida",
-      "icon": "FaCamera",
-      "description": "Projetos fotográficos autorais e acervos de memórias personalizadas."
+      "id": "CERTIFICACAO",
+      "label": "Certificação Profissional",
+      "icon": "FaAward",
+      "description": "Comprovação de capacitação técnica reconhecida para gráficas, agências e estúdios."
     }
   ]
 }

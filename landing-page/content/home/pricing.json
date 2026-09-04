@@ -1,0 +1,52 @@
+{
+  "pricingSection": {
+    "badge": "Planos & Kits",
+    "title": "O Que Está Incluso",
+    "subtitle": "Escolha o formato ideal para dominar arte-final e produção gráfica com material de verdade.",
+    "plans": [
+      {
+        "name": "Kit Completo",
+        "tagline": "Tudo o que você precisa para ser um arte-finalista completo",
+        "priceLabel": "Mais Completo",
+        "highlight": true,
+        "items": [
+          "Manual impresso capa dura (cópia física)",
+          "Acesso ao PDF do manual para consulta",
+          "Assets digitais: cartão de visitas, flyers, books e portfólios",
+          "Protocolos de produção em gráfica (checklists)",
+          "App's pedagógico (Acesso On-line Grátis)"
+        ],
+        "ctaLabel": "Garantir Kit Completo"
+      },
+      {
+        "name": "Manual Impresso",
+        "tagline": "O conteúdo essencial em mãos, com suporte aos apps",
+        "priceLabel": "Essencial",
+        "highlight": false,
+        "items": [
+          "Manual impresso capa dura (cópia física)",
+          "App's pedagógico (Acesso On-line Grátis)"
+        ],
+        "ctaLabel": "Pedir Manual Impresso"
+      },
+      {
+        "name": "Empresarial",
+        "tagline": "Solução customizada para equipes e gráficas inteiras",
+        "priceLabel": "Sob Consulta",
+        "highlight": false,
+        "business": true,
+        "items": [
+          "Plano customizado para treinamentos in-company",
+          "Kits completos para toda a equipe",
+          "Workshops presenciais ou online",
+          "Mentoria individual com especialistas",
+          "Consultoria em fluxo de produção",
+          "Protocolos feitos sob medida para sua gráfica",
+          "App's pedagógico (Acesso On-line Grátis)",
+          "Certificado de conclusão"
+        ],
+        "ctaLabel": "Falar com Consultor"
+      }
+    ]
+  }
+}

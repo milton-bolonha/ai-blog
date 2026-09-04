@@ -4,69 +4,51 @@
   "items": [
     {
       "id": "intro",
-      "label": "Destaque 3D",
-      "icon": "FaHome",
+      "label": "Destaque",
+      "icon": "FaStar",
       "href": "#intro"
     },
     {
       "id": "inicio",
-      "label": "Início",
-      "icon": "FaUser",
+      "label": "Manual",
+      "icon": "FaBookOpen",
       "href": "#inicio"
     },
     {
-      "id": "galeria",
-      "label": "Galeria Fine Art",
-      "icon": "FaUser",
-      "href": "#galeria"
-    },
-    {
-      "id": "lente-reveal",
-      "label": "Lente 50mm",
-      "icon": "FaFlask",
-      "href": "#lente-reveal"
+      "id": "depoimentos",
+      "label": "Depoimentos",
+      "icon": "FaQuoteRight",
+      "href": "#depoimentos"
     },
     {
       "id": "panorama",
-      "label": "Panorama",
-      "icon": "FaClock",
+      "label": "O Que Você Vai Dominar",
+      "icon": "FaLayerGroup",
       "href": "#panorama"
     },
     {
-      "id": "sobre",
-      "label": "Sobre",
-      "icon": "FaUser",
-      "href": "#sobre"
-    },
-    {
-      "id": "projetos",
-      "label": "Especialidades",
-      "icon": "FaCode",
-      "href": "#projetos"
-    },
-    {
       "id": "o-que-faco",
-      "label": "Coleção",
-      "icon": "FaGamepad",
+      "label": "Instituto",
+      "icon": "FaBuilding",
       "href": "#o-que-faco"
     },
     {
-      "id": "contato",
-      "label": "Contato",
-      "icon": "FaEnvelope",
-      "href": "#contato"
+      "id": "planos",
+      "label": "Planos & Kits",
+      "icon": "FaTags",
+      "href": "#planos"
     },
     {
-      "id": "cta",
-      "label": "Vamos Conversar",
+      "id": "contato",
+      "label": "Aquisição & Contato",
       "icon": "FaEnvelope",
-      "href": "#cta"
+      "href": "#contato"
     }
   ],
   "style": {
-    "backgroundColor": "rgba(29, 45, 68, 0.85)",
-    "activeColor": "#D47E30",
-    "inactiveColor": "#e6d8cc",
+    "backgroundColor": "rgba(10, 10, 12, 0.92)",
+    "activeColor": "#ffd400",
+    "inactiveColor": "#a1a1aa",
     "hoverColor": "#ffffff"
   }
 }

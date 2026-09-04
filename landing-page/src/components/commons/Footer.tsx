@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import { getGeneralSettings, getLinkTreeData } from '@/lib/settings';
-import { useLanguage } from '@/contexts/LanguageContext';
-import Link from 'next/link';
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import { getGeneralSettings, getLinkTreeData } from "@/lib/settings";
+import { useLanguage } from "@/contexts/LanguageContext";
+import Link from "next/link";
 
-import businessData from '../../../content/settings/business.json';
+import businessData from "../../../content/settings/business.json";
+import { CONTACT_EMAIL, WHATSAPP_URL } from "@/lib/contacts";
 
 interface LinkTreeItem {
   href: string;
@@ -29,7 +30,9 @@ export const Footer = ({ className = "" }: FooterProps) => {
 
   if (!mounted) {
     return (
-      <footer className={`bg-[#1d2d44] text-[#f4ece4] border-t border-[#f4ece4]/10 ${className}`}>
+      <footer
+        className={`bg-[#1d2d44] text-[#f4ece4] border-t border-[#f4ece4]/10 ${className}`}
+      >
         <div className="max-w-7xl mx-auto px-6 py-12">
           <div className="h-64"></div>
         </div>
@@ -54,54 +57,90 @@ export const Footer = ({ className = "" }: FooterProps) => {
   };
 
   return (
-    <footer className={`bg-[#1d2d44] text-[#f4ece4] border-t border-[#e6d8cc]/15 ${className}`}>
+    <footer className={`relative bg-[#09090b] text-zinc-300 ${className}`}>
+      {/* Barra de Calibração CMYK */}
+      <div className="absolute top-0 left-0 right-0 h-0.5 flex">
+        <div className="w-1/4 bg-[#00a8c6]" />
+        <div className="w-1/4 bg-[#e4007d]" />
+        <div className="w-1/4 bg-[#ffd400]" />
+        <div className="w-1/4 bg-[#09090b]" />
+      </div>
+
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          
           {/* Brand Info */}
           <div className="md:col-span-2 space-y-4">
-            <div className="mb-4">
+            <div className="flex items-center gap-3 mb-4">
               <Image
-                src="/mark.png"
-                alt="Larissa Canhas Mark Logo"
-                width={54}
-                height={54}
-                className="h-12 w-auto object-contain"
-                unoptimized
+                src="/logo-mobile.png"
+                alt="Instituto Organizacionista"
+                width={40}
+                height={40}
+                className="w-10 h-10 rounded-xl object-cover border border-zinc-700"
               />
+              <div>
+                <span className="text-lg font-bold tracking-tight text-white block">
+                  Escola de Artes Gráficas e Design
+                </span>
+                <span className="text-xs uppercase tracking-widest text-zinc-400 font-mono">
+                  Arte Final • Digital • Offset
+                </span>
+              </div>
             </div>
-            <span className="text-xs uppercase tracking-widest text-[#D47E30] font-bold block mb-4">
-              Antes do clique, o encontro.
-            </span>
-            <p className="text-[#e6d8cc]/80 leading-relaxed text-sm font-sans max-w-md">
-              Fotografia documental de famílias, casais e celebrações com direção sensível.
+            <p className="text-zinc-400 leading-relaxed text-sm font-sans max-w-md">
+              O Instituto Organizacionista é especializado em produzir manual
+              prático técnico de qualidade, com material complementar pedagógico
+              especializado.
             </p>
+            <div className="pt-2 flex flex-wrap items-center gap-2 text-xs font-mono text-[#d4af37]">
+              <span>Ordem de Produção</span>
+              <span>•</span>
+              <span>Modelagem</span>
+              <span>•</span>
+              <span>Imposição</span>
+              <span>•</span>
+              <span>RIP</span>
+              <span>•</span>
+              <span>Acabamentos</span>
+            </div>
           </div>
 
           {/* Links */}
           <div>
-            <h4 className="text-sm font-normal text-[#D47E30] uppercase tracking-widest block mb-4" style={{ fontFamily: 'Federo, serif' }}>
+            <h4 className="text-xs font-bold text-[#d4af37] uppercase tracking-widest block mb-4">
               Navegação
             </h4>
             <ul className="space-y-3 text-sm font-sans">
               <li>
-                <Link href="/" className="text-[#e6d8cc]/80 hover:text-[#D47E30] transition-colors">
-                  {t('navigation.home')}
+                <Link
+                  href="/"
+                  className="text-zinc-400 hover:text-white transition-colors"
+                >
+                  Início
                 </Link>
               </li>
               <li>
-                <Link href="/#galeria" className="text-[#e6d8cc]/80 hover:text-[#D47E30] transition-colors">
-                  Galeria Fine Art
+                <Link
+                  href="/#projetos"
+                  className="text-zinc-400 hover:text-white transition-colors"
+                >
+                  Conteúdo do Livro
                 </Link>
               </li>
               <li>
-                <Link href="/sobre" className="text-[#e6d8cc]/80 hover:text-[#D47E30] transition-colors">
-                  {t('navigation.about')}
+                <Link
+                  href="/#o-que-faco"
+                  className="text-zinc-400 hover:text-white transition-colors"
+                >
+                  Material Complementar
                 </Link>
               </li>
               <li>
-                <Link href="/contato" className="text-[#e6d8cc]/80 hover:text-[#D47E30] transition-colors">
-                  {t('navigation.contact')}
+                <Link
+                  href="/#contato"
+                  className="text-zinc-400 hover:text-white transition-colors"
+                >
+                  Aquisição & Contato
                 </Link>
               </li>
             </ul>
@@ -109,45 +148,39 @@ export const Footer = ({ className = "" }: FooterProps) => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-normal text-[#D47E30] uppercase tracking-widest mb-4" style={{ fontFamily: 'Federo, serif' }}>
-              Contato & Redes
+            <h4 className="text-xs font-bold text-[#d4af37] uppercase tracking-widest mb-4">
+              Atendimento e Aquisição
             </h4>
             <div className="space-y-3 text-sm font-sans">
-              <p className="text-[#e6d8cc]/80">
+              <p className="text-zinc-400">
                 <a
-                  href="mailto:contato@larissacanhas.com.br"
-                  className="hover:text-[#D47E30] transition-colors"
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="hover:text-[#d4af37] transition-colors"
                 >
-                  contato@larissacanhas.com.br
+                  {CONTACT_EMAIL}
                 </a>
               </p>
-
-              {/* Social */}
-              <div className="flex gap-3 pt-2">
-                {linkTreeData.linkTree?.filter((link: LinkTreeItem) => link.icon !== 'FaEnvelope').map((link: LinkTreeItem, index: number) => {
-                  const IconComponent = getIcon(link.icon);
-                  return (
-                    <a
-                      key={index}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2.5 bg-[#e6d8cc]/10 rounded-lg hover:bg-[#D47E30] transition-colors text-[#f4ece4] hover:text-white"
-                      aria-label={link.label}
-                    >
-                      <IconComponent />
-                    </a>
-                  );
-                })}
-              </div>
+              <p className="text-zinc-400">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#d4af37] transition-colors"
+                >
+                  WhatsApp: (16) 99999-9999
+                </a>
+              </p>
             </div>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-[#e6d8cc]/15 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[#e6d8cc]/60 text-xs font-sans">
-            <p>© {new Date().getFullYear()} Larissa Canhas Fotografia. Todos os direitos reservados.</p>
+        <div className="pt-8 text-center">
+          <div className="text-zinc-500 text-xs font-sans">
+            <p>
+              © {new Date().getFullYear()} Escola de Artes Gráficas e Design.
+              Todos os direitos reservados.
+            </p>
           </div>
         </div>
       </div>

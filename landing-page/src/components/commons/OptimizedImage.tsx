@@ -1,29 +1,29 @@
-import React from 'react';
-import Image, { ImageProps } from 'next/image';
-import { useState, useEffect, useRef } from 'react';
+import React from "react";
+import Image, { ImageProps } from "next/image";
+import { useState, useEffect, useRef } from "react";
 
-interface OptimizedImageProps extends Omit<ImageProps, 'onError' | 'onLoad'> {
+interface OptimizedImageProps extends Omit<ImageProps, "onError" | "onLoad"> {
   fallback?: string;
   cubeFrame?: boolean;
   enableFlip?: boolean;
   shouldLoad?: boolean;
   bgColor?: string;
-  shape?: 'rect' | 'circle';
+  shape?: "rect" | "circle";
 }
 
 export const OptimizedImage = ({
   src,
   alt,
-  fallback = '/img/placeholder.svg',
-  className = '',
+  fallback = "/img/placeholder.svg",
+  className = "",
   width,
   height,
   priority = false,
   cubeFrame = false,
   enableFlip = true,
   shouldLoad, // Destructured here to remove from ...props
-  bgColor = '#f4ece4',
-  shape = 'rect',
+  bgColor = "transparent",
+  shape = "rect",
   ...props
 }: OptimizedImageProps) => {
   const [error, setError] = useState(false);
@@ -48,10 +48,10 @@ export const OptimizedImage = ({
   // Initialize framer-blocks when cubeFrame is enabled
   // Lazy load state (priority loads immediately)
   const [isInView, setIsInView] = useState(priority);
-  
+
   useEffect(() => {
     if (!containerRef.current) return;
-    
+
     // Simple Intersection Observer to detect visibility
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -60,11 +60,11 @@ export const OptimizedImage = ({
           observer.disconnect(); // Once visible, keep loaded
         }
       },
-      { threshold: 0.1 } // Load when 10% visible
+      { threshold: 0.1 }, // Load when 10% visible
     );
-    
+
     observer.observe(containerRef.current);
-    
+
     return () => observer.disconnect();
   }, []);
 
@@ -81,38 +81,25 @@ export const OptimizedImage = ({
       setIs3DReady(true);
       return;
     }
-    
-    if (!containerRef.current || loading || error || !isInView || !shouldLoadVal) return;
-    
+
+    if (
+      !containerRef.current ||
+      loading ||
+      error ||
+      !isInView ||
+      !shouldLoadVal
+    )
+      return;
+
     let cleanup: (() => void) | undefined;
 
-    const initVoxels = async () => {
-      try {
-        const { initFramerBlocks } = await import('@/lib/framer-blocks');
-        const result = await initFramerBlocks(containerRef.current!, imgSrc, {
-          resolution: 128,
-          size: 180,
-          layeredDelay: true,
-          voxelizeImage: false,
-          bgColor: bgColor,
-          shape: shape,
-        }) as any;
-        
-        rendererRef.current = result.renderer;
-        cleanup = result.cleanup as () => void;
-        
-        // Simular um tempo mínimo para garantir que o canvas foi injetado e está visível
-        setTimeout(() => setIs3DReady(true), 500);
-        
-      } catch (err) {
-        console.error('[OptimizedImage] Failed to initialize framer-blocks:', err);
-        // Em caso de erro, mostramos a imagem fallback
-        setIs3DReady(true);
-      }
+    const initVoxels = () => {
+      // Pure CSS 3D mode: No WebGL/Three.js library loaded
+      setIs3DReady(true);
     };
 
     const timer = setTimeout(() => {
-        initVoxels();
+      initVoxels();
     }, 100);
 
     return () => {
@@ -121,7 +108,16 @@ export const OptimizedImage = ({
       rendererRef.current = null;
       setIs3DReady(false); // Resetar ao desmontar
     };
-  }, [cubeFrame, imgSrc, loading, error, isInView, shouldLoadVal, shape, bgColor]);
+  }, [
+    cubeFrame,
+    imgSrc,
+    loading,
+    error,
+    isInView,
+    shouldLoadVal,
+    shape,
+    bgColor,
+  ]);
 
   // Funções de controle do 3D
   const [isGravityOn, setIsGravityOn] = useState(false);
@@ -141,61 +137,92 @@ export const OptimizedImage = ({
 
   // Renderização Composta
   return (
-    <div 
-      className={`relative w-full h-full ${loading ? 'animate-pulse' : ''}`}
-      style={{ width: '100%', height: '100%', background: loading ? `${bgColor}cc` : bgColor }}
+    <div
+      className={`relative w-full h-full ${loading ? "animate-pulse" : ""}`}
+      style={{
+        width: "100%",
+        height: "100%",
+        background: bgColor === "transparent" ? "transparent" : (loading ? `${bgColor}cc` : bgColor),
+      }}
     >
       {/* 1. Imagem Base de Fallback - Reduzida para 75% para casar com o 3D */}
-      <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${loading ? 'opacity-0' : 'opacity-100'}`}>
-         <div className={`relative ${cubeFrame ? 'w-[75%] h-[75%]' : 'w-full h-full'} ${shape === 'circle' ? 'rounded-full overflow-hidden' : ''}`}>
-            <Image
-              src={error ? fallback : imgSrc}
-              alt={alt}
-              fill
-              className={`${className} ${shape === 'circle' ? 'rounded-full' : ''} object-contain`}
-              loading={priority ? undefined : 'lazy'}
-              priority={priority}
-              {...props}
-            />
-            {/* Overlay Estático "Sinta-se Bem-Vind@!" - Transição Suave */}
-            {(() => {
-                const shouldShowLoader = cubeFrame && !is3DReady && isInView && shouldLoadVal && !loading;
-                // Visible if NOT loading, NOT ready, and Loader is NOT showing
-                const isWelcomeVisible = cubeFrame && !loading && !shouldShowLoader && !is3DReady;
-                
-                return cubeFrame && !loading && (
-                   <div className={`absolute inset-0 flex justify-center items-center z-10 pointer-events-none transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${isWelcomeVisible ? 'opacity-100 scale-110' : 'opacity-0 scale-0'}`}>
-                      <div className="bg-black/80 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 flex items-center justify-center shadow-2xl">
-                        <span className="text-xs font-bold text-white uppercase tracking-widest">Sinta-se Bem-Vind@!</span>
-                      </div>
-                   </div>
-                );
-            })()}
-         </div>
+      <div
+        className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${loading ? "opacity-0" : "opacity-100"}`}
+      >
+        <div
+          className={`relative ${cubeFrame ? "w-[75%] h-[75%]" : "w-full h-full"} ${shape === "circle" ? "rounded-full overflow-hidden" : ""}`}
+        >
+          <Image
+            src={error ? fallback : imgSrc}
+            alt={alt}
+            fill
+            unoptimized
+            quality={100}
+            className={`${className} ${shape === "circle" ? "rounded-full" : ""} object-contain`}
+            loading={priority ? undefined : "lazy"}
+            priority={priority}
+            {...props}
+          />
+          {/* Overlay Estático "Sinta-se Bem-Vind@!" - Transição Suave */}
+          {(() => {
+            const shouldShowLoader =
+              cubeFrame && !is3DReady && isInView && shouldLoadVal && !loading;
+            // Visible if NOT loading, NOT ready, and Loader is NOT showing
+            const isWelcomeVisible =
+              cubeFrame && !loading && !shouldShowLoader && !is3DReady;
+
+            return (
+              cubeFrame &&
+              !loading && (
+                <div
+                  className={`absolute inset-0 flex justify-center items-center z-10 pointer-events-none transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${isWelcomeVisible ? "opacity-100 scale-110" : "opacity-0 scale-0"}`}
+                >
+                  <div className="bg-black/80 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 flex items-center justify-center shadow-2xl">
+                    <span className="text-xs font-bold text-white uppercase tracking-widest">
+                      Sinta-se Bem-Vind@!
+                    </span>
+                  </div>
+                </div>
+              )
+            );
+          })()}
+        </div>
       </div>
 
       {/* Indicador de Carregamento 3D */}
       {(() => {
-          const shouldShowLoader = cubeFrame && !is3DReady && isInView && shouldLoadVal && !loading;
-          return shouldShowLoader && (
-             <div className="absolute inset-0 flex justify-center items-center z-20 pointer-events-none animate-in fade-in zoom-in duration-300">
-                <div className="bg-black/80 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 flex items-center gap-3 shadow-2xl transform scale-110">
-                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                  <span className="text-xs font-bold text-white uppercase tracking-widest">Carregando Experiência 3D...</span>
-                </div>
-             </div>
-          );
+        const shouldShowLoader =
+          cubeFrame && !is3DReady && isInView && shouldLoadVal && !loading;
+        return (
+          shouldShowLoader && (
+            <div className="absolute inset-0 flex justify-center items-center z-20 pointer-events-none animate-in fade-in zoom-in duration-300">
+              <div className="bg-black/80 backdrop-blur-md px-6 py-3 rounded-full border border-white/20 flex items-center gap-3 shadow-2xl transform scale-110">
+                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                <span className="text-xs font-bold text-white uppercase tracking-widest">
+                  Carregando Experiência 3D...
+                </span>
+              </div>
+            </div>
+          )
+        );
       })()}
 
       {/* 2. Camada 3D */}
       {cubeFrame && (
         <>
-          <div 
+          <div
             ref={containerRef}
-            className={`absolute inset-0 w-full h-full z-10 transition-opacity duration-1000 ${is3DReady ? 'opacity-100' : 'opacity-0'}`}
-            style={{ width: '100%', height: '100%', background: bgColor, border: 'none', outline: 'none', boxShadow: 'none' }}
+            className={`absolute inset-0 w-full h-full z-10 transition-opacity duration-1000 ${is3DReady ? "opacity-100" : "opacity-0"}`}
+            style={{
+              width: "100%",
+              height: "100%",
+              background: bgColor,
+              border: "none",
+              outline: "none",
+              boxShadow: "none",
+            }}
           />
-          
+
           {/* Control Buttons - Only show if enableFlip is true */}
           {enableFlip && (
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-3">
@@ -206,17 +233,17 @@ export const OptimizedImage = ({
                 aria-label="Toggle Gravity"
                 title="Ligar/Desligar Gravidade"
               >
-                <svg 
-                  className={`w-6 h-6 text-white transition-transform duration-500 ${isGravityOn ? 'rotate-180' : ''}`}
-                  fill="none" 
-                  stroke="currentColor" 
+                <svg
+                  className={`w-6 h-6 text-white transition-transform duration-500 ${isGravityOn ? "rotate-180" : ""}`}
+                  fill="none"
+                  stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M19 14l-7 7m0 0l-7-7m7 7V3" 
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
                   />
                 </svg>
               </button>
@@ -228,17 +255,17 @@ export const OptimizedImage = ({
                 aria-label="Rotate 360°"
                 title="Girar 360°"
               >
-                <svg 
-                  className="w-6 h-6 text-white group-hover:rotate-180 transition-transform duration-500" 
-                  fill="none" 
-                  stroke="currentColor" 
+                <svg
+                  className="w-6 h-6 text-white group-hover:rotate-180 transition-transform duration-500"
+                  fill="none"
+                  stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" 
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
                   />
                 </svg>
               </button>

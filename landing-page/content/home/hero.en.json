@@ -1,32 +1,32 @@
 {
   "hero": {
-    "badge": "Documentary Family, Couples & Celebrations Photography",
-    "title": "Larissa Canhas",
-    "subtitle": "Before the shot, the connection. Before the image, the story.",
+    "badge": "Over Two Decades of Experience • Professional Training",
+    "title": "Graphic Production & Art Finishing",
+    "subtitle": "Digital & Offset Printing. Master pre-press, color management, file preflight and production automation with real-world print shop practices.",
     "cta": {
-      "primary": "Book Your Chapter",
-      "secondary": "Explore Experiences"
+      "primary": "Enroll Now",
+      "secondary": "Course Syllabus"
     },
     "stats": [
       {
-        "value": "+500",
-        "label": "Sessions Completed",
-        "info": "Families, couples and lifetime celebrations"
+        "value": "+20",
+        "label": "Years in Industry",
+        "info": "More than two decades training design and pre-press professionals"
       },
       {
-        "value": "12",
-        "label": "Years of Experience",
-        "info": "Over a decade capturing timeless memories"
+        "value": "+4",
+        "label": "Method Pillars",
+        "info": "Production order, pre-press, printing and finishing — the full print cycle"
       },
       {
-        "value": "100%",
-        "label": "Sensitive Direction",
-        "info": "Authentic and natural light approach"
+        "value": "+100",
+        "label": "Lives Impacted",
+        "info": "Professionals and teams who advanced their careers with this pedagogical material"
       }
     ],
     "photo": {
       "url": "/img/foto-perfil-png.png",
-      "alt": "Larissa Canhas Photography",
+      "alt": "School of Graphic Arts and Design",
       "width": 500,
       "height": 600
     }

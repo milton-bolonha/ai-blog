@@ -1,21 +1,21 @@
 {
-  "defaultAuthor": "Milton Bolonha",
-  "siteUrl": "https://blog-instituto.netlify.app",
+  "defaultAuthor": "Escola de Artes Gráficas e Design",
+  "siteUrl": "https://escoladeartesgraficas.com.br",
   "defaultImage": "/img/og-image.jpg",
   "brandCardImage": "/img/brand-card.jpg",
-  "themeColor": "#FF0081",
-  "twitterHandle": "@miltonbolonha",
+  "themeColor": "#0a0a0a",
+  "twitterHandle": "@artesgraficas",
   "locale": "pt_BR",
   "fbAppID": "",
   "adsAccount": "",
   "organization": {
-    "name": "21 Miles",
-    "url": "https://21miles.com",
+    "name": "Escola de Artes Gráficas e Design",
+    "url": "https://escoladeartesgraficas.com.br",
     "logo": "/logo.png"
   },
   "social": {
-    "github": "https://github.com/milton-bolonha",
-    "linkedin": "https://www.linkedin.com/in/milton-bolonha",
-    "upwork": "https://www.upwork.com/freelancers/miltonbolonha"
+    "github": "",
+    "linkedin": "",
+    "upwork": ""
   }
 }

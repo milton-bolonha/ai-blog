@@ -1,7 +1,17 @@
 {
-  "brandName": "Milton Bolonha",
-  "brandDescription": "Desenvolvedor web apaixonado por criar soluções eficientes e práticas.",
-  "brandEmail": "miltonbolonha@gmail.com",
-  "brandKeywords": ["Desenvolvedor Web", "Portfolio", "JavaScript", "Next.js", "React", "Node.js"],
-  "brandPhone": "+55 (12) 98106-2959"
+  "brandName": "Escola de Artes Gráficas e Design",
+  "brandDescription": "Mais de 20 anos de experiência formando profissionais em Design Gráfico, Arte-Final, Pré-Impressão, Gráfica Digital e Offset.",
+  "brandEmail": "arte@instituto.app",
+  "brandKeywords": [
+    "Escola de Artes Gráficas",
+    "Design Gráfico",
+    "Arte-Finalista",
+    "Produção Gráfica",
+    "Pré-Impressão",
+    "Gráfica Digital",
+    "Impressão Offset",
+    "Cursos de Design",
+    "Fechamento de Arquivos"
+  ],
+  "brandPhone": "+55 (16) 99999-9999"
 }

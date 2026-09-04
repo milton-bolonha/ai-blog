@@ -1,22 +1,22 @@
 {
   "about": {
-    "title": "Let's Work Together",
-    "badge1": "Artificial Intelligence",
-    "badge2": "+20 Years Experience",
-    "description": "The digital world has changed. Today, products are intelligent, automated, and connected.\n\nI work helping people and companies transform ideas into:",
+    "title": "Conheça nossos",
+    "badge1": "Over 20 Years of Experience",
+    "badge2": "Digital & Offset Print Mastery",
+    "description": "The Art Finishing & Graphic Production course was created for designers and production artists who want to master technical pre-press and transform creative concepts into flawless manufactured products.\n\nWe combine preflight inspection, color management, pagination, offset and digital presses, and automated workflows using PitStop Pro and Enfocus Switch.",
     "list": [
-      "Real web products",
-      "AI-powered systems",
-      "Gamified experiences",
-      "Sustainable digital careers"
+      "Pre-press & PDF/X Standards",
+      "CMYK & ICC Color Profiling",
+      "Zero-Error File Delivery",
+      "Digital & Offset Print Techniques"
     ],
-    "closing": "Whether it's a site, a platform, a game, or mentorship, my focus is clarity, execution, and results.",
-    "cta": "Request Contact",
+    "closing": "Validate your expertise with professional certification recognized across the printing and design industry.",
+    "cta": "Learn More About the Program",
     "photo": {
-        "url": "/img/foto-perfil.jpg",
-        "alt": "Milton Bolonha",
-        "width": 500,
-        "height": 500
+      "url": "/img/perfil2.jpg",
+      "alt": "School of Graphic Arts and Design",
+      "width": 500,
+      "height": 500
     }
   }
 }

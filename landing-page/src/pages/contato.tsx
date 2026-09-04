@@ -40,13 +40,13 @@ const Contato = ({ businessSettings, generalSettings, linkTreeData }: ContatoPro
   return (
     <>
       <Head>
-        <title>Contact | {businessSettings.brandName}</title>
+        <title>Contato & Matrícula | Escola de Artes Gráficas e Design</title>
         <meta
           name="description"
-          content={`Get in touch with ${businessSettings.brandName} - Web developer available for new projects and opportunities`}
+          content="Entre em contato com a Escola de Artes Gráficas e Design — dúvidas sobre matrículas, turmas, ementa do curso e suporte pedagógico."
         />
-        <meta property="og:title" content={`Contact | ${businessSettings.brandName}`} />
-        <meta property="og:description" content={`Get in touch with ${businessSettings.brandName} - Web developer available for new projects and opportunities`} />
+        <meta property="og:title" content="Contato | Escola de Artes Gráficas e Design" />
+        <meta property="og:description" content="Entre em contato com a Escola de Artes Gráficas e Design para garantir sua vaga no próximo curso." />
       </Head>
 
       <div className="min-h-screen">

@@ -1,20 +1,20 @@
 {
   "about": {
-    "title": "Fotografar é um ato de atenção",
-    "badge1": "Fotografia Documental de Família",
-    "badge2": "Direção Sensível & Luz Natural",
-    "description": "Minha fotografia nasce da escuta, da conexão e da direção sensível. Não busco cenas perfeitas — busco o que é essencial.",
+    "title": "Conheça o manual",
+    "badge1": "Mais de 20 Anos de Experiência",
+    "badge2": "Tradição em Gráfica Digital & Offset",
+    "description": "Arte-Final para Designers: O Manual de Impressão Digital e Offset reúne a experiência de mercado necessária para dominar a preparação técnica de arquivos e transformar conhecimento de design em segurança na produção gráfica.\n\nO manual combina pré-impressão, tratamento de imagens, diagramação, gerenciamento de cores, impressão digital, offset e material complementar pronto para uso.",
     "list": [
-      "Gestante",
-      "Família",
-      "Casal & Pré-Wedding",
-      "Celebrações & Bodas"
+      "Pré-impressão & PDF/X",
+      "Gerenciamento de Cores CMYK",
+      "Fechamento sem Retrabalho",
+      "Processos Digital e Offset"
     ],
-    "closing": "Cada registro é um capítulo vivo eternizado com afeto e presença.",
-    "cta": "Conheça Meu Trabalho",
+    "closing": "Consulte o manual sempre que precisar e aplique o conhecimento no próximo arquivo.",
+    "cta": "Conhecer o Livro",
     "photo": {
       "url": "/img/perfil2.jpg",
-      "alt": "Larissa Canhas Fotografia Documental",
+      "alt": "Escola de Artes Gráficas e Design",
       "width": 500,
       "height": 500
     }

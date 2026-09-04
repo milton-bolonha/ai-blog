@@ -7,12 +7,18 @@ interface MagneticButtonProps {
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  href?: string;
+  target?: string;
+  rel?: string;
 }
 
 export default function MagneticButton({
   children,
   className = "",
   onClick,
+  href,
+  target,
+  rel,
 }: MagneticButtonProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -30,6 +36,8 @@ export default function MagneticButton({
   };
 
   const { x, y } = position;
+  const linkRel =
+    rel || (target === "_blank" ? "noopener noreferrer" : undefined);
 
   return (
     <motion.div
@@ -40,9 +48,21 @@ export default function MagneticButton({
       animate={{ x, y }}
       transition={{ type: "tween" as const, duration: 0.3 }}
     >
-      <button className={className} onClick={onClick}>
-        {children}
-      </button>
+      {href ? (
+        <a
+          href={href}
+          target={target}
+          rel={linkRel}
+          className={className}
+          onClick={onClick}
+        >
+          {children}
+        </a>
+      ) : (
+        <button type="button" className={className} onClick={onClick}>
+          {children}
+        </button>
+      )}
     </motion.div>
   );
 }

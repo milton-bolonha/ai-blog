@@ -1,37 +1,37 @@
 {
   "navigation": {
     "home": "Home",
-    "about": "About",
-    "projects": "Projects",
-    "blog": "Blog",
-    "contact": "Contact"
+    "about": "The Course",
+    "projects": "Syllabus",
+    "blog": "Methodology",
+    "contact": "Enrollment"
   },
   "home": {
-    "title": "Pleasure, I am",
-    "titleBold": "Larissa",
-    "subtitle": "Photographer & Art Director creating timeless visual stories",
+    "title": "Graphic Arts &",
+    "titleBold": "Design School",
+    "subtitle": "Professional Finished Artwork & Pre-press Course for Digital and Offset Printing",
     "cta": {
-      "letsTalk": "Let's Talk",
-      "viewProjects": "View Projects",
-      "title": "Ready to bring your next visual narrative to life?",
-      "description": "Get in touch to schedule your session, check available dates, or discuss a tailored art direction project.",
-      "button": "Request Session & Quote"
+      "letsTalk": "Enroll Now",
+      "viewProjects": "View Syllabus",
+      "title": "Conheça nossos",
+      "description": "Master pre-press, file preflight, color management, digital and offset printing in a 100% practical, market-ready course.",
+      "button": "Enroll Now"
     },
     "whatsapp": "WhatsApp",
     "hero": {
       "experience": "years of experience"
     },
     "stats": {
-      "title": "Numbers that speak for themselves",
-      "projects": "Projects Delivered",
+      "title": "Numbers that prove technical excellence",
+      "projects": "Students Trained",
       "experience": "Years of Experience",
-      "technologies": "Technologies Mastered",
-      "response": "Response"
+      "technologies": "Production Hours",
+      "response": "Market Focus"
     },
     "about": {
-      "title": "Who am I?",
-      "description": "ADS student, known for being hardworking and committed. I transform problems into clean and functional code.",
-      "cta": "Learn About My Story"
+      "title": "About Our School",
+      "description": "Over two decades of experience training high-value graphic finishers and designers.",
+      "cta": "Explore Our History"
     },
     "services": {
       "title": "How can I help your project?",

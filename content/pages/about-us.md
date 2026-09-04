@@ -1,21 +1,19 @@
 ---
-title: About Us
+title: Sobre a Escola
 layout: page
-date: 2024-03-31 16:25:34
-pageDescription: I/O Blog is here to deliver tips and tricks to live a better life.
+date: 2026-09-01 12:00:00
+pageDescription: Escola de Artes Gráficas e Design — Mais de duas décadas de experiência e excelência formando profissionais de arte-final, pré-impressão e produção gráfica.
 ---
 
-## About Us
+## Sobre a Escola de Artes Gráficas e Design
 
-**I/O Blog is here to deliver tips and tricks to live a better life.** We cover a broad range of topics including finance, health, and travel to help enhance your everyday life. We’re passionate about spreading meaningful content that makes an immediate and noticeable difference in your life.
+A **Escola de Artes Gráficas e Design** foi fundada com a missão de transformar o conhecimento técnico de produção gráfica em um diferencial de alto valor no mercado. Com **mais de 20 anos de experiência prática** em gráficas digitais e offset, ensinamos o que as agências, estúdios e indústrias gráficas realmente exigem no dia a dia.
 
-Our writers aim to produce content that improves everyday lives. We understand how inside tips and tricks in the financial, health, and travel world can be extraordinarily powerful. We’re here to educate and inform so you can live your best life.
+Nosso principal programa, **Design Arte-Finalista — Gráfica Digital e Offset**, prepara designers, diagramadores e profissionais de pré-impressão para dominarem fechamento de arquivos, gerenciamento de cores (CMYK, RGB, perfis ICC), sangrias, dobras, facas especiais, imposição de páginas e automação com softwares padrão da indústria, como PitStop Pro e Enfocus Switch.
 
-**I/O Blog delivers understandable and usable information for people in all stages of life.** From seniors to newly married couples who are learning to make a family budget, I/O Blog has valuable content you need to succeed. Our contributors enjoy researching the best in finance, health, and travel. We cover content on improving your credit, career, investments and how to live frugally, be healthy, and make the most of your travels. Look to I/O Blog before you make decisions – we’re providing the best tips for you and your family.
+## Contato & Atendimento
 
-## Contact Us
-
-I/O Blog  
-PO Box 515381  
-Los Angeles, CA 90051-6681  
-[info@moderntips.com](mailto:mailinfo@moderntips.com)
+**Escola de Artes Gráficas e Design**  
+E-mail: [contato@escoladeartesgraficas.com.br](mailto:contato@escoladeartesgraficas.com.br)  
+WhatsApp: +55 (16) 99999-9999  
+Brasil

@@ -5,16 +5,16 @@
       "href": "/"
     },
     {
-      "label": "Sobre",
-      "href": "/sobre"
+      "label": "Conteúdo Programático",
+      "href": "/#projetos"
     },
     {
-      "label": "Projetos",
-      "href": "/projetos"
+      "label": "Metodologia",
+      "href": "/#o-que-faco"
     },
     {
-      "label": "Contato",
-      "href": "/contato"
+      "label": "Inscrição",
+      "href": "/#contato"
     }
   ]
 }

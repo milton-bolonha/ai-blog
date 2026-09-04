@@ -21,12 +21,12 @@
     "headerMainMenuType": "simple"
   },
   "themeColors": {
-    "brand_color": "#ffffff",
-    "ctaColor": "#ffffff",
-    "background_color": "#000000",
-    "darkBrandColor": "#f0f0f0",
-    "secondaryColor": "#333333",
-    "darkBackgroundColor": "#000000"
+    "brand_color": "#d4af37",
+    "ctaColor": "#d4af37",
+    "background_color": "#ffffff",
+    "darkBrandColor": "#f59e0b",
+    "secondaryColor": "#0a0a0a",
+    "darkBackgroundColor": "#0a0a0a"
   },
   "generalThemeSettings": {
     "themeStyle": "modern",

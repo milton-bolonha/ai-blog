@@ -1,12 +1,12 @@
 {
-  "siteUrl": "https://blog-instituto.netlify.app",
-  "footerText": "© 2025 Milton Bolonha. Todos os direitos reservados. Desenvolvido com Next.js e muito ☕.",
+  "siteUrl": "https://escoladeartesgraficas.com.br",
+  "footerText": "© 2026 Escola de Artes Gráficas e Design. Mais de duas décadas formando mestres em produção gráfica e design.",
   "postsToShow": 6,
-  "homeCategory": "Desenvolvimento",
+  "homeCategory": "Artes Gráficas",
   "cookieConsent": false,
-  "darkModeSwitcher": true,
-  "feedbackEmail": "miltonbolonha@gmail.com",
-  "publishedDate": "2025-01-15 00:00:00",
-  "i18n": "en",
-  "errorMessage": "Oops... something went wrong. Please try again later or contact: miltonbolonha@gmail.com"
+  "darkModeSwitcher": false,
+  "feedbackEmail": "arte@instituto.app",
+  "publishedDate": "2026-01-01 00:00:00",
+  "i18n": "pt-br",
+  "errorMessage": "Ocorreu um erro ao carregar as informações. Entre em contato conosco pelo e-mail contato@escoladeartesgraficas.com.br."
 }

@@ -1,49 +1,81 @@
 import React, { useState, useEffect } from "react";
-import { FaGamepad, FaCode, FaChalkboardTeacher, FaExpand, FaBriefcase, FaHeart } from "react-icons/fa";
+import dynamic from "next/dynamic";
 import { Inicio } from "@/components/Home/Inicio";
-import { AboutSection } from "@/components/Home/AboutSection";
-import { FeaturedProjects } from "@/components/Home/FeaturedProjects";
-import { TechStack } from "@/components/Home/TechStack";
-import NewTimelineSection from "@/components/Home/NewTimelineSection";
-import { NewStatsSection } from "@/components/Home/NewStatsSection";
-import { FAQSection } from "@/components/Home/FAQSection";
-import { CTASection } from "@/components/Home/CTASection";
-import ContactSection from "@/components/Home/ContactSection";
-import ExperienceShowcase from "@/components/Home/ExperienceShowcase";
-import TestimonialsSection from "@/components/Home/TestimonialsSection";
-import { Footer } from "@/components/commons/Footer";
+import { IntroSection } from "@/components/Home/IntroSection";
 import { AboutMe as TAboutMe } from "@/types/Home";
 import { GetStaticProps } from "next";
 import { getSortedPostsData, PostData } from "@/lib/posts";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { getBusinessSettings, getGeneralSettings, getNavigatorSettings, getThemeSettings, getCategoriesSettings } from "@/lib/settings";
-import dynamic from "next/dynamic";
-import { GridBackground } from "@/components/commons/GridBackground";
-
-const NeonFlightGame = dynamic(
-  () => import("@/components/games/fly/components/NeonFlightGame"),
-  { ssr: false }
-);
-
-const StrangerCraftGame = dynamic(
-  () => import("@/components/games/StrangerCraftGame"),
-  { ssr: false }
-);
-
-import { ClientOnly } from "@/components/commons/ClientOnly";
+import {
+  getBusinessSettings,
+  getGeneralSettings,
+  getNavigatorSettings,
+  getThemeSettings,
+  getCategoriesSettings,
+} from "@/lib/settings";
 import Seo from "@/components/commons/Seo";
 import FloatingNavigator from "@/components/commons/FloatingNavigator";
-
 import {
   ScrollContainer,
   SectionWrapper,
 } from "@/components/commons/SectionWrapper";
 import { SlideshowLayout } from "@/components/layouts/SlideshowLayout";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
-
 import homeData from "../../public/home.json";
-
 import { ImmersiveModal } from "@/components/commons/ImmersiveModal";
+import { Header } from "@/components/commons/Header";
+import { FloatingObjects } from "@/components/Home/FloatingObjects";
+
+const sectionFallback = () => (
+  <div className="min-h-[50vh] w-full" aria-hidden />
+);
+
+const HorizontalPanoramaSection = dynamic(
+  () =>
+    import("@/components/Home/HorizontalPanoramaSection").then((mod) => ({
+      default: mod.HorizontalPanoramaSection,
+    })),
+  { loading: sectionFallback },
+);
+
+const NewStatsSection = dynamic(
+  () =>
+    import("@/components/Home/NewStatsSection").then((mod) => ({
+      default: mod.NewStatsSection,
+    })),
+  { loading: sectionFallback },
+);
+
+const PricingSection = dynamic(
+  () =>
+    import("@/components/Home/PricingSection").then((mod) => ({
+      default: mod.PricingSection,
+    })),
+  { loading: sectionFallback },
+);
+
+const TestimonialsSection = dynamic(
+  () => import("@/components/Home/TestimonialsSection"),
+  { loading: sectionFallback },
+);
+
+const ContactSection = dynamic(
+  () => import("@/components/Home/ContactSection"),
+  { loading: sectionFallback },
+);
+
+const ProductionCTASection = dynamic(
+  () => import("@/components/Home/ProductionCTASection"),
+  { loading: sectionFallback },
+);
+
+const Footer = dynamic(
+  () =>
+    import("@/components/commons/Footer").then((mod) => ({
+      default: mod.Footer,
+    })),
+  { loading: () => null },
+);
 
 interface HomeProps {
   home: {
@@ -57,12 +89,6 @@ interface HomeProps {
   categoriesSettings: any;
 }
 
-import { IntroSection } from "@/components/Home/IntroSection";
-import { EditorialGallerySection } from "@/components/Home/EditorialGallerySection";
-import { LensRevealSection } from "@/components/Home/LensRevealSection";
-import { HorizontalPanoramaSection } from "@/components/Home/HorizontalPanoramaSection";
-import { InstagramSection } from "@/components/Home/InstagramSection";
-
 const HomeContent = ({
   home,
   allPostsData,
@@ -70,26 +96,26 @@ const HomeContent = ({
   generalSettings,
   navigatorSettings,
   themeSettings,
-  categoriesSettings
+  categoriesSettings,
 }: HomeProps) => {
   const { t } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const isMobile = useMediaQuery("(max-width: 768px)");
-  const themeLayout = themeSettings?.generalThemeSettings?.layoutMode || 'vertical';
+  const themeLayout =
+    themeSettings?.generalThemeSettings?.layoutMode || "vertical";
   const layoutMode = themeLayout;
 
   // SECTIONS (Slides)
   const sections = [
-    'intro',         // 0: Nova Seção 3D Circular Centralizado
-    'inicio',        // 1: Hero 3D Perspective
-    'galeria',       // 2: Galeria Vertical Parallax
-    'lente-reveal',  // 3: Lens Reveal Mask
-    'panorama',      // 4: Horizontal Scroll Panorama
-    'sobre',         // 5: Sobre Larissa Canhas
-    'projetos',      // 6: Categorias
-    'o-que-faco',    // 7: Showcase
-    'contato'        // 8: Contato
+    "intro",
+    "header",
+    "inicio",
+    "depoimentos",
+    "panorama",
+    "o-que-faco",
+    "planos",
+    "contato",
   ];
 
   const [isLoaded, setIsLoaded] = useState(false);
@@ -105,13 +131,25 @@ const HomeContent = ({
   };
 
   const seoData = {
-    title: "Larissa Canhas — Fotografia Autoral & Direção de Arte",
-    description: "Portfólio de Fotografia Editorial, Retratos Fine Art e Direção Visual por Larissa Canhas.",
-    siteUrl: generalSettings.siteUrl,
+    title:
+      "Arte-Final para Designers: O Manual de Impressão Digital e Offset | Escola de Artes Gráficas e Design",
+    description:
+      "Formação profissional em Arte-Final, Pré-Impressão, Fechamento de Arquivos, Impressão Digital e Offset com mais de 20 anos de experiência de mercado.",
+    siteUrl: generalSettings?.siteUrl || "https://escoladeartesgraficas.com.br",
     slug: "/",
-    author: "Larissa Canhas",
-    keywords: ["fotografia", "fotografia editorial", "fine art", "retratos", "larissa canhas", "direção de arte"],
-    featuredImage: `${generalSettings.siteUrl}/img/og-image.jpg`,
+    author: "Escola de Artes Gráficas e Design",
+    keywords: [
+      "arte-final",
+      "design gráfico",
+      "pré-impressão",
+      "offset",
+      "gráfica digital",
+      "fechamento de arquivos",
+      "pitstop pro",
+      "cmyk",
+      "escola de artes graficas",
+    ],
+    featuredImage: `${generalSettings?.siteUrl || ""}/img/og-image.jpg`,
     topology: "page" as const,
   };
 
@@ -121,10 +159,12 @@ const HomeContent = ({
       <ImmersiveModal />
       <ScrollContainer>
         {!isLoaded && (
-          <div className="fixed inset-0 z-50 bg-[#f4ece4] text-[#1d2d44] flex items-center justify-center">
+          <div className="fixed inset-0 z-50 bg-[#09090b] text-white flex items-center justify-center">
             <div className="text-center">
-              <div className="w-16 h-16 border-4 border-[#1d2d44]/20 border-t-[#D47E30] rounded-full animate-spin mx-auto mb-4"></div>
-              <p className="text-[#3b5068] text-sm font-sans">Carregando galeria editorial...</p>
+              <div className="w-16 h-16 border-4 border-zinc-800 border-t-[#d4af37] rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="text-zinc-400 tracking-wider uppercase text-xs font-mono">
+                Carregando Escola de Artes Gráficas...
+              </p>
             </div>
           </div>
         )}
@@ -139,150 +179,83 @@ const HomeContent = ({
           isMobile={isMobile}
         />
 
-        <div className={`transition-opacity duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
-          <SlideshowLayout
-            mode={layoutMode}
-            currentSlide={currentSlide}
-            onSlideChange={handleSlideChange}
-            sections={sections}
-          >
-            {/* Slide 0: Nova Seção 3D Circular Centralizado */}
+        <div
+          className={`transition-opacity duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}
+        >
+          <div className="relative">
+            <FloatingObjects />
+            <SlideshowLayout
+              mode={layoutMode}
+              currentSlide={currentSlide}
+              onSlideChange={handleSlideChange}
+              sections={sections}
+            >
+            {/* Slide 0: Selo 3D Circular Centralizado */}
             <SectionWrapper id="intro" vPadding="py-0" fullHeight>
               <IntroSection onNavigate={handleSlideChange} />
             </SectionWrapper>
+
+            <Header />
 
             {/* Slide 1: Hero 3D Perspective */}
             <SectionWrapper id="inicio" vPadding="py-0" fullHeight>
               <Inicio onNavigate={handleSlideChange} />
             </SectionWrapper>
 
-            {/* Slide 1: Galeria Vertical Parallax & Modal Fullscreen (layoutId) */}
-            <SectionWrapper id="galeria" vPadding="py-0">
-              <EditorialGallerySection />
+            {/* Slide 2: Depoimentos de alunos e profissionais */}
+            <SectionWrapper id="depoimentos" vPadding="py-0" fullHeight>
+              <TestimonialsSection />
             </SectionWrapper>
 
-            {/* Slide 2: Lens Reveal Mask (Máscara de Lente Interativa) */}
-            <SectionWrapper id="lente-reveal" vPadding="py-0">
-              <LensRevealSection />
-            </SectionWrapper>
-
-            {/* Slide 3: Panorama Scroll Horizontal (0% -> -75%) */}
+            {/* Slide 3: Panorama Scroll Horizontal (+20 Anos de História) */}
             <SectionWrapper id="panorama" vPadding="py-0">
               <HorizontalPanoramaSection />
             </SectionWrapper>
 
-            {/* Slide 4: About Larissa Canhas */}
-            <SectionWrapper id="sobre" vPadding="py-0">
-              <AboutSection />
-            </SectionWrapper>
-
-            {/* Slide 5: Featured Projects */}
-            <SectionWrapper id="projetos" vPadding="pt-24 pb-0">
-              <FeaturedProjects categories={categoriesSettings.categories} />
-            </SectionWrapper>
-
-            {/* Slide 6: Showcase Merged */}
+            {/* Slide 4: Resultados e métricas */}
             <SectionWrapper
               id="o-que-faco"
-              vPadding="pt-24 pb-0"
-              className="relative flex flex-col w-full"
-              background={<GridBackground />}
+              vPadding="py-0"
+              className="relative flex flex-col w-full bg-[#09090b]"
             >
-              <div className="mb-24">
-                <ClientOnly>
-                  <ExperienceShowcase
-                    badge="Capítulos & Histórias"
-                    title="Experiências & Registros"
-                    description="Explore as diferentes coleções de fotografia documental e direção sensível por Larissa Canhas."
-                    tabs={[
-                      {
-                        id: 'familias',
-                        label: 'Gestante & Família',
-                        icon: FaHeart,
-                        content: {
-                          type: 'slideshow',
-                          manualSlideshow: true,
-                          slides: [
-                            { bg: "/img/thumb-insights-a.jpg", fg: "/img/thumb-insights-b.jpg" },
-                            { bg: "/img/thumb-blog-a.jpg", fg: "/img/thumb-blog-b.jpg" },
-                          ],
-                          buttons: [
-                            { text: 'Reserve seu Capítulo', variant: 'primary', link: '/contato' },
-                            { text: 'Ver Coleção Família', variant: 'secondary', link: '/catalogo' },
-                          ]
-                        },
-                      },
-                      {
-                        id: 'casais',
-                        label: 'Casais & Celebrações',
-                        icon: FaBriefcase,
-                        content: {
-                          type: 'slideshow',
-                          manualSlideshow: true,
-                          slides: [
-                            { bg: "/img/thumb-wp-a.jpg", fg: "/img/thumb-wp-b.jpg" },
-                            { bg: "/img/fly-1-a.jpg", fg: "/img/fly-1-b.jpg" },
-                          ],
-                          buttons: [
-                            { text: 'Reserve seu Ensaio', variant: 'primary', link: '/contato' },
-                            { text: 'Ver Galeria de Casais', variant: 'secondary', link: '/catalogo' },
-                          ]
-                        },
-                      },
-                      {
-                        id: 'lifestyle',
-                        label: 'Documental & Lifestyle',
-                        icon: FaChalkboardTeacher,
-                        content: {
-                          type: 'slideshow',
-                          manualSlideshow: true,
-                          slides: [
-                            { bg: "/img/thumb-stranger-b.jpg", fg: "/img/thumb-stranger-a.jpg" },
-                          ],
-                          buttons: [
-                            { text: 'Conheça o Estilo', variant: 'primary', link: '/contato' },
-                            { text: 'Ver Galeria Lifestyle', variant: 'secondary', link: '/catalogo' },
-                          ]
-                        },
-                      },
-                    ]}
-                    defaultTab="familias"
-                  />
-                </ClientOnly>
-              </div>
-
-              <div className="mb-24">
-                <NewStatsSection />
-              </div>
-
-              <div className="mb-12">
-                <TestimonialsSection />
-              </div>
+              <NewStatsSection />
             </SectionWrapper>
 
-            {/* Slide 7: Contact Section */}
+            {/* Slide 5: Planos & Kits (Tabela de Preços) */}
+            <SectionWrapper
+              id="planos"
+              vPadding="py-0"
+              className="relative flex flex-col w-full bg-[#09090b]"
+            >
+              <PricingSection onNavigate={handleSlideChange} />
+            </SectionWrapper>
+
+            {/* Slide 8: Contact Section */}
             <SectionWrapper id="contato" vPadding="pt-0 pb-0">
               <ContactSection
                 contacts={[
-                  { name: "Instagram", link: "https://instagram.com/larissacanhas" },
-                  { name: "Email", link: "contato@larissacanhas.com.br", isMail: true },
-                  { name: "Agendar Sessão", link: "/contato" },
+                  {
+                    name: "WhatsApp Pedagógico: (16) 99999-9999",
+                    link: "https://wa.me/5516999999999",
+                    isWhatsapp: true,
+                  },
+                  {
+                    name: "E-mail: arte@instituto.app",
+                    link: "arte@instituto.app",
+                    isMail: true,
+                  },
                 ]}
-                title="Entre em Contato"
-                formTitle="Solicite um Orçamento para seu Ensaio"
+                title="Garanta Seu Exemplar"
+                formTitle="Fale com a Equipe"
               />
             </SectionWrapper>
 
-            {/* Instagram Section */}
-            <SectionWrapper id="instagram" vPadding="pt-12 pb-0">
-              <InstagramSection />
-            </SectionWrapper>
-
-            {/* Slide 8: CTA Final ("Vamos Conversar") */}
-            <SectionWrapper id="cta" vPadding="pt-12 pb-0">
-              <CTASection />
+            {/* Slide 9: CTA Final */}
+            <SectionWrapper id="cta" vPadding="pt-0 pb-0">
+              <ProductionCTASection />
             </SectionWrapper>
           </SlideshowLayout>
+          </div>
 
           {/* Footer as the absolute last element */}
           <Footer />
@@ -293,9 +266,7 @@ const HomeContent = ({
 };
 
 const Home = (props: HomeProps) => {
-  return (
-    <HomeContent {...props} />
-  );
+  return <HomeContent {...props} />;
 };
 
 const loadHome = async () => {
@@ -308,7 +279,10 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 
   const businessSettings = getBusinessSettings();
   const generalSettings = getGeneralSettings();
-  const navigatorSettings = typeof getNavigatorSettings === 'function' ? getNavigatorSettings() : { enabled: true, showProgress: true }; // Temporary safety
+  const navigatorSettings =
+    typeof getNavigatorSettings === "function"
+      ? getNavigatorSettings()
+      : { enabled: true, showProgress: true }; // Temporary safety
   const themeSettings = getThemeSettings();
   const categoriesSettings = getCategoriesSettings();
 

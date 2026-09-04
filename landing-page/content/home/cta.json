@@ -1,18 +1,19 @@
 {
   "cta": {
     "titleEmoji": "",
-    "link": "/contato",
+    "link": "/#contato",
     "contacts": [
       {
         "type": "email",
         "icon": "email",
-        "translationKey": "contact.email"
+        "label": "arte@instituto.app",
+        "url": "mailto:arte@instituto.app"
       },
       {
         "type": "whatsapp",
-        "url": "https://wa.me/5543991575781",
+        "url": "https://wa.me/5516999999999",
         "icon": "whatsapp",
-        "label": "WhatsApp"
+        "label": "WhatsApp: (16) 99999-9999"
       }
     ]
   }

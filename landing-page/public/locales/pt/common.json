@@ -1,109 +1,109 @@
 {
   "home": {
-    "titleNormal": "Transformando ideias em",
-    "titleBold": "Realidade Digital",
-    "subtitle": "Desenvolvedor Full Stack especializado em experiências web de alta performance e sistemas escaláveis.",
+    "titleNormal": "Formação Profissional em",
+    "titleBold": "Artes Gráficas & Design",
+    "subtitle": "Mais de 20 anos de experiência preparando profissionais para dominar pré-impressão, gráfica digital, offset e fechamento técnico de arquivos.",
     "cta": {
-      "letsTalk": "Vamos Conversar",
-      "viewProjects": "Ver Projetos",
-      "title": "Pronta para dar vida à sua próxima narrativa visual?",
-      "description": "Entre em contato para agendar seu ensaio autoral, consultar datas disponíveis ou discutir um projeto de direção de arte sob medida.",
-      "button": "Solicitar Orçamento & Agendar"
+      "letsTalk": "Falar com Consultor",
+      "viewProjects": "Ver Formação",
+      "title": "Conheça nossos",
+      "description": "Domine pré-impressão, fechamento de arquivos, impressão digital, offset e automação em uma formação prática e voltada para o mercado.",
+      "button": "Quero me Inscrever Agora"
     },
-    "scroll": "Role para explorar",
+    "scroll": "Role para explorar o curso",
     "about": {
-      "title": "Open To Work",
-      "description": "Trabalho ajudando pessoas e empresas a transformarem ideias em produtos web reais, sistemas com inteligência artificial e experiências gamificadas.",
-      "cta": "Saiba Mais"
+      "title": "A Escola",
+      "description": "Formamos designers e arte-finalistas com capacidade técnica para atuar em gráficas, agências e estúdios sem erros e sem retrabalho.",
+      "cta": "Conhecer a Metodologia"
     },
     "projects": {
-      "title": "Catálogo",
-      "subtitle": "Catálogo em Destaque",
-      "description": "Veja abaixo os sistemas prontos que possuo de fácil instalação, também os projetos de curto, médio e longo prazo.",
-      "viewAll": "Ver Todos os Projetos",
-      "projectNumber": "Projeto",
-      "project1": "Plataforma SaaS completa com arquitetura escalável e SEO otimizado.",
-      "project2": "Dashboard administrativo com analytics em tempo real e gestão de usuários.",
-      "project3": "API RESTful de alta performance com documentação Swagger integrada."
+      "title": "Módulos do Curso",
+      "subtitle": "Conheça nossos",
+      "description": "Do básico ao avançado com foco total nas necessidades e exigências do mercado gráfico real.",
+      "viewAll": "Ver Conteúdo Programático",
+      "projectNumber": "Módulo",
+      "project1": "Pré-impressão e fechamento técnico: sangrias, marcas de corte, registros, cores e PDF/X.",
+      "project2": "Tratamento de imagens e gerenciamento de cor: CMYK, RGB, perfis ICC e controle de ganho de ponto.",
+      "project3": "Impressão digital, offset e automação com PitStop Pro e Enfocus Switch."
     },
     "services": {
-      "title": "Como posso ajudar seu projeto?",
-      "subtitle": "Serviços especializados para escalar seu negócio",
+      "title": "Por que escolher nossa escola?",
+      "subtitle": "Diferenciais de mais de duas décadas de prática",
       "list": [
-        "Desenvolvimento Web Full Stack",
-        "Otimização de Performance",
-        "Arquitetura de Sistemas",
-        "Mentoria Técnica"
+        "100% Foco no Mercado Gráfico",
+        "Aulas ao Vivo e Acesso a Gravações",
+        "Projetos Práticos de Produção Real",
+        "Certificação Profissional Reconhecida"
       ]
     },
     "contact": {
-      "title": "Vamos criar algo incrível juntos?",
-      "subtitle": "Entre em contato para discutir seu próximo projeto",
+      "title": "Pronto para dominar a produção gráfica?",
+      "subtitle": "Entre em contato com nossa equipe pedagógica para garantir sua vaga na próxima turma.",
       "form": {
-        "name": "Seu Nome",
+        "name": "Seu Nome Completo",
         "email": "Seu E-mail",
-        "message": "Sua Mensagem",
-        "submit": "Enviar Mensagem",
+        "message": "Mensagem ou Dúvida",
+        "submit": "Enviar Inscrição / Contato",
         "sending": "Enviando...",
-        "success": "Mensagem enviada com sucesso!",
-        "error": "Erro ao enviar mensagem. Tente novamente."
+        "success": "Mensagem enviada com sucesso! Entraremos em contato em breve.",
+        "error": "Ocorreu um erro ao enviar. Por favor, tente novamente."
       }
     },
     "footer": {
       "rights": "Todos os direitos reservados.",
-      "copyright": "Todos os direitos reservados."
+      "copyright": "Escola de Artes Gráficas e Design."
     }
   },
   "about": {
-    "title": "Sobre Mim",
-    "introduction": "Olá! Sou Milton Bolonha, estudante de Análise e Desenvolvimento de Sistemas, conhecido por ser trabalhador e honrado em cumprir minhas promessas. Meu objetivo é ajudar empreendedores e profissionais como você a transformarem ideias em projetos digitais de sucesso, com soluções escaláveis, modernas e funcionais.",
+    "title": "Sobre a Escola",
+    "introduction": "A Escola de Artes Gráficas e Design reúne mais de duas décadas de experiência prática no mercado gráfico, editorial e de comunicação visual. Nosso propósito é capacitar designers, arte-finalistas e profissionais da indústria com conhecimento técnico profundo e rigor de produção.",
     "education": {
-      "title": "Educação",
-      "degree": "Graduando em Análise e Desenvolvimento de Sistemas",
-      "degreeShort": "Análise e Desenvolvimento de Sistemas"
+      "title": "Formação Técnica",
+      "degree": "Design Arte-Finalista — Gráfica Digital e Offset",
+      "degreeShort": "Arte-Final & Produção Gráfica"
     },
     "specialization": {
       "title": "Especialização",
-      "area": "Desenvolvimento Web Full-Stack"
+      "area": "Pré-Impressão, Fechamento de Arquivos e Gestão de Cores"
     },
     "services": {
-      "title": "O que posso fazer pelo seu projeto?",
+      "title": "O que você aprenderá conosco?",
       "items": [
-        "Desenvolvimento de sites responsivos e modernos que destacam seus produtos ou serviços.",
-        "Criação de aplicações web personalizadas, com Front-End e Back-End integrados.",
-        "Otimização e deploy em plataformas como Netlify e Vercel, garantindo performance e estabilidade.",
-        "Estruturação de sistemas eficientes utilizando Node.js, SQL, ReactJS e NextJS.",
-        "Documentação organizada e comunicação clara, facilitando o trabalho em equipe e manutenções futuras."
+        "Preparação técnica de arquivos para impressão com qualidade, segurança e economia.",
+        "Tratamento de imagens e conversão precisa para CMYK com perfis ICC adequados.",
+        "Diagramação profissional de livros, revistas, catálogos e peças multipágina no InDesign.",
+        "Diferenciação precisa entre processos de impressão digital e offset, papéis e acabamentos.",
+        "Automação de fluxos de preflight e correção de PDFs com PitStop Pro e Enfocus Switch."
       ]
     },
     "whyChoose": {
-      "title": "Por que escolher trabalhar comigo?",
+      "title": "Por que escolher nossa formação?",
       "items": [
-        "Comprometimento total: Entrego o que prometo, estudando e aplicando soluções eficazes.",
-        "Aprendizado rápido e constante: Estou sempre atualizado nas tecnologias mais recentes, oferecendo soluções modernas e eficientes.",
-        "Foco em resultados: Antes de codificar, analiso e entendo profundamente o problema, garantindo que a solução atenda exatamente às suas necessidades."
+        "Mais de 20 anos de tradição e experiência real no chão de fábrica e pré-impressão.",
+        "Aprendizado prático direto ao ponto: sem enrolação, resolvendo problemas reais do mercado.",
+        "Redução comprovada de erros, perdas de papel e retrabalho na produção gráfica."
       ]
     },
     "skills": {
-      "title": "Minhas habilidades técnicas:",
-      "frontend": "Front-End:",
-      "backend": "Back-End:",
-      "deploy": "Deploy & Otimização:",
-      "frontendTechs": "ReactJS | NextJS | HTML5 | CSS3 | Tailwind CSS | Bootstrap | JavaScript | TypeScript",
-      "backendTechs": "Node.js | SQL | REST APIs | Git | GitHub",
-      "deployTechs": "Netlify | Vercel"
+      "title": "Ferramentas abordadas:",
+      "frontend": "Design & Diagramação:",
+      "backend": "Pré-impressão & Automação:",
+      "deploy": "Processos Gráficos:",
+      "frontendTechs": "Adobe InDesign | Adobe Illustrator | Adobe Photoshop",
+      "backendTechs": "Adobe Acrobat Pro | PitStop Pro | Enfocus Switch",
+      "deployTechs": "Impressão Digital | Impressão Offset | Acabamentos Especiais"
     },
-    "cta": "Conheça Minha História"
+    "cta": "Quero Conhecer o Curso"
   },
   "navigation": {
     "home": "Início",
-    "about": "Sobre",
-    "projects": "Catálogo",
-    "blog": "Blog",
-    "contact": "Contato"
+    "about": "A Escola",
+    "projects": "O Curso",
+    "blog": "Artigos",
+    "contact": "Inscrição"
   },
   "floatingButton": {
-    "contactMe": "Fale Comigo"
+    "contactMe": "Fale com o Consultor"
   },
   "notFound": {
     "title": "Página não encontrada",
@@ -111,7 +111,7 @@
     "backHome": "Voltar para o início"
   },
   "blog": {
-    "readMore": "Ler mais",
+    "readMore": "Ler artigo",
     "publishedOn": "Publicado em",
     "by": "por",
     "timeToRead": "min de leitura"

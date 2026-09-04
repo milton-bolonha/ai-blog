@@ -17,7 +17,8 @@ export const SplitText = ({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" }); // Anima quando chega na seção
 
-  const letters = text.split("");
+  // Allow only explicit line-break tokens; all other content remains plain text.
+  const textParts = text.split(/(<br\s*\/?>)/gi);
 
   const container = {
     hidden: { opacity: 0 },
@@ -50,15 +51,21 @@ export const SplitText = ({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
     >
-      {letters.map((letter, index) => (
-        <motion.span
-          key={index}
-          variants={child}
-          style={{ display: "inline-block" }}
-        >
-          {letter === " " ? "\u00A0" : letter}
-        </motion.span>
-      ))}
+      {textParts.map((part, partIndex) => {
+        if (/^<br\s*\/?>$/i.test(part)) {
+          return <br key={`break-${partIndex}`} />;
+        }
+
+        return part.split("").map((letter, letterIndex) => (
+          <motion.span
+            key={`${partIndex}-${letterIndex}`}
+            variants={child}
+            style={{ display: "inline-block" }}
+          >
+            {letter === " " ? "\u00A0" : letter}
+          </motion.span>
+        ));
+      })}
     </motion.span>
   );
 };

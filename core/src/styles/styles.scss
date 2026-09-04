@@ -59,20 +59,20 @@ Version: 0.1.0-journal.1
 @import "../../../content/styles/CUSTOMIZE-ME.scss";
 
 /*--------------------------------------------------------------
-6.0 Editorial Theme Overrides (Larissa Canhas Visual Identity)
+6.0 Editorial Theme Overrides (Escola de Artes Gráficas e Design)
 --------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Federo&family=Tenor+Sans&display=swap');
 
 body, html, .boilerplate-times {
-  background-color: #f4ece4 !important;
-  color: #1d2d44 !important;
+  background-color: #ffffff !important;
+  color: #09090b !important;
   font-family: 'Tenor Sans', sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, .post-title, .hero h1, .entry-title, .card-title, .heading, .brand-title {
   font-family: 'Federo', serif !important;
-  color: #1d2d44 !important;
-  font-weight: 400 !important;
+  color: #09090b !important;
+  font-weight: 700 !important;
 }
 
 p, span, li, a, td, th, input, button {
@@ -80,19 +80,19 @@ p, span, li, a, td, th, input, button {
 }
 
 a {
-  color: #1d2d44;
+  color: #09090b;
   transition: color 0.3s ease;
   &:hover {
-    color: #D47E30 !important;
+    color: #d4af37 !important;
   }
 }
 
 // Header & Navigation (Matching Index Landing Page)
 header, .header-wrapper, .main-header {
   padding-top: 5px !important;
-  background-color: #f4ece4 !important;
-  color: #1d2d44 !important;
-  border-bottom: none !important;
+  background-color: #09090b !important;
+  color: #ffffff !important;
+  border-bottom: 2px solid #27272a !important;
   border: none !important;
   
   hr {
@@ -100,7 +100,7 @@ header, .header-wrapper, .main-header {
   }
 
   a, span, li {
-    color: #1d2d44 !important;
+    color: #f4f4f5 !important;
     font-family: 'Tenor Sans', sans-serif !important;
     font-size: 14px !important;
     font-weight: 600 !important;
@@ -108,7 +108,7 @@ header, .header-wrapper, .main-header {
     transition: color 0.3s ease !important;
     
     &:hover {
-      color: #D47E30 !important;
+      color: #d4af37 !important;
     }
   }
 }
@@ -117,49 +117,49 @@ header, .header-wrapper, .main-header {
 h2.title, .post-title, .caption .title, a.post-link h2, a.post-link {
   transition: color 0.3s ease !important;
   &:hover {
-    color: #D47E30 !important;
+    color: #d4af37 !important;
   }
 }
 
 .post:hover, .post-card:hover, .grid-post .post:hover, .media:hover {
   h2.title, .post-title, .caption .title, a.post-link, .title {
-    color: #D47E30 !important;
+    color: #d4af37 !important;
   }
 }
 
 // Blog Cards / Articles
 .card, .post-card, .article-card, .news-card, .blog-item {
-  background-color: #e6d8cc !important;
-  border: 1px solid rgba(29, 45, 68, 0.15) !important;
+  background-color: #ffffff !important;
+  border: 1px solid #e4e4e7 !important;
   border-radius: 1rem !important;
   overflow: hidden !important;
   transition: all 0.4s ease-out !important;
-  box-shadow: 0 4px 12px rgba(29, 45, 68, 0.05) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
 
   &:hover {
     transform: translateY(-4px) !important;
-    box-shadow: 0 12px 24px rgba(29, 45, 68, 0.12) !important;
-    border-color: #D47E30 !important;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08) !important;
+    border-color: #d4af37 !important;
   }
 
   h2, h3, .card-title {
-    color: #1d2d44 !important;
+    color: #09090b !important;
     font-family: 'Federo', serif !important;
     transition: color 0.3s ease !important;
     &:hover {
-      color: #D47E30 !important;
+      color: #d4af37 !important;
     }
   }
 
   p, .card-excerpt, .description {
-    color: #3b5068 !important;
+    color: #52525b !important;
   }
 }
 
-// Category Badges & Tags (Sharp contrast, hover shifts to Navy background)
+// Category Badges & Tags (Sharp contrast, gold / dark graphite background)
 .badge, .tag, .category-badge, .post-category, a.post-category {
-  background-color: #D47E30 !important;
-  color: #ffffff !important;
+  background-color: #09090b !important;
+  color: #d4af37 !important;
   font-size: 11px !important;
   text-transform: uppercase !important;
   letter-spacing: 0.08em !important;
@@ -169,15 +169,16 @@ h2.title, .post-title, .caption .title, a.post-link h2, a.post-link {
   display: inline-block !important;
   text-decoration: none !important;
   transition: all 0.3s ease !important;
+  border: 1px solid #27272a !important;
 
   &:hover {
-    background-color: #1d2d44 !important;
-    color: #ffffff !important;
+    background-color: #d4af37 !important;
+    color: #000000 !important;
     text-decoration: none !important;
   }
 }
 
-// Single Item Grid Override for Category pages (/blog/saas/) - Matches Blog Index Height
+// Single Item Grid Override for Category pages (/blog/saas/)
 .single-post-grid,
 .news-grid.single-post-grid,
 .grid-post.single-post-grid,
@@ -206,19 +207,19 @@ div.single-post-grid {
   }
 }
 
-// Category Page Post Cards (Unrounded corners, full natural image dimensions)
+// Category Page Post Cards
 .page-wrapper .post, .page-wrapper .media, .page-wrapper .media img {
   border-radius: 0 !important;
 }
 
-// Widget and Tag Headers Fix (White text on Canela background)
+// Widget and Tag Headers Fix
 .tag-news-wrapper .tag-news, 
 h4.tag-news, 
 .tag-news, 
 .home-sidebar .tag-news,
 .home-sidebar h4 {
-  color: #ffffff !important;
-  background-color: #D47E30 !important;
+  color: #000000 !important;
+  background-color: #d4af37 !important;
   font-family: 'Federo', serif !important;
   font-size: 13px !important;
   text-transform: uppercase !important;
@@ -234,8 +235,8 @@ h4.tag-news,
   align-items: center !important;
   gap: 12px !important;
   padding: 12px 16px !important;
-  background: #e6d8cc !important;
-  border: 1px solid rgba(29, 45, 68, 0.15) !important;
+  background: #f4f4f5 !important;
+  border: 1px solid #e4e4e7 !important;
   border-radius: 12px !important;
   margin-bottom: 10px !important;
   transition: all 0.3s ease !important;
@@ -247,36 +248,36 @@ h4.tag-news,
   }
 
   p, span {
-    color: #1d2d44 !important;
+    color: #09090b !important;
     font-family: 'Tenor Sans', sans-serif !important;
     font-weight: 600 !important;
     margin: 0 !important;
   }
 
   &:hover {
-    background: #1d2d44 !important;
-    border-color: #D47E30 !important;
+    background: #09090b !important;
+    border-color: #d4af37 !important;
     p, span {
-      color: #ffffff !important;
+      color: #d4af37 !important;
     }
   }
 }
 
 // Footer Overrides
 footer, .footer-wrapper {
-  background-color: #1d2d44 !important;
-  color: #f4ece4 !important;
-  border-top: 1px solid rgba(230, 216, 204, 0.15) !important;
+  background-color: #09090b !important;
+  color: #f4f4f5 !important;
+  border-top: 2px solid #27272a !important;
   
   h3, h4, .footer-heading {
     font-family: 'Federo', serif !important;
-    color: #D47E30 !important;
+    color: #d4af37 !important;
   }
   
   p, a, span {
-    color: rgba(230, 216, 204, 0.8) !important;
+    color: #a1a1aa !important;
     &:hover {
-      color: #D47E30 !important;
+      color: #d4af37 !important;
     }
   }
 }

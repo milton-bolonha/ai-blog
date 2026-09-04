@@ -1,27 +1,27 @@
 {
   "statsSection": {
-    "title": "Trajetória & Indicadores",
-    "subtitle": "Mais de uma década eternizando momentos",
+    "title": "Quem Garante a Excelência do Conteúdo",
+    "subtitle": "O Instituto Organizacionista garante a qualidade e a excelência deste material, com experiência em criar conteúdo pedagógico que transforma vidas.",
     "items": [
       {
-        "value": "+500",
-        "label": "Famílias Fotografadas",
-        "sublabel": "Registros afetivos únicos"
-      },
-      {
-        "value": "12+",
+        "value": "+20",
         "label": "Anos de Experiência",
-        "info": "Dedicação e olhar sensível"
+        "sublabel": "Tradição condensada em linguagem direta"
       },
       {
-        "value": "+1200",
-        "label": "Ensaios & Celebrações",
-        "info": "Histórias vivas eternizadas"
+        "value": "Zero",
+        "label": "Enrolação",
+        "info": "Sem depender de vídeo-aula ou prazo de acesso expirando"
       },
       {
         "value": "100%",
-        "label": "Luz Natural & Presença",
-        "info": "Conexão genuína com cada história"
+        "label": "Foco no Mercado",
+        "info": "Pré-impressão, cor, produção e prática em um só lugar"
+      },
+      {
+        "value": "∞",
+        "label": "Acesso Permanente",
+        "info": "O livro fica com você para consultar sempre que precisar"
       }
     ]
   }

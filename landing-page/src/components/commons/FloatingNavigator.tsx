@@ -13,6 +13,15 @@ import {
   FaChartBar,
   FaQuestionCircle,
   FaFlask,
+  FaStar,
+  FaBookOpen,
+  FaQuoteRight,
+  FaLayerGroup,
+  FaBuilding,
+  FaTags,
+  FaGraduationCap,
+  FaHistory,
+  FaCheckCircle,
 } from 'react-icons/fa';
 
 interface NavigatorItem {
@@ -57,6 +66,15 @@ const iconMap: Record<string, React.ComponentType<any>> = {
   FaChartBar,
   FaQuestionCircle,
   FaFlask,
+  FaStar,
+  FaBookOpen,
+  FaQuoteRight,
+  FaLayerGroup,
+  FaBuilding,
+  FaTags,
+  FaGraduationCap,
+  FaHistory,
+  FaCheckCircle,
 };
 
 export default function FloatingNavigator({

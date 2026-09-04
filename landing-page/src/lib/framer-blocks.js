@@ -58,9 +58,11 @@ class VoxelImageRenderer {
     const height = this.container.clientHeight || (this.shape === 'circle' ? 300 : 400);
     const aspect = width / height;
     this.camera = new THREE.PerspectiveCamera(45, aspect || 1, 0.1, 5000);
-    this.camera.position.set(0, 0, 250); // Close framing for normal view
-    this.cameraBaseZ = 250; // Store base position
-    this.cameraTargetZ = 250; // For smooth transitions
+    // Distância do giro (300): o recuo no clique era o enquadramento nítido;
+    // o zoom de 250 esticava a textura e deixava a imagem borrada.
+    this.camera.position.set(0, 0, 300);
+    this.cameraBaseZ = 300;
+    this.cameraTargetZ = 300;
     
     // Renderer com alpha:true — canvas é transparente, o bg vem do CSS
     // Isso garante correspondência perfeita com qualquer cor de fundo CSS
@@ -827,8 +829,7 @@ class VoxelImageRenderer {
       const startDelay = 0.06;
       const maxProgress = 1.0 + startDelay + 0.1; // Buffer
 
-      // Zoom out camera during rotation
-      this.cameraTargetZ = 300; 
+      this.cameraTargetZ = this.cameraBaseZ; 
       
       if (this.rotationProgress >= maxProgress) {
         this.rotationProgress = 0;
