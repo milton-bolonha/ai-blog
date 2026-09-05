@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
       <?xml-stylesheet type="text/xsl" href="https://blog-instituto.netlify.app/blog//template.xsl"?>
-        <!-- Created in Fri Sep 04 2026 09:45:32 GMT-0300 (Horário Padrão de Brasília) -->
+        <!-- Created in Sat Sep 05 2026 12:40:22 GMT-0300 (Horário Padrão de Brasília) -->
         <urlset
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd"
           xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           <url>
             <loc>https://blog-instituto.netlify.app/blog/terms-and-conditions</loc>
-            <lastmod>2026-09-04T12:45:23.661Z</lastmod>
+            <lastmod>2026-09-05T15:40:14.142Z</lastmod>
             
           </url>,<url>
             <loc>https://blog-instituto.netlify.app/blog/privacy-policy</loc>
-            <lastmod>2026-09-04T12:45:23.659Z</lastmod>
+            <lastmod>2026-09-05T15:40:14.139Z</lastmod>
             
           </url>,<url>
             <loc>https://blog-instituto.netlify.app/blog/advertising-disclosure</loc>
-            <lastmod>2026-09-04T12:45:23.655Z</lastmod>
+            <lastmod>2026-09-05T15:40:14.133Z</lastmod>
             
           </url>,<url>
             <loc>https://blog-instituto.netlify.app/blog/about-us</loc>
-            <lastmod>2026-09-04T12:45:23.654Z</lastmod>
+            <lastmod>2026-09-05T15:40:14.131Z</lastmod>
             
           </url>
       </urlset>
