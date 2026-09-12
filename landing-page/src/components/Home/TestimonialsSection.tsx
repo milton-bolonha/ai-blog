@@ -41,7 +41,7 @@ const testimonials: Testimonial[] = [
       avatar: "https://randomuser.me/api/portraits/men/32.jpg",
     },
     content:
-      "Eu já tinha anos de designer, mas nunca tinha trabalhado em uma gráfica. Então fiquei desempregado. O método me deu tudo o que eu precisava e a segurança que faltavam para eu tentar esse mercado. Tentei e deu certo! Estou emprego e feliz.",
+      "Eu já tinha anos de designer, mas nunca tinha trabalhado em uma gráfica. Então fiquei desempregado. O método me deu tudo o que eu precisava e a segurança que faltavam para eu tentar esse mercado. Tentei e deu certo! Consegui um novo emprego e estou feliz.",
     stats: { rating: 5 },
   },
   {

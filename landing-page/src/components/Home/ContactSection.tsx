@@ -112,7 +112,7 @@ export default function ContactSection({
             {title}
           </h2>
           <p className="text-base text-zinc-600 max-w-2xl mx-auto font-sans">
-            Fale com a gente sobre formatos físico e digital, material
+            Fale com a gente, material
             complementar incluso e condições especiais de lançamento.
           </p>
         </div>
@@ -155,7 +155,7 @@ export default function ContactSection({
                   Atendimento por E-mail
                 </h3>
                 <p className="mt-3 max-w-md text-sm leading-relaxed text-zinc-600">
-                  Envie sua dúvida e receba as informações completas da livro e
+                  Envie sua dúvida e receba as informações do manual e
                   material complementar.
                 </p>
                 {emailContact && (
