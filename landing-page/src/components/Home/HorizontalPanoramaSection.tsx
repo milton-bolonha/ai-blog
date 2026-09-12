@@ -6,12 +6,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const PANORAMA_SERIES = [
   {
     id: 1,
-    title: "Op Ordem de Produção",
+    title: "Ordem de Produção",
     category: "Fluxo",
     image: "/box-1.jpg",
     year: "OP",
     description:
-      "Do briefing à entrega: como estruturar a ordem de produção, prazos, responsabilidades e o rastro que a gráfica realmente usa no dia a dia.",
+      "Do primeiro contato à entrega: A Ordem de Serviço acompanha todos os profissionais contendo os detalhes do serviço tais como cliente, produtos, quantidades, prazos e o rastro que a gráfica realmente usa no dia a dia.",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const PANORAMA_SERIES = [
     image: "/box-2.jpg",
     year: "CONTAINER",
     description:
-      "Modelagem, gabaritos e dimensões exatas de containers e formatos para otimização de matrizes impressas.",
+      "Tamanho da impressão, sangria, margem de segurança, área de corte e todos os detalhes que vão para uma impressão precisa.",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const PANORAMA_SERIES = [
     image: "/box-3.jpg",
     year: "CAD",
     description:
-      "Distribuição e arranjo de páginas e peças na folha de impressão, reduzindo desperdício e garantindo o encaixe perfeito.",
+      "Ao montar suas artes e páginas, você precisa distribuí-la na ordem especial correta, ou criar diversas cópias espalhadas na folha, reduzindo desperdício e garantindo o maior aproveitamento.",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const PANORAMA_SERIES = [
     image: "/box-4.jpg",
     year: "RIP / RASTER",
     description:
-      "Raster Image Processor: interpretação de curvas, retículas, conversão de cor e envio de dados para a gravadora de chapa ou impressora digital.",
+      "Raster Image Processor: Interpretação de vetores, transformação em retículas, conversão de cor e envio de arquivo para a gravadora de chapa.",
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const PANORAMA_SERIES = [
     image: "/box-5.jpg",
     year: "ESPECIAIS",
     description:
-      "Verniz, hot stamping, faca, laminação e os acabamentos que transformam o impresso em peça — e o arquivo em responsabilidade.",
+      "Verniz, hot stamping, faca, laminação e os acabamentos que transformam o impresso em peça de alta qualidade.",
   },
 ];
 

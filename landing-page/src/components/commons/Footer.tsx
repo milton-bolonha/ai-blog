@@ -129,18 +129,10 @@ export const Footer = ({ className = "" }: FooterProps) => {
               </li>
               <li>
                 <Link
-                  href="/#o-que-faco"
+                  href="/#planos"
                   className="text-zinc-400 hover:text-white transition-colors"
                 >
-                  Material Complementar
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#contato"
-                  className="text-zinc-400 hover:text-white transition-colors"
-                >
-                  Aquisição & Contato
+                  Preço
                 </Link>
               </li>
             </ul>

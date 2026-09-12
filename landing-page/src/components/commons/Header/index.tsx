@@ -135,17 +135,18 @@ export const Header = () => {
         >
           Conteúdo do Livro
         </Link>
-        <Link
-          href="/#o-que-faco"
-          className="px-3.5 py-2 rounded-full text-zinc-300 hover:bg-zinc-800/70 hover:text-white transition-colors"
-        >
-          Material Complementar
-        </Link>
+      
         <Link
           href="/#depoimentos"
           className="px-3.5 py-2 rounded-full text-zinc-300 hover:bg-zinc-800/70 hover:text-white transition-colors"
         >
           Depoimentos
+        </Link>
+        <Link
+          href="/#planos"
+          className="px-3.5 py-2 rounded-full text-zinc-300 hover:bg-zinc-800/70 hover:text-white transition-colors"
+        >
+          Preço
         </Link>
         <Link
           href={WHATSAPP_URL}

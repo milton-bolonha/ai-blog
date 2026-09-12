@@ -20,9 +20,9 @@ export const ProductionCTASection = () => {
         <p className="text-zinc-400 mb-10 text-lg leading-relaxed">
           Garanta seu exemplar de{" "}
           <strong className="text-white">
-            Arte-Final para Designers: O Manual de Impressão Digital e Offset
+            Arte-Final para Designers: Manual da Impressão Digital e Offset
           </strong>{" "}
-          com material complementar completo para te preparar como um
+          com material complementar completo para te lapidar como um
           profissional de alto nível.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

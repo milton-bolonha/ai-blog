@@ -24,24 +24,24 @@ const testimonials: Testimonial[] = [
     id: "1",
     type: "card",
     author: {
-      name: "Rodrigo Mendes",
-      role: "Arte-finalista em transição • Offset",
-      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+      name: "Camila Guimarães",
+      role: "Designer editorial no início da carreira",
+      avatar: "https://randomuser.me/api/portraits/women/45.jpg",
     },
     content:
-      "Eu já tinha anos de gráfica, mas sentia que estava travado no mesmo cargo. O método me deu o vocabulário e a segurança que faltavam para assumir arquivos mais complexos — e a equipe passou a me procurar antes de gravar chapa.",
+      "Saí da faculdade sabendo criar, sem rumo. Entender o que acontece dentro de uma gráfica me tirou o medo. Hoje eu trabalho na área e se faço tudo com confiança, devo muito a esse kit.",
     stats: { rating: 5 },
   },
   {
     id: "2",
     type: "card",
     author: {
-      name: "Camila Guimarães",
-      role: "Designer editorial no início da carreira",
-      avatar: "https://randomuser.me/api/portraits/women/45.jpg",
+      name: "Rodrigo Mendes",
+      role: "Arte-finalista em transição • Offset",
+      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
     },
     content:
-      "Saí da faculdade sabendo criar, mas não sabia entregar. Cada prova voltava diferente da tela. Entender cor, arquivo e o que a gráfica espera me tirou do medo — hoje eu fecho com calma e o cliente para de me cobrar retrabalho.",
+      "Eu já tinha anos de designer, mas nunca tinha trabalhado em uma gráfica. Então fiquei desempregado. O método me deu tudo o que eu precisava e a segurança que faltavam para eu tentar esse mercado. Tentei e deu certo! Estou emprego e feliz.",
     stats: { rating: 5 },
   },
   {
@@ -53,7 +53,7 @@ const testimonials: Testimonial[] = [
       avatar: "https://randomuser.me/api/portraits/men/22.jpg",
     },
     content:
-      "O gargalo da agência era o tempo entre o layout aprovado e o arquivo que a gráfica aceitava. Organizei o fluxo da equipe com o que aprendi aqui. Menos madrugada, menos briga com fornecedor, mais previsibilidade.",
+      "Na agência em que trabalho, perdíamos tempo com retrabalho, e processos sem controle algum. Organizei o fluxo da equipe com o que aprendi com ese material.",
     stats: { rating: 5 },
   },
   {
@@ -65,7 +65,7 @@ const testimonials: Testimonial[] = [
       avatar: "https://randomuser.me/api/portraits/women/44.jpg",
     },
     content:
-      "Eu amava o que criava e chorava quando ia para a produção. A peça bonita na tela virava outra coisa no plástico. Aprender o caminho até o acabamento me devolveu o gosto de ver o trabalho nas prateleiras — do jeito que eu imaginei.",
+      "Como designer, eu amava o que criava e chorava quando ia para a gráfica. A arte final para a gráfica é muito diferente do jeito que eu imaginava. Hoje não passo mais raiva, aprendi os detalhes que me faltavam com o kit.",
     stats: { rating: 5 },
   },
   {
@@ -77,7 +77,7 @@ const testimonials: Testimonial[] = [
       avatar: "https://randomuser.me/api/portraits/men/67.jpg",
     },
     content:
-      "Meus operadores apagavam incêndio o dia inteiro. Padronizei o recebimento de arquivos e o time parou de perder folha e turno. Não foi um milagre: foi método, da ordem de produção ao acabamento.",
+      "O Protocolo de Produção é incrível. Ele me ajudou a organizar a produção da minha gráfica, e a treinar a equipe. Hoje entregamos mais rápido, com menos erros e com isso temos mais lucro.",
     stats: { rating: 5 },
   },
   {
@@ -89,7 +89,7 @@ const testimonials: Testimonial[] = [
       avatar: "https://randomuser.me/api/portraits/men/11.jpg",
     },
     content:
-      "Eu cobrava barato porque tinha medo de errar na gráfica. Quando passei a entregar arquivo redondo, o cliente parou de me tratar como executor e passou a me tratar como parceiro. Isso mudou minha renda — e a forma como eu me via.",
+      "Eu tinha medo de errar na gráfica. Quando passei a entregar arquivo redondo, passei a me ver com outros olhos, eu tinha me tornado parceiro valioso para os meus clientes. Isso mudou minha renda e a vida da minha família.",
     stats: { rating: 5 },
   },
 ];
@@ -134,7 +134,7 @@ const TestimonialCard = ({ item }: { item: Testimonial }) => {
             ))}
           </div>
           <span className="flex items-center gap-1 text-[11px] font-mono text-zinc-400">
-            <FaCheckCircle className="text-[#00a8c6]" /> Leitor Profissional
+            <FaCheckCircle className="text-[#00a8c6]" /> Testemunho Real{" "}
           </span>
         </div>
       </div>
@@ -165,8 +165,9 @@ export const TestimonialsSection = () => {
             Testemunhos e Vidas Transformadas
           </h2>
           <p className="text-base text-zinc-300 max-w-2xl mx-auto font-sans">
-            Histórias de quem estava em estágios diferentes da carreira e
-            encontrou um caminho mais seguro até a produção.
+            Histórias de pessoas reais que transformaram as suas vidas, mudaram
+            suas carreiras
+            <br /> e que aperfeiçoaram as suas técnicas nas artes gráficas.
           </p>
         </div>
 

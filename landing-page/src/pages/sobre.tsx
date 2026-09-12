@@ -61,7 +61,7 @@ const Sobre = ({ businessSettings }: SobreProps) => {
         <title>O Livro | Escola de Artes Gráficas e Design</title>
         <meta
           name="description"
-          content="Conheça Arte-Final para Designers: O Manual de Impressão Digital e Offset, da Escola de Artes Gráficas e Design."
+          content="Conheça Arte-Final para Designers: Manual da Impressão Digital e Offset, da Escola de Artes Gráficas e Design."
         />
         <meta
           property="og:title"

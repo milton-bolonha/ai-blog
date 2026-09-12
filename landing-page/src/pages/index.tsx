@@ -132,7 +132,7 @@ const HomeContent = ({
 
   const seoData = {
     title:
-      "Arte-Final para Designers: O Manual de Impressão Digital e Offset | Escola de Artes Gráficas e Design",
+      "Arte-Final para Designers: Manual da Impressão Digital e Offset | Escola de Artes Gráficas e Design",
     description:
       "Formação profissional em Arte-Final, Pré-Impressão, Fechamento de Arquivos, Impressão Digital e Offset com mais de 20 anos de experiência de mercado.",
     siteUrl: generalSettings?.siteUrl || "https://escoladeartesgraficas.com.br",

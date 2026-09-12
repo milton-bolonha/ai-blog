@@ -11,8 +11,8 @@ interface PricingSectionProps {
 }
 
 const planIcons: Record<string, React.ComponentType<any>> = {
-  "Kit Completo": FaCrown,
-  "Manual Impresso": FaBook,
+  "Kit Completo": FaBook,
+  "Kit Premium": FaCrown,
   Empresarial: FaBuilding,
 };
 
@@ -25,13 +25,13 @@ export const PricingSection = (_props: PricingSectionProps) => {
       className="relative w-full h-full bg-[#09090b] text-white py-16 lg:py-20"
     >
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-size-[60px_60px] pointer-events-none" />
-      <div className="absolute left-[5%] top-1/3 h-80 w-80 rounded-full bg-[#ffd400]/10 blur-3xl pointer-events-none" />
+      <div className="absolute left-[5%] top-1/3 h-80 w-80 rounded-full bg-[#00ff15]/10 blur-3xl pointer-events-none" />
       <div className="absolute right-[5%] bottom-1/4 h-80 w-80 rounded-full bg-[#00bcd4]/10 blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-12 lg:mb-16">
           <div className="inline-block px-4 py-1.5 bg-zinc-900 rounded-full border border-zinc-800 mb-4 shadow-sm">
-            <span className="text-xs font-bold text-[#ffd400] tracking-widest uppercase">
+            <span className="text-xs font-bold text-[#00ff15] tracking-widest uppercase">
               {content.badge}
             </span>
           </div>
@@ -55,28 +55,26 @@ export const PricingSection = (_props: PricingSectionProps) => {
             return (
               <div
                 key={plan.name}
-                className={`relative flex flex-col rounded-3xl border transition-all duration-300 ${
+                className={`relative z-${1+index} flex flex-col rounded-3xl border transition-all duration-300 ${
                   plan.highlight
-                    ? "border-[#ffd400]/60 bg-gradient-to-b from-zinc-900 via-zinc-900 to-zinc-900/90 lg:scale-[1.03] lg:-translate-y-2 shadow-[0_0_60px_rgba(255,212,0,0.12)]"
+                    ? "border-[#00ff15]/60 bg-gradient-to-b from-zinc-900 via-zinc-900 to-zinc-900/90 lg:scale-[1.03] lg:-translate-y-2 shadow-[0_0_60px_rgba(0,212,0,0.12)]"
                     : "border-zinc-800 bg-zinc-900/60 hover:border-zinc-700 hover:shadow-xl"
                 }`}
               >
-                {plan.highlight && (
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#ffd400] via-[#ffb700] to-[#ffd400]" />
-                )}
+               
 
                 <div className="p-7 lg:p-8 pb-6">
                   <div className="flex items-center gap-3 mb-3">
                     <div
                       className={`w-11 h-11 rounded-2xl flex items-center justify-center shrink-0 ${
                         plan.highlight
-                          ? "bg-[#ffd400]/15 border border-[#ffd400]/30"
+                          ? "bg-[#00ff15]/15 border border-[#00ff15]/30"
                           : "bg-zinc-800 border border-zinc-700"
                       }`}
                     >
                       <IconComp
                         className={`text-xl ${
-                          plan.highlight ? "text-[#ffd400]" : "text-zinc-300"
+                          plan.highlight ? "text-[#00ff15]" : "text-zinc-300"
                         }`}
                       />
                     </div>
@@ -96,13 +94,13 @@ export const PricingSection = (_props: PricingSectionProps) => {
 
                 <div
                   className={`relative border-t ${
-                    plan.highlight ? "border-[#ffd400]/20" : "border-zinc-800"
+                    plan.highlight ? "border-[#00ff15]/20" : "border-zinc-800"
                   }`}
                 >
                   <span
                     className={`absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full whitespace-nowrap ${
                       plan.highlight
-                        ? "bg-[#09090b] text-[#ffd400] border border-[#ffd400]/30"
+                        ? "bg-[#09090b] text-[#00ff15] border border-[#00ff15]/30"
                         : plan.business
                           ? "bg-[#09090b] text-[#00bcd4] border border-[#00bcd4]/20"
                           : "bg-[#09090b] text-zinc-400 border border-zinc-700"
@@ -119,7 +117,7 @@ export const PricingSection = (_props: PricingSectionProps) => {
                         <span
                           className={`mt-0.5 shrink-0 w-5 h-5 rounded-full flex items-center justify-center ${
                             plan.highlight
-                              ? "bg-[#ffd400]/15 text-[#ffd400]"
+                              ? "bg-[#00ff15]/15 text-[#00ff15]"
                               : "bg-zinc-800 text-zinc-300"
                           }`}
                         >
@@ -136,9 +134,9 @@ export const PricingSection = (_props: PricingSectionProps) => {
                     <MagneticButton
                       href={WHATSAPP_URL}
                       target="_blank"
-                      className={`w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full font-bold uppercase tracking-widest text-[11px] transition-all duration-300 ${
+                      className={`w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full font-bold uppercase tracking-widest text-[14px] transition-all duration-300 ${
                         plan.highlight
-                          ? "bg-[#ffd400] text-black hover:bg-[#ffe566] shadow-lg hover:shadow-yellow-500/25"
+                          ? "bg-[#00ff15] text-black hover:bg-[#73ff66] shadow-lg hover:shadow-green-500/25"
                           : plan.business
                             ? "bg-zinc-800 hover:bg-zinc-700 text-white border border-zinc-700 hover:border-zinc-600"
                             : "bg-transparent text-white border border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800/50"

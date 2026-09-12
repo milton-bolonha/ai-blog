@@ -1,6 +1,6 @@
 {
   "hero": {
-    "badge": "Material Exclusivo Para Você Ser Um Arte Finalista Completo",
+    "badge": "Material Completo Pra Aprender Arte Final",
     "title": "Arte-Final para Designers:<br />Manual de Impressão Digital e Offset",
     "subtitle": "Chega de aprender arte-final no erro e no retrabalho. Este manual reúne mais de 20 anos de experiência em pré-impressão, gerenciamento de cor e fechamento de arquivos, com material complementar pronto para aprender na prática.",
     "cta": {
@@ -11,17 +11,17 @@
       {
         "value": "I/O",
         "label": "Instituto Organizacionista",
-        "info": "esse kit e manual é gerido pelo Instituto Organizacionista"
+        "info": "Gerido pelo Instituto Organizacionista"
       },
       {
         "value": "+7",
-        "label": "anos de mercado",
-        "info": "o Instituto está há +7 anos criando conteúdo técnico de qualidade."
+        "label": "Anos de Mercado",
+        "info": "O Instituto está há +7 anos criando conteúdo técnico de qualidade."
       },
       {
         "value": "+10",
         "label": "Materiais Complementares",
-        "info": "livro, apps pedagógicos, fichas técnicas, ..."
+        "info": "Livro, Aplicativos Pedagógicos, Moldes Técnicos e muito mais."
       }
     ],
     "photo": {
